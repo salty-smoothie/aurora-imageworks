@@ -3,9 +3,10 @@ import Sailfish.Silica 1.0
 import Aurora.Controls 1.0
 import io.thp.pyotherside 1.5
 
+import "../components"
+
 Page {
     id: page
-    allowedOrientations: Orientation.All
 
     // values transmitted from FirstPage.qml
     property var tempImageFolderPath
@@ -41,15 +42,13 @@ Page {
                 idNewImageButton.enabled = true
                 pageStack.pop()
             });
-
         }
 
         // file operations
 
         function createNewImageFunction() {
             var savePath = tempImageFolderPath + fileName
-            call("graphx.createNewFunction", [ savePath, idNewImageWidth.text.toString(), 
-                                               idNewImageHeight.text.toString(), paintToolColor ])
+            call("graphx.createNewFunction", [ savePath, idNewImageWidth.text, idNewImageHeight.text, paintToolColor ])
         }
 
         onError: console.log('python error: ' + traceback);
@@ -82,6 +81,7 @@ Page {
 
             Row {
                 width: parent.width
+
                 Row {
                     width: parent.width / 6 * 5
                     height: Theme.itemSizeSmall
@@ -178,13 +178,11 @@ Page {
                         size: BusyIndicatorSize.Medium
                     }
                 }
-
             } // end row save filename
 
-
             Item {
-                width: page.width
-                height: 2* Theme.paddingLarge
+                width: 1
+                height: Theme.paddingLarge
             }
 
             SectionHeader {
@@ -192,297 +190,101 @@ Page {
                 text: qsTrId("new-page-section-presets")
             }
 
-            Grid {
-                x: Theme.paddingSmall
-                width: parent.width - 2* Theme.paddingSmall
-                rowSpacing: Theme.itemSizeExtraSmall * 0.8
-                columns: 5
+            EvenGrid {
+                id: grid
 
-                IconButton {
-                    id: idApplyCopyPasteImageSizeButton
-                    enabled: ( copyPasteImageWidth !== 0 ) ? true : false
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = copyPasteImageWidth
-                        idNewImageHeight.text = copyPasteImageHeight
-                    }
+                function setResolution(width, height) {
+                    console.log("setting resolution", width, height)
 
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        //% "From clipboard"
-                        text: qsTrId("new-page-preset-from-clipboard")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
+                    oldTextfieldWidth = idNewImageWidth.text
+                    oldTextfieldHeight = idNewImageHeight.text
+                    idNewImageWidth.text = copyPasteImageWidth
+                    idNewImageHeight.text = copyPasteImageHeight
                 }
 
-                IconButton {
-                    id: idApplyScreenResolutionButton
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = page.width
-                        idNewImageHeight.text = page.height
-                    }
-
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        //% "Screen resolution"
-                        text: qsTrId("new-page-preset-screen-resolution")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    leftMargin: Theme.horizontalPageMargin
+                    rightMargin: Theme.horizontalPageMargin
                 }
 
-                IconButton {
-                    id: idApplyA4dpi72Button
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 595
-                        idNewImageHeight.text = 842
-                    }
+                LabelledButton {
+                    enabled: page.copyPasteImageWidth > 0 && page.copyPasteImageHeight > 0
+                    iconSource: "../symbols/icon-m-resize.svg"
+                    //% "From clipboard"
+                    text: qsTrId("new-page-preset-from-clipboard")
 
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "DIN A4\n72 dpi"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
+                    onClicked: grid.setResolution(page.copyPasteImageWidth, page.copyPasteImageHeight)
                 }
 
-                IconButton {
-                    id: idApplyA4dpi150Button
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 1240
-                        idNewImageHeight.text = 1754
-                    }
+                LabelledButton {
+                    iconSource: "../symbols/icon-m-resize.svg"
+                    //% "Screen resolution"
+                    text: qsTrId("new-page-preset-screen-resolution")
 
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "DIN A4\n150 dpi"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
+                    onClicked: grid.setResolution(page.width, page.height)
                 }
 
-                IconButton {
-                    id: idApplyA4dpi300Button
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 2480
-                        idNewImageHeight.text = 3508
-                    }
+                Repeater {
+                    model: ListModel {
+                        ListElement {
+                            name: "DIN A4 72 dpi"
+                            width: 595
+                            height: 842
+                        }
 
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "DIN A4\n300 dpi"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
+                        ListElement {
+                            name: "DIN A4 150 dpi"
+                            width: 1240
+                            height: 1754
+                        }
+
+                        ListElement {
+                            name: "DIN A4 300 dpi"
+                            width: 2480
+                            height: 3508
+                        }
+
+                        ListElement {
+                            name: "XGA"
+                            width: 1024
+                            height: 768
+                        }
+
+                        ListElement {
+                            name: "WXGA"
+                            width: 1366
+                            height: 768
+                        }
+
+                        ListElement {
+                            name: "WXGA+"
+                            width: 1440
+                            height: 900
+                        }
+
+                        ListElement {
+                            name: "Full HD"
+                            width: 1920
+                            height: 1080
+                        }
+
+                        ListElement {
+                            name: "4k"
+                            width: 4096
+                            height: 2160
                         }
                     }
-                }
 
-                IconButton {
-                    id: idApply1024Button
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 1024
-                        idNewImageHeight.text = 768
-                    }
+                    delegate: LabelledButton {
+                        iconSource: "../symbols/icon-m-resize.svg"
+                        text: model.name
 
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "XGA"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
+                        onClicked: grid.setResolution(model.width, model.height)
                     }
                 }
-
-                IconButton {
-                    id: idApplyWXGAButton
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 1366
-                        idNewImageHeight.text = 768
-                    }
-
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "WXGA"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-                IconButton {
-                    id: idApplyWXGAplusButton
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 1440
-                        idNewImageHeight.text = 900
-                    }
-
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "WXGA+"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-                IconButton {
-                    id: idApplyFullHDButton
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 1920
-                        idNewImageHeight.text = 1080
-                    }
-
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "Full HD"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-                IconButton {
-                    id: idApply4kButton
-                    height: Theme.itemSizeMedium
-                    icon.source: "../symbols/icon-m-resize.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    icon.color: Theme.secondaryHighlightColor
-                    width: parent.width / 5
-                    onClicked: {
-                        oldTextfieldWidth = idNewImageWidth.text
-                        oldTextfieldHeight = idNewImageHeight.text
-                        idNewImageWidth.text = 4096
-                        idNewImageHeight.text = 2160
-                    }
-
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: "4k"
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryHighlightColor
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
             }
-
         } // end Column
     } // end Silica Flickable
 }
