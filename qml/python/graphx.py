@@ -2412,14 +2412,6 @@ def getHomePath ():
     homeDir = str(Path.home())
     pyotherside.send('homePathFolder', homeDir )
 
-def createNewFunction ( savePath, newImageSizeX, newImageSizeY, newBackColor ):
-    output_img = Image.new("RGBA", (int(newImageSizeX), int(newImageSizeY)), color = newBackColor )
-    output_img.save(savePath)
-    pyotherside.send('fileIsSaved', savePath)
-    pyotherside.send('exchangeImage', savePath)
-    pyotherside.send('finishedSavingRenaming', savePath)
-    output_img.close()
-
 
 def deleteNowFunction ( inputPathPy ):
     os.remove ( inputPathPy )

@@ -32,12 +32,12 @@ Page {
 
         function createNewImageFunction() {
             var savePath = tempImageFolderPath + fileName
-            call("graphx.createNewFunction", [ savePath, idNewImageWidth.text, idNewImageHeight.text, paintToolColor ])
+            call("new_image.create_image", [ savePath, idNewImageWidth.text, idNewImageHeight.text, paintToolColor ])
         }
 
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../python'))
-            importModule('graphx', function() { })
+            importModule('new_image', function() { })
 
             setHandler('fileIsSaved', function() {
                 idNewImageButtonRunningIndicator.running = false

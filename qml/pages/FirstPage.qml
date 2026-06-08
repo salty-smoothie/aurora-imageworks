@@ -193,7 +193,7 @@ Page {
             "copyPasteImageHeight": copyPasteImageHeight,
         }
 
-        pageStack.push(Qt.resolvedUrl("NewPage.qml"), args)
+        pageStack.push(Qt.resolvedUrl("NewImagePage.qml"), args)
     }
 
     allowedOrientations: Orientation.Portrait
