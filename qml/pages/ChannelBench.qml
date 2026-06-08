@@ -65,7 +65,7 @@ Page {
         id: py
 
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('../py'));
+            addImportPath(Qt.resolvedUrl('../python'));
             importModule('graphx', function () {}); // Which Python file will be used?
         }
 

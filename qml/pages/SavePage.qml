@@ -63,7 +63,7 @@ Page {
         id: py
 
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('../py'))
+            addImportPath(Qt.resolvedUrl('../python'))
             importModule('graphx', function () { })
 
             setHandler('tempFilesDeleted', function(i) { console.log("temp files deleted:", i) })

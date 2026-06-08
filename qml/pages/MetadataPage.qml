@@ -37,7 +37,7 @@ Page {
         id: py
 
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('../py'))
+            addImportPath(Qt.resolvedUrl('../python'))
             importModule('graphx', function () {})
 
             // Handlers = Signals to do something in QML whith received Infos from pyotherside.send

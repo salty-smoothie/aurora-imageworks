@@ -48,7 +48,7 @@ Page {
     Python {
         id: py
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('../py'))
+            addImportPath(Qt.resolvedUrl('../python'))
             importModule('graphx', function() { })
 
             setHandler('histogramsReady', function(max_alpha, max_red, max_green, max_blue, max_rgb) {

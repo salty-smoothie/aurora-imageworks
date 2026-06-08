@@ -15,7 +15,7 @@ BackgroundItem {
         }
     }
 
-    property alias iconSource: icon.source
+    property alias icon: icon
     property alias text: label.text
 
     width: implicitWidth

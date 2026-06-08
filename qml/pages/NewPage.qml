@@ -21,20 +21,22 @@ Page {
     property var newImageSizeY
     property var paintToolColor : "white"
 
-    // other variables
-    property var oldTextfieldWidth
-    property var oldTextfieldHeight
-
     Component.onCompleted: {
-        newImageSizeY = (page.width).toString()
-        newImageSizeX = (page.height).toString()
+        newImageSizeY = page.width.toString()
+        newImageSizeX = page.height.toString()
     }
 
 
     Python {
         id: py
+
+        function createNewImageFunction() {
+            var savePath = tempImageFolderPath + fileName
+            call("graphx.createNewFunction", [ savePath, idNewImageWidth.text, idNewImageHeight.text, paintToolColor ])
+        }
+
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('../py'))
+            addImportPath(Qt.resolvedUrl('../python'))
             importModule('graphx', function() { })
 
             setHandler('fileIsSaved', function() {
@@ -42,13 +44,6 @@ Page {
                 idNewImageButton.enabled = true
                 pageStack.pop()
             });
-        }
-
-        // file operations
-
-        function createNewImageFunction() {
-            var savePath = tempImageFolderPath + fileName
-            call("graphx.createNewFunction", [ savePath, idNewImageWidth.text, idNewImageHeight.text, paintToolColor ])
         }
 
         onError: console.log('python error: ' + traceback);
@@ -188,18 +183,15 @@ Page {
             SectionHeader {
                 //% "Presets"
                 text: qsTrId("new-page-section-presets")
+                horizontalAlignment: Text.AlignLeft
             }
 
             EvenGrid {
                 id: grid
 
                 function setResolution(width, height) {
-                    console.log("setting resolution", width, height)
-
-                    oldTextfieldWidth = idNewImageWidth.text
-                    oldTextfieldHeight = idNewImageHeight.text
-                    idNewImageWidth.text = copyPasteImageWidth
-                    idNewImageHeight.text = copyPasteImageHeight
+                    idNewImageWidth.text = width
+                    idNewImageHeight.text = height
                 }
 
                 anchors {
@@ -278,7 +270,7 @@ Page {
                     }
 
                     delegate: LabelledButton {
-                        iconSource: "../symbols/icon-m-resize.svg"
+                        icon.source: "../symbols/icon-m-resize.svg"
                         text: model.name
 
                         onClicked: grid.setResolution(model.width, model.height)

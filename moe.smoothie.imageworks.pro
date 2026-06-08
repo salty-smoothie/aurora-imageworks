@@ -11,7 +11,7 @@ DISTFILES += \
     qml/fonts/*.ttf \
     qml/js/*.js \
     qml/pages/*.qml \
-    qml/py/*.py \
+    qml/python/*.py \
     qml/symbols/*.png \
     qml/symbols/*.svg \
     qml/moe.smoothie.imageworks.qml \
