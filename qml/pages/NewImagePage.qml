@@ -19,7 +19,7 @@ Page {
     property var fileName : "empty.tmp.png"
     property var newImageSizeX
     property var newImageSizeY
-    property var paintToolColor : "white"
+    property string paintToolColor : "white"
 
     property bool _busy
 
@@ -92,89 +92,143 @@ Page {
 
             width: page.width
 
-            Row {
-                width: parent.width
+            SectionHeader {
+                //% "New image settings"
+                text: qsTrId("new-page-settings-image-settings")
+                horizontalAlignment: Text.AlignLeft
+            }
 
-                Row {
-                    width: parent.width / 6 * 5
-                    height: Theme.itemSizeSmall
-                    TextField {
-                        id: idNewImageWidth
-                        width: parent.width / 5*1.5
-                        anchors.verticalCenter: parent.verticalCenter
-                        anchors.verticalCenterOffset: Theme.paddingLarge
-                        text: newImageSizeX
-                        //% "Width"
-                        label: qsTrId("new-page-textfield-width")
-                        color: Theme.highlightColor
-                        inputMethodHints: Qt.ImhDigitsOnly
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        validator: IntValidator { bottom: 1; top: maxScalePixels }
-                        EnterKey.onClicked: idNewImageWidth.focus = false
+            Row {
+                id: dimensionsRow
+
+                readonly property real fieldWidth: (width - switchDimensionsButton.width) / 2
+
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    leftMargin: Theme.horizontalPageMargin
+                    rightMargin: Theme.horizontalPageMargin
+                }
+
+                height: idNewImageWidth.height + Theme.paddingLarge
+
+                TextField {
+                    id: idNewImageWidth
+
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: dimensionsRow.fieldWidth
+                    text: newImageSizeX
+                    //% "Width"
+                    label: qsTrId("new-page-textfield-width")                    
+
+                    validator: IntValidator { 
+                        bottom: 1
+                        top: maxScalePixels 
                     }
-                    IconButton {
-                        id: idPaintOrientationPicker
-                        width: parent.width/5*0.5
-                        height: Theme.itemSizeSmall
-                        icon.source: "image://theme/icon-m-transfer?" //icon-s-retweet?"
-                        icon.scale: 0.75 //1.32
-                        icon.color: Theme.secondaryHighlightColor
-                        icon.rotation: 90
-                        onClicked: {
-                            var oldWidth = idNewImageWidth.text
-                            var oldHeight = idNewImageHeight.text
-                            idNewImageWidth.text = oldHeight
-                            idNewImageHeight.text = oldWidth
-                        }
+                    
+                    EnterKey.onClicked: idNewImageWidth.focus = false
+                }
+
+                IconButton {
+                    id: switchDimensionsButton
+
+                    width: Theme.itemSizeSmall
+                    height: width
+                    
+                    icon {
+                        source: "image://theme/icon-m-transfer?"
+                        scale: 0.75
+                        color: Theme.secondaryHighlightColor
                     }
-                    TextField {
-                        id: idNewImageHeight
-                        width: parent.width / 5*1.5
-                        anchors.verticalCenter: parent.verticalCenter
-                        anchors.verticalCenterOffset: Theme.paddingLarge
-                        text: newImageSizeY
-                        //% "Height"
-                        label: qsTrId("new-page-textfield-height")
-                        horizontalAlignment: Text.AlignRight
-                        color: Theme.highlightColor
-                        inputMethodHints: Qt.ImhDigitsOnly
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        validator: IntValidator { bottom: 1; top: maxScalePixels }
-                        EnterKey.onClicked: idNewImageHeight.focus = false
-                    }
-                    IconButton {
-                        id: idPaintColorPicker
-                        width: parent.width/5*1.5
-                        height: Theme.itemSizeSmall
-                        icon.source: "image://theme/icon-s-group-chat?"
-                        icon.color: paintToolColor
-                        icon.scale: 2//1.32
-                        onClicked: {
-                            var page = pageStack.push("Sailfish.Silica.ColorPickerPage", { "colors" : myColors})
-                            page.colorClicked.connect(function(color) {
-                                paintToolColor = color.toString()
-                                pageStack.pop()
-                            })
-                        }
-                        Label {
-                            horizontalAlignment: Text.AlignHCenter
-                            //% "Color"
-                            text: qsTrId("new-page-button-color")
-                            color: Theme.secondaryHighlightColor
-                            font.pixelSize: Theme.fontSizeSmall
-                            anchors {
-                                top: parent.bottom
-                                topMargin: -Theme.paddingMedium * 1.05
-                                horizontalCenter: parent.horizontalCenter
-                            }
-                        }
+                    
+                    onClicked: {
+                        const oldWidth = idNewImageWidth.text
+                        const oldHeight = idNewImageHeight.text
+                        idNewImageWidth.text = oldHeight
+                        idNewImageHeight.text = oldWidth
                     }
                 }
-            } // end row save filename
 
-            Item {
-                width: 1
-                height: Theme.paddingLarge
+                TextField {
+                    id: idNewImageHeight
+
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: dimensionsRow.fieldWidth
+                    text: newImageSizeY
+                    //% "Height"
+                    label: qsTrId("new-page-textfield-height")
+                    horizontalAlignment: Text.AlignRight
+                    inputMethodHints: Qt.ImhDigitsOnly
+                    
+                    validator: IntValidator { 
+                        bottom: 1
+                        top: maxScalePixels 
+                    }
+
+                    EnterKey.onClicked: idNewImageHeight.focus = false
+                }
+            }
+
+            BackgroundItem {
+                width: parent.width
+                height: fillColorLabel.height + fillColorDescription.height + Theme.paddingLarge * 2
+
+                onClicked: {
+                    const picker = pageStack.push("Sailfish.Silica.ColorPickerPage", { "colors": myColors })
+                    picker.colorClicked.connect(function(color) {
+                        page.paintToolColor = color
+                        pageStack.pop()
+                    })
+                }
+
+                Label {
+                    id: fillColorLabel
+
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: fillColorPatch.left
+                        topMargin: Theme.paddingLarge
+                        leftMargin: Theme.horizontalPageMargin
+                        rightMargin: Theme.paddingMedium
+                    }
+
+                    //% "Fill color"
+                    text: qsTrId("new-page-fill-color-title")
+                    color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+                    wrapMode: Text.WordWrap
+                }
+
+                Label {
+                    id: fillColorDescription
+
+                    anchors {
+                        top: fillColorLabel.bottom
+                        left: fillColorLabel.left
+                        right: fillColorLabel.right
+                    }
+
+                    //% "Select base color for the new image"
+                    text: qsTrId("new-page-fill-color-summary")
+                    color: parent.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    wrapMode: Text.WordWrap
+                    font.pixelSize: Theme.fontSizeSmall
+                }
+
+                Rectangle {
+                    id: fillColorPatch
+
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        right: parent.right
+                        rightMargin: Theme.horizontalPageMargin
+                    }
+
+                    width: Theme.itemSizeExtraSmall
+                    height: width
+                    color: page.paintToolColor
+                    radius: Theme.dp(8)
+                }
             }
 
             SectionHeader {
