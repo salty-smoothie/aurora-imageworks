@@ -39,15 +39,15 @@ Page {
                 }
 
                 onPinchUpdated: {
-                    if(photoFrame.x < dragArea.drag.minimumX) {
+                    if (photoFrame.x < dragArea.drag.minimumX) {
                         photoFrame.x = dragArea.drag.minimumX
-                    } else if(photoFrame.x > dragArea.drag.maximumX) {
+                    } else if (photoFrame.x > dragArea.drag.maximumX) {
                         photoFrame.x = dragArea.drag.maximumX
                     }
 
-                    if(photoFrame.y < dragArea.drag.minimumY) {
+                    if (photoFrame.y < dragArea.drag.minimumY) {
                         photoFrame.y = dragArea.drag.minimumY
-                    } else if(photoFrame.y > dragArea.drag.maximumY) {
+                    } else if (photoFrame.y > dragArea.drag.maximumY) {
                         photoFrame.y = dragArea.drag.maximumY
                     }
                 }

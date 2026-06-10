@@ -6,6 +6,7 @@ import Aurora.Controls 1.0
 import io.thp.pyotherside 1.5
 
 import "../components"
+import "../tabs"
 import "../js/perspectivetransformhelper.js" as PerspT
 
 Page {
@@ -293,7 +294,6 @@ Page {
         id: remorse
     }
 
-    // Python connections and signals, callable from QML side
     Python {
         id: py
         Component.onCompleted: {
@@ -2479,6 +2479,7 @@ Page {
                 }
             } // end Toolbar
 
+<<<<<<< HEAD
             // begin tool crop
             Grid {
                 id: idGridCropPerspectivePicker
@@ -2941,6 +2942,11 @@ Page {
 
             } //end tools crop
 
+=======
+            CropTab {
+                width: parent.width
+            }
+>>>>>>> 9a89f98 (Basic implementation of the new cropping toolbox)
 
             Grid {
                 id: idGridScale
