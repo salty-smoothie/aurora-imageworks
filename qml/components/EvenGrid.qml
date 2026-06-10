@@ -6,15 +6,6 @@ Item {
 
     default property alias container: grid.children
 
-    readonly property real maxItemWidth: {
-        var maxWidth = 0
-        for (var i = 0; i < grid.children.length; i++) {
-            maxWidth = Math.max(grid.children[i].width, maxWidth)
-        }
-
-        return maxWidth
-    }
-
     property alias spacing: grid.spacing
 
     width: implicitWidth
@@ -25,12 +16,25 @@ Item {
     Grid {
         id: grid
 
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: columns * (root.maxItemWidth + spacing) - spacing
-        columns: Math.floor((parent.width + spacing) / (root.maxItemWidth + spacing))
-        spacing: Theme.paddingSmall
-    
+        readonly property real maxItemWidth: {
+            var maxWidth = 0
+            for (var i = 0; i < children.length; i++) {
+                maxWidth = Math.max(children[i].width, maxWidth)
+            }
+
+            return maxWidth
+        }
+
+        width: implicitWidth
+        spacing: Theme.paddingMedium
+        columns: Math.floor((parent.width + spacing) / (maxItemWidth + spacing))
+
         Component.onCompleted: {
+            var columnWidth = (parent.width + spacing) / columns - spacing
+            for (var i = 0; i < children.length; i++) {
+                children[i].width = columnWidth
+            }
+
             var maxHeight = 0
             for (var i = 0; i < children.length; i++) {
                 maxHeight = Math.max(maxHeight, children[i].implicitHeight)

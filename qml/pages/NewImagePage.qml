@@ -272,19 +272,19 @@ Page {
                 Repeater {
                     model: ListModel {
                         ListElement {
-                            name: "DIN A4 72 dpi"
+                            name: "DIN A4\n72 dpi"
                             width: 595
                             height: 842
                         }
 
                         ListElement {
-                            name: "DIN A4 150 dpi"
+                            name: "DIN A4\n150 dpi"
                             width: 1240
                             height: 1754
                         }
 
                         ListElement {
-                            name: "DIN A4 300 dpi"
+                            name: "DIN A4\n300 dpi"
                             width: 2480
                             height: 3508
                         }
