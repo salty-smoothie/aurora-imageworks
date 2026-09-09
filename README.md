@@ -6,7 +6,7 @@ Imageworks основывается на одноименном приложен
 
 | Ссылки для скачивания |
 | --- |
-| 🛒 [Аврора Маркет](https://aurorarepos.ru/aurora-5/imageworks) <br> 😼 [Скачать RPM](https://github.com/salty-smoothie/aurora-imageworks/releases/latest/) |
+| 📦 [RuStore для ОС Аврора](https://www.rustore.ru/osaurora) <br> 🛒 [Аврора Маркет](https://aurorarepos.ru/aurora-5/imageworks) <br> 😼 [Скачать RPM](https://github.com/salty-smoothie/aurora-imageworks/releases/latest/) |
 
 ## Функционал
 
