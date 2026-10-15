@@ -118,7 +118,8 @@ Page {
 
                 Button {
                     width: (parent.width - Theme.paddingLarge) / 2
-                    text: qsTrId("View source")
+                    //% "View source"
+                    text: qsTrId("about-page-button-view-source")
 
                     onClicked: {
                         if (mouse.button === Qt.LeftButton) {
