@@ -365,8 +365,10 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Effects bench")
-        subHeaderText: qsTr("Apply effects")
+        //% "Effects bench"
+        headerText: qsTrId("effects-bench-header")
+        //% "Apply effects"
+        subHeaderText: qsTrId("effects-bench-subheader")
 
         AppBarSpacer { }
 
@@ -409,102 +411,134 @@ Page {
             ComboBox {
                 id: idComboBoxPresets
                 
-                label: qsTr("Effect")
+                //% "Effect"
+                label: qsTrId("effects-bench-cb-preset-label")
 
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("original")
+                        //% "Original"
+                        text: qsTrId("effects-bench-preset-original")
                     }
                     MenuItem {
-                        text: qsTr("auto contrast")
+                        //% "Auto contrast"
+                        text: qsTrId("effects-bench-preset-auto-contrast")
                     }
                     MenuItem {
-                        text: qsTr("stretch contrast")
+                        //% "Stretch contrast"
+                        text: qsTrId("effects-bench-preset-stretch-contrast")
                     }
                     MenuItem {
-                        text: qsTr("dithering")
+                        //% "Dithering"
+                        text: qsTrId("effects-bench-preset-dithering")
                     }
                     MenuItem {
-                        text: qsTr("coal drawing")
+                        //% "Coal drawing"
+                        text: qsTrId("effects-bench-preset-coal-drawing")
                     }
                     MenuItem {
-                        text: qsTr("grayscale")
+                        //% "Gray scale"
+                        text: qsTrId("effects-bench-preset-grayscale")
                     }
                     MenuItem {
-                        text: qsTr("invert colors")
+                        //% "Invert colors"
+                        text: qsTrId("effects-bench-preset-invert-colors")
                     }
                     MenuItem {
-                        text: qsTr("equalize colors")
+                        //% "Equalize colors"
+                        text: qsTrId("effects-bench-preset-equalize-colors")
                     }
                     MenuItem {
-                        text: qsTr("solarize")
+                        //% "Solarize"
+                        text: qsTrId("effects-bench-preset-solarize")
                     }
                     MenuItem {
-                        text: qsTr("brush art")
+                        //% "Brush art"
+                        text: qsTrId("effects-bench-preset-brush-art")
                     }
                     MenuItem {
-                        text: qsTr("posterize")
+                        //% "Posterize"
+                        text: qsTrId("effects-bench-preset-posterize")
                     }
                     MenuItem {
-                        text: qsTr("blur image")
+                        //% "Blur image"
+                        text: qsTrId("effects-bench-preset-blur-image")
                     }
                     MenuItem {
-                        text: qsTr("smooth surface")
+                        //% "Smooth surface"
+                        text: qsTrId("effects-bench-preset-smooth-surface")
                     }
                     MenuItem {
-                        text: qsTr("central focus")
+                        //% "Central focus"
+                        text: qsTrId("effects-bench-preset-central-focus")
                     }
                     MenuItem {
-                        text: qsTr("miniature world")
+                        //% "Miniature world"
+                        text: qsTrId("effects-bench-preset-miniature-world")
                     }
                     MenuItem {
-                        text: qsTr("enhance edges")
+                        //% "Enhance edges"
+                        text: qsTrId("effects-bench-preset-enhance-edges")
                     }
                     MenuItem {
-                        text: qsTr("digital unsharp masking")
+                        //% "Digital unsharp masking"
+                        text: qsTrId("effects-bench-preset-digital-unsharp-masking")
                     }
                     MenuItem {
-                        text: qsTr("find edges")
+                        //% "Find edges"
+                        text: qsTrId("effects-bench-preset-find-edges")
                     }
                     MenuItem {
-                        text: qsTr("find contour")
+                        //% "Find contour"
+                        text: qsTrId("effects-bench-preset-find-contour")
                     }
                     MenuItem {
-                        text: qsTr("emboss")
+                        //% "Emboss"
+                        text: qsTrId("effects-bench-preset-emboss")
                     }
                     MenuItem {
-                        text: qsTr("add current colored frame")
+                        //% "Add current colored frame"
+                        text: qsTrId("effects-bench-preset-add-current-colored-frame")
                     }
                     MenuItem {
-                        text: qsTr("tint with current color")
+                        //% "Tint with current color"
+                        text: qsTrId("effects-bench-preset-tint-with-current-color")
                     }
                     MenuItem {
-                        text: qsTr("reduce colors")
+                        //% "Reduce colors"
+                        text: qsTrId("effects-bench-preset-reduce-colors")
                     }
                     MenuItem {
-                        text: qsTr("change opacity")
+                        //% "Change opacity"
+                        text: qsTrId("effects-bench-preset-change-opacity")
                     }
                     MenuItem {
-                        text: qsTr("create alpha from")
+                        //% "Create alpha from"
+                        text: qsTrId("effects-bench-preset-create-alpha-from")
                     }
                     MenuItem {
-                        text: qsTr("extract color")
+                        //% "Extract color"
+                        text: qsTrId("effects-bench-preset-extract-color")
                     }
                     MenuItem {
-                        text: qsTr("extract channel")
+                        //% "Extract channel"
+                        text: qsTrId("effects-bench-preset-extract-channel")
                     }
 
                     MenuItem {
-                        text: qsTr("minFilter (bright spots darker)")
+                        //% "Minimum filter (bright spots darker)"
+                        text: qsTrId("effects-bench-preset-min-filter")
                     }
                     MenuItem {
-                        text: qsTr("maxFilter (dark spots brighter)")
+                        //% "Maximum filter (dark spots brighter)"
+                        text: qsTrId("effects-bench-preset-max-filter")
                     }
                     MenuItem {
-                        text: qsTr("mediumFilter")
+                        //% "Medium filter"
+                        text: qsTrId("effects-bench-preset-medium-filter")
                     }
                     MenuItem {
-                        text: qsTr("fishEye")
+                        //% "Fish eye"
+                        text: qsTrId("effects-bench-preset-fish-eye")
                     }
                 }
 
@@ -607,6 +641,7 @@ Page {
 
             Slider {
                 id: idFxSliderCoalBlur
+
                 visible: idComboBoxPresets.currentIndex === 4
                 enabled: blockerApply === false
                 width: parent.width
@@ -618,22 +653,28 @@ Page {
                 value: 20
                 stepSize: 1
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("coal") + " " + idFxSliderCoalBlur.value //"blur"
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Coal %1"
+                    text: qsTrId("effects-bench-slider-coal-size").arg(idFxSliderCoalBlur.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderDrawing
+
                 visible: idComboBoxPresets.currentIndex === 9
                 enabled: blockerApply === false
                 width: parent.width
@@ -645,22 +686,28 @@ Page {
                 value: 9
                 stepSize: 1
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("brush size") + " " + idFxSliderDrawing.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Brush size %1"
+                    text: qsTrId("effects-bench-slider-brush-size").arg(idFxSliderDrawing.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderBlur
+
                 visible: idComboBoxPresets.currentIndex === 11
                 enabled: blockerApply === false
                 width: parent.width
@@ -672,22 +719,28 @@ Page {
                 value: 5
                 stepSize: 1
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("blur") + " " + idFxSliderBlur.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Blur %1"
+                    text: qsTrId("effects-bench-slider-blur").arg(idFxSliderBlur.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderCentralFocus
+
                 visible: idComboBoxPresets.currentIndex === 13
                 enabled: blockerApply === false
                 width: parent.width
@@ -699,22 +752,28 @@ Page {
                 value: 6
                 stepSize: 1
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("blur") + " " + idFxSliderCentralFocus.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Blur %1"
+                    text: qsTrId("effects-bench-slider-central-focus").arg(idFxSliderCentralFocus.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderMiniatureBlur
+
                 visible: idComboBoxPresets.currentIndex === 14
                 enabled: blockerApply === false
                 width: parent.width
@@ -726,22 +785,28 @@ Page {
                 value: 5
                 stepSize: 1
                 smooth: true
+                
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+                
                 Label {
-                    text: qsTr("blur") + " " + idFxSliderMiniatureBlur.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Blur %1"
+                    text: qsTrId("effects-bench-slider-miniature-blur").arg(idFxSliderMiniatureBlur.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderMiniatureColor
+
                 visible: idComboBoxPresets.currentIndex === 14
                 enabled: blockerApply === false
                 width: parent.width
@@ -753,22 +818,28 @@ Page {
                 value: 1.75
                 stepSize: 0.02
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("color") + " " + idFxSliderMiniatureColor.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Color %1"
+                    text: qsTrId("effects-bench-slider-miniature-color").arg(idFxSliderMiniatureColor.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderAddFrame
+            
                 visible: idComboBoxPresets.currentIndex === 20
                 enabled: blockerApply === false
                 width: parent.width
@@ -780,22 +851,28 @@ Page {
                 value: 10
                 stepSize: 1
                 smooth: true
+            
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+            
                 Label {
-                    text: qsTr("frame") + " " + idFxSliderAddFrame.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Frame %1"
+                    text: qsTrId("effects-bench-slider-add-frame").arg(idFxSliderAddFrame.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderQuantize
+            
                 visible: idComboBoxPresets.currentIndex === 22
                 enabled: blockerApply === false
                 width: parent.width
@@ -807,22 +884,28 @@ Page {
                 value: 256
                 stepSize: 1
                 smooth: true
+            
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+            
                 Label {
-                    text: qsTr("amount colors") + " " + idFxSliderQuantize.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Amount colors %1"
+                    text: qsTrId("effects-bench-slider-quantize").arg(idFxSliderQuantize.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             Slider {
                 id: idFxSliderOpacity
+            
                 visible: idComboBoxPresets.currentIndex === 23
                 enabled: blockerApply === false
                 width: parent.width
@@ -834,42 +917,57 @@ Page {
                 value: 100
                 stepSize: 1
                 smooth: true
+            
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+            
                 Label {
-                    text: qsTr("opacity") + " " + idFxSliderOpacity.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Opacity %1"
+                    text: qsTrId("effects-bench-slider-opacity").arg(idFxSliderOpacity.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             ComboBox {
                 id: idComboBoxAlphaColor
+            
                 visible: idComboBoxPresets.currentIndex === 24
                 x: Theme.paddingMedium
                 width: parent.width - Theme.paddingMedium
+                //% "Alpha color"
+                text: qsTrId("effects-bench-combobox-alpha-color-label")
+            
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("white")
+                        //% "White"
+                        text: qsTrId("effects-bench-combobox-alpha-color-white")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
+
                     MenuItem {
-                        text: qsTr("black")
+                        //% "Black"
+                        text: qsTrId("effects-bench-combobox-alpha-color-black")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
+
                 onCurrentIndexChanged: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
             }
+
             Slider {
                 id: idFxSliderAlphaTolerance
+
                 visible: idComboBoxPresets.currentIndex === 24
                 enabled: blockerApply === false
                 width: parent.width
@@ -881,64 +979,86 @@ Page {
                 value: 30
                 stepSize: 1
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("tolerance") + " " + idFxSliderAlphaTolerance.value
-                    font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: -Theme.paddingSmall
                         horizontalCenter: parent.horizontalCenter
                     }
+
+                    //% "Tolerance %1"
+                    text: qsTrId("effects-bench-slider-tolerance").arg(idFxSliderAlphaTolerance.value)
+                    font.pixelSize: Theme.fontSizeExtraSmall
                 }
             }
+
             ComboBox {
                 id: idComboBoxColorExtract
+
                 visible: idComboBoxPresets.currentIndex === 25
                 x: Theme.paddingMedium
                 width: parent.width - Theme.paddingMedium
+                //% "Extract color"
+                text: qsTrId("effects-bench-combobox-extract-color-label")
+
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("red")
+                        //% "Red"
+                        text: qsTrId("effects-bench-combobox-extract-color-red")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("green")
+                        //% "Green"
+                        text: qsTrId("effects-bench-combobox-extract-color-green")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("blue")
+                        //% "Blue"
+                        text: qsTrId("effects-bench-combobox-extract-color-blue")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
+
                 onCurrentIndexChanged: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
             }
+
             ComboBox {
                 id: idComboBoxChannelExtract
+            
                 visible: idComboBoxPresets.currentIndex === 26
                 x: Theme.paddingMedium
                 width: parent.width - Theme.paddingMedium
+                //% "Extract channel"
+                text: qsTrId("effects-bench-combobox-extract-channel-label")
+            
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("red")
+                        //% "Red"
+                        text: qsTrId("effects-bench-combobox-extract-channel-red")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("green")
+                        //% "Green"
+                        text: qsTrId("effects-bench-combobox-extract-channel-green")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("blue")
+                        //% "Blue"
+                        text: qsTrId("effects-bench-combobox-extract-channel-blue")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("alpha")
+                        //% "Alpha"
+                        text: qsTrId("effects-bench-combobox-extract-channel-alpha")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -965,7 +1085,8 @@ Page {
                     previewImageEffectPicker()
                 }
                 Label {
-                    text: qsTr("radius") + " " + idFxUnsharpRadiusMask.value
+                    //% "Radius %1"
+                    text: qsTrId("effects-bench-slider-unsharp-radius-mask").arg(idFxUnsharpRadiusMask.value)
                     font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
@@ -992,7 +1113,8 @@ Page {
                     previewImageEffectPicker()
                 }
                 Label {
-                    text: qsTr("percent") + " " + idFxUnsharpPercentMask.value
+                    //% "Percent %1"
+                    text: qsTrId("effects-bench-slider-unsharp-percent-mask").arg(idFxUnsharpPercentMask.value)
                     font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
@@ -1019,7 +1141,8 @@ Page {
                     previewImageEffectPicker()
                 }
                 Label {
-                    text: qsTr("threshold") + " " + idFxUnsharpThresholdMask.value
+                    //% "Threshold %1"
+                    text: qsTrId("effect-bench-slider-unsharp-threshold-mask").arg(idFxUnsharpThresholdMask.value)
                     font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom
@@ -1030,7 +1153,11 @@ Page {
             }
             Slider {
                 id: idFxSliderBrightspotSize
-                visible: (idComboBoxPresets.currentIndex === 27 || idComboBoxPresets.currentIndex === 28 || idComboBoxPresets.currentIndex === 29) ? true : false
+                
+                visible: idComboBoxPresets.currentIndex === 27 
+                         || idComboBoxPresets.currentIndex === 28 
+                         || idComboBoxPresets.currentIndex === 29
+                
                 enabled: blockerApply === false
                 width: parent.width
                 height: Theme.itemSizeSmall * 1.1
@@ -1041,12 +1168,15 @@ Page {
                 value: 3
                 stepSize: 2
                 smooth: true
+
                 onReleased: {
                     blockerApply = true
                     previewImageEffectPicker()
                 }
+
                 Label {
-                    text: qsTr("size") + " " + idFxSliderBrightspotSize.value
+                    //% "Size %1"
+                    text: qsTrId("effect-bench-slider-brightness-size").arg(idFxSliderBrightspotSize.value)
                     font.pixelSize: Theme.fontSizeExtraSmall
                     anchors {
                         bottom: parent.bottom

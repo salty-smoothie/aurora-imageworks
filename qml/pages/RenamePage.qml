@@ -74,7 +74,8 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Rename as...")
+        //% "Rename as..."
+        headerText: qsTrId("rename-page-header")
 
         AppBarSpacer { }
 
@@ -161,10 +162,12 @@ Page {
                 color: Theme.secondaryColor
                 font.pixelSize: Theme.fontSizeSmall
 
-                text: qsTr("Path") + ": " + origImageFolderPath + "\n"
-                        + qsTr("Width") + ": " + imageWidthSave + "\n"
-                        + qsTr("Height") + ": " + imageHeightSave + "\n"
-                        + qsTr("Size") + ": " + estimatedFileSize + " kb"
+                //% "Path: %1\nWidth: %2\nHeight: %3\nSize: %4kb"
+                text: qsTrId("rename-page-file-properties")
+                      .arg(origImageFolderPath)
+                      .arg(imageWidthSave)
+                      .arg(imageHeightSave)
+                      .arg(estimatedSize)
             }
         } // end Column
     } // end Silica Flickable

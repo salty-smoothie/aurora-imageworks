@@ -23,7 +23,8 @@ CoverBackground {
 
         Label {
             width: parent.width
-            text: qsTr("Welcome to Imageworks!")
+            //% "Welcome to Imageworks!"
+            text: qsTrId("cover-page-welcome-title")
             wrapMode: Text.WordWrap
 
             font {
@@ -34,7 +35,8 @@ CoverBackground {
 
         Label {
             width: parent.width
-            text: qsTr("Edit images and create new ones")
+            //% "Edit images and create new ones"
+            text: qsTrId("cover-page-welcome-subtitle")
             wrapMode: Text.WordWrap
             font.pixelSize: Theme.fontSizeTiny
             color: Theme.secondaryColor
@@ -67,7 +69,8 @@ CoverBackground {
             }
 
             height: implicitHeight
-            text: qsTr("Currently editing")
+            //% "Currently editing"
+            text: qsTrId("cover-page-editing-subtitle")
             font.pixelSize: Theme.fontSizeSmall
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap

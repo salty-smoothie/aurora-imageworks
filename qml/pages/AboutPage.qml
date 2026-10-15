@@ -9,7 +9,8 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("About")
+        //% "About"
+        headerText: qsTrId("about-page-app-bar-title")
 
         AppBarSpacer { }
 
@@ -18,7 +19,8 @@ Page {
 
             onClicked: {
                 Clipboard.text = text
-                Notices.show(qsTr("Version info copied to clipboard"), Notice.Short, Notice.Bottom)
+                //% "Version info copied to clipboard"
+                Notices.show(qsTrId("about-page-version-copy-notice"), Notice.Short, Notice.Bottom)
             }
         }
     }
@@ -66,7 +68,7 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Imageworks")
+                text: "Imageworks"
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
                 
@@ -78,14 +80,16 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Feature-rich image editing application for Aurora OS based on Python Pillow library.")
+                //% "Feature-rich image editing application for Aurora OS based on Python Pillow library."
+                text: qsTrId("about-page-app-description")
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
             }
 
             Label {
                 width: parent.width
-                text: qsTr("Imageworks was originally developed for Sailfish OS and then ported to Aurora OS by Smooth-E.")
+                //% "Imageworks was originally developed for Sailfish OS and then ported to Aurora OS by Smooth-E."
+                text: qsTrId("about-page-port-notice")
                 horizontalAlignment: Text.AlignHCenter
                 color: Theme.secondaryColor
                 wrapMode: Text.WordWrap
@@ -93,7 +97,8 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Imageworks is free software, distributed under the terms of GNU GPL v3.")
+                //% "Imageworks is free software, distributed under the terms of GNU GPL v3."
+                text: qsTrId("about-page-license-notice")
                 color: Theme.secondaryColor
                 wrapMode: Text.WordWrap
             }
@@ -113,7 +118,7 @@ Page {
 
                 Button {
                     width: (parent.width - Theme.paddingLarge) / 2
-                    text: qsTr("View source")
+                    text: qsTrId("View source")
 
                     onClicked: {
                         if (mouse.button === Qt.LeftButton) {
@@ -129,7 +134,8 @@ Page {
 
                 Button {
                     width: (parent.width - Theme.paddingLarge) / 2
-                    text: qsTr("Donate")
+                    //% "Donate"
+                    text: qsTrId("about-page-button-donate")
 
                     onClicked: {
                         if (mouse.button === Qt.LeftButton) {

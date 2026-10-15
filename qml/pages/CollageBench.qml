@@ -181,11 +181,14 @@ Page {
     AppBar {
         id: appBar
 
-        readonly property string subheader: qsTr("Combine %1 images").arg(selectedFilesCounter)
+        //% "Combine %1 images"
+        readonly property string subheader: qsTrId("collage-bench-subheader").arg(selectedFilesCounter)
 
-        headerText: qsTr("Collage")
+        //% "Collage"
+        headerText: qsTrId("collage-bench-header")
         subHeaderText: warningLargeSize
-                       ? qsTr("Output limited to %1px. %2").arg(warningInputMaxWidth).arg(subheader)
+                       //% "Output limited to %1px. %2" 
+                       ? qsTrId("collage-bench-subheader-warning").arg(warningInputMaxWidth).arg(subheader)
                        : subheader 
 
         AppBarSpacer { }
@@ -248,7 +251,8 @@ Page {
                     rightMargin: anchors.leftMargin
                 }
 
-                text: qsTr("Creating a collage")
+                //% "Creating a collage"
+                text: qsTrId("collage-bench-tutorial-title")
                 font.pixelSize: Theme.fontSizeHuge
                 color: Theme.highlightColor
                 horizontalAlignment: Text.AlignHCenter
@@ -261,18 +265,24 @@ Page {
             }
 
             TutorialSection {
-                title: qsTr("1. Start by adding images")
-                summary: qsTr("Press the button above and select several images to start creating.")
+                //% "1. Start by adding images"
+                title: qsTrId("collage-bench-tutorial-1-title")
+                //% "Press the button above and select several images to start creating."
+                summary: qsTrId("collage-bench-tutorial-1-summary")
             }
 
             TutorialSection {
-                title: qsTr("2. Adjust the parameters")
-                summary: qsTr("Use menus and sliders below to adjust your collage's parameters. Don't forget to tap the \"Refresh\" button after making changes.")
+                //% "2. Adjust the parameters"
+                title: qsTrId("collage-bench-tutorial-2-title")
+                //% "Use menus and sliders below to adjust your collage's parameters. Don't forget to tap the \"Refresh\" button after making changes."
+                summary: qsTrId("collage-bench-tutorial-2-summary")
             }
 
             TutorialSection {
-                title: qsTr("3. Save your work")
-                summary: qsTr("When you are done, tap the check-mark button above to replace your image with the new collage.")
+                //% "3. Save your work"
+                title: qsTrId("collage-bench-tutorial-3-title")
+                //% "When you are done, tap the check-mark button above to replace your image with the new collage."
+                summary: qsTrId("collage-bench-tutorial-3-summary")
             }
         }
     }
@@ -331,27 +341,33 @@ Page {
 
                 enabled: (blockApply === false)
                 width: parent.width
-                label: qsTr("layout generator:") + " "
+                //% "layout generator:"
+                label: qsTrId("collage-bench-combobox-preset-label") + " "
                 
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("auto-rows")
+                        //% "auto-rows"
+                        text: qsTrId("collage-bench-preset-auto-rows")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("auto-columns")
+                        //% "auto-columns"
+                        text: qsTrId("collage-bench-preset-auto-columns")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("mosaic")
+                        //% "mosaic"
+                        text: qsTrId("collage-bench-preset-mosaic")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("photowall")
+                        //% "photowall"
+                        text: qsTrId("collage-bench-preset-photowall")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("scattered")
+                        //% "scattered"
+                        text: qsTrId("collage-bench-preset-scattered")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -380,27 +396,33 @@ Page {
                 
                 enabled: (blockApply === false)
                 width: parent.width
-                label: qsTr("background:") + " "
+                //% "background:"
+                label: qsTrId("collage-bench-combobox-background-label") + " "
                 
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("blurry image")
+                        //% "blurry image"
+                        text: qsTrId("collage-bench-background-blurry-image")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("current color")
+                        //% "current color"
+                        text: qsTrId("collage-bench-background-current-color")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("black")
+                        //% "black"
+                        text: qsTrId("collage-bench-background-black")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("white")
+                        //% "white"
+                        text: qsTrId("collage-bench-background-white")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("transparent")
+                        //% "transparent"
+                        text: qsTrId("collage-bench-background-transparent")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -411,23 +433,28 @@ Page {
                 
                 enabled: (blockApply === false)
                 width: parent.width
-                label: qsTr("frames:") + " "
+                //% "frames:"
+                label: qsTrId("collage-bench-combobox-frames-label") + " "
                 
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("none")
+                        //% "none"
+                        text: qsTrId("collage-bench-frame-none")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("current color")
+                        //% "current color"
+                        text: qsTrId("collage-bench-frame-current-color")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("black")
+                        //% "black"
+                        text: qsTrId("collage-bench-frame-black")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("white")
+                        //% "white"
+                        text: qsTrId("collage-bench-frame-white")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -439,19 +466,23 @@ Page {
                 visible: (currentCollageType === "polaroids")
                 enabled: (blockApply === false)
                 width: parent.width
-                label: qsTr("ratio:") + " "
+                //% "ratio:"
+                label: qsTrId("collage-bench-combobox-ratio-label") + " "
                 
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("3 : 2")
+                        //% "3 : 2"
+                        text: qsTrId("collage-bench-aspect-3-2")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("1 : 1")
+                        //% "1 : 1"
+                        text: qsTrId("collage-bench-aspect-1-1")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("2 : 3")
+                        //% "2 : 3"
+                        text: qsTrId("collage-bench-aspect-2-3")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -471,7 +502,8 @@ Page {
                 value: 3
                 stepSize: 1
                 smooth: true
-                label: qsTr("Height: 1/%1 of width").arg(idSliderHeight.value)
+                //% "Height: 1/%1 of width"
+                label: qsTrId("collage-bench-slider-height").arg(idSliderHeight.value)
             }
 
             Slider {
@@ -492,7 +524,8 @@ Page {
                 value: 3
                 stepSize: 1
                 smooth: true
-                label: qsTr("Columns: %1").arg(idSliderColumns.value)
+                //% "Columns: %1"
+                label: qsTrId("collage-bench-slider-columns").arg(idSliderColumns.value)
             }
 
             Slider {
@@ -508,7 +541,8 @@ Page {
                 value: Theme.paddingSmall
                 stepSize: Theme.paddingSmall / 2
                 smooth: true
-                label: qsTr("Spacing: %1").arg(idSliderSpacing.value)
+                //% "Spacing: %1"
+                label: qsTrId("collage-bench-slider-spacing").arg(idSliderSpacing.value)
             }
 
             Slider {
@@ -525,7 +559,8 @@ Page {
                 value: Theme.paddingSmall
                 stepSize: Theme.paddingSmall / 2
                 smooth: true
-                label: qsTr("Frame width: %1").arg(idSliderFrameWidth.value)
+                //% "Frame width: %1"
+                label: qsTrId("collage-bench-slider-frame-width").arg(idSliderFrameWidth.value)
             }
         } // end Column
     } // end Silica Flickable

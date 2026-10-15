@@ -39,7 +39,8 @@ Item {
         }
 
         InfoLabel {
-            text: qsTr("Applying changes")
+            //% "Applying changes"
+            text: qsTrId("extended-busy-label-title")
         }
     }
 
@@ -58,7 +59,8 @@ Item {
         wrapMode: Text.WordWrap
         horizontalAlignment: Text.AlignHCenter
         color: Theme.secondaryColor
-        text: qsTr("Some changes take longer to process.\nDo not close Imageworks while this operation is in progress.")
+        //% "Some changes take longer to process.\nDo not close Imageworks while this operation is in progress."
+        text: qsTrId("extended-busy-label-subtitle")
         font.pixelSize: Theme.fontSizeSmall
         opacity: 0
 

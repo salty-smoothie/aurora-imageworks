@@ -6,6 +6,11 @@ import io.thp.pyotherside 1.5
 Page {
     id: page
 
+    //% "replace with"
+    readonly property string optionReplaceWith: qsTrId("pixel-bench-option-replace-with")
+    //% "keep values"
+    readonly property string optionKeepValues: qsTrId("pixel-bench-option-keep-values")
+
     // values transmitted from FirstPage.qml
     property var inputPathPy
     property var outputPathPy
@@ -66,8 +71,10 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Pixel bench")
-        subHeaderText: qsTr("Find and replace")
+        //% "Pixel bench"
+        headerText: qsTrId("pixel-bench-header")
+        //% "Find and replace"
+        subHeaderText: qsTrId("pixel-bench-subheader")
     }
 
     SilicaFlickable {
@@ -99,7 +106,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Alpha")
+                        //% "Alpha"
+                        text: qsTrId("pixel-bench-column-alpha")
                     }
                     Label {
                         width: parent.width / 4
@@ -107,7 +115,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Red")
+                        //% "Red"
+                        text: qsTrId("pixel-bench-column-red")
                     }
                     Label {
                         width: parent.width / 4
@@ -115,7 +124,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Green")
+                        //% "Green"
+                        text: qsTrId("pixel-bench-column-green")
                     }
                     Label {
                         width: parent.width / 4
@@ -123,7 +133,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Blue")
+                        //% "Blue"
+                        text: qsTrId("pixel-bench-column-blue")
                     }
                 }
 
@@ -296,7 +307,8 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("old")
+                    //% "old"
+                    text: qsTrId("pixel-bench-type-old")
                 }
             }
 
@@ -367,7 +379,8 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("+/-")
+                    //% "+/-"
+                    text: qsTrId("pixel-bench-type-diff")
                 }
             }
 
@@ -391,16 +404,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("replace") + "\n" + qsTr("with")
+                            text: page.optionReplaceWith
                         }
                         onClicked: {
                             if (idNewAlpha.enabled === true) {
-                                idAlphaReplaceLabel.text = qsTr("keep")+ "\n" + qsTr("values")
+                                idAlphaReplaceLabel.text = page.optionKeepValues
                                 idNewAlpha.font.strikeout = true
                                 idNewAlpha.enabled = false
                             }
                             else {
-                                idAlphaReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idAlphaReplaceLabel.text = page.optionReplaceWith
                                 idNewAlpha.font.strikeout = false
                                 idNewAlpha.enabled = true
                             }
@@ -419,16 +432,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("replace") + "\n" + qsTr("with")
+                            text: page.optionReplaceWith
                         }
                         onClicked: {
                             if (idNewRed.enabled === true) {
-                                idRedReplaceLabel.text =  qsTr("keep")+ "\n" + qsTr("values")
+                                idRedReplaceLabel.text =  page.optionKeepValues
                                 idNewRed.font.strikeout = true
                                 idNewRed.enabled = false
                             }
                             else {
-                                idRedReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idRedReplaceLabel.text = page.optionReplaceWith
                                 idNewRed.font.strikeout = false
                                 idNewRed.enabled = true
                             }
@@ -447,16 +460,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("replace") + "\n" + qsTr("with")
+                            text: page.optionReplaceWith
                         }
                         onClicked: {
                             if (idNewGreen.enabled === true) {
-                                idGreenReplaceLabel.text =  qsTr("keep")+ "\n" + qsTr("values")
+                                idGreenReplaceLabel.text =  page.optionKeepValues
                                 idNewGreen.font.strikeout = true
                                 idNewGreen.enabled = false
                             }
                             else {
-                                idGreenReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idGreenReplaceLabel.text = page.optionReplaceWith
                                 idNewGreen.font.strikeout = false
                                 idNewGreen.enabled = true
                             }
@@ -475,16 +488,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("replace") + "\n" + qsTr("with")
+                            text: page.optionReplaceWith
                         }
                         onClicked: {
                             if (idNewBlue.enabled === true) {
-                                idBlueReplaceLabel.text = qsTr("keep")+ "\n" + qsTr("values")
+                                idBlueReplaceLabel.text = page.optionKeepValues
                                 idNewBlue.font.strikeout = true
                                 idNewBlue.enabled = false
                             }
                             else {
-                                idBlueReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idBlueReplaceLabel.text = page.optionReplaceWith
                                 idNewBlue.font.strikeout = false
                                 idNewBlue.enabled = true
                             }
@@ -559,7 +572,8 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("new")
+                    //% "new"
+                    text: qsTrId("pixel-bench-type-new")
                 }
             }
 
@@ -573,7 +587,8 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     leftPadding: Theme.paddingLarge
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("Results")
+                    //% "Result"
+                    text: qsTrId("pixel-bench-label-result")
                 }
                 IconButton {
                     id: idInvertResults
@@ -589,15 +604,18 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("normal")
+                        // Translation declared below
+                        text: qsTrId("pixel-bench-result-normal")
                     }
                     onClicked: {
                         if (idInvertResultsLabel.enabled === true) {
-                            idInvertResultsLabel.text = qsTr("invert")
+                            //% "inverted"
+                            idInvertResultsLabel.text = qsTrId("pixel-bench-result-inverted")
                             idInvertResultsLabel.enabled = false
                         }
                         else {
-                            idInvertResultsLabel.text = qsTr("normal")
+                            //% "normal"
+                            idInvertResultsLabel.text = qsTrId("pixel-bench-result-normal")
                             idInvertResultsLabel.enabled = true
                         }
                     }
@@ -674,7 +692,5 @@ Page {
         else {
             modePixeldraw = "invert"
         }
-
-
     }
 }

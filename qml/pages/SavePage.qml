@@ -138,7 +138,8 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Save as...")
+        //% "Save as..."
+        headerText: qsTrId("save-page-header")
 
         AppBarSpacer { }
 
@@ -189,7 +190,8 @@ Page {
                 TextField {
                     id: idFilenameNew
 
-                    label: page.validatorNameOverwrite ? qsTr("overwrite...") : ""
+                    //% "Override..."
+                    label: page.validatorNameOverwrite ? qsTrId("save-page-filename-override") : ""
                     enabled: !fileExtensionCombo.multiPagePdfCreation
                     width: parent.width - fileExtensionCombo.width
                     anchors.top: parent.top
@@ -295,7 +297,8 @@ Page {
                 readonly property string path: currentItem.path
 
                 width: parent.width
-                label: qsTr("Save location")
+                //% "Save location"
+                label: qsTrId("save-page-combobox-save-location")
                 
                 menu: ContextMenu {
                     MenuItem {
@@ -303,7 +306,8 @@ Page {
                                                        ? page.homeDirectory + "/Documents/"
                                                        : page.origImageFolderPath
 
-                        text: fileExtensionCombo.isDocument ? qsTr("Documents") : qsTr("Original Folder")
+                        //% "Original Folder"
+                        text: fileExtensionCombo.isDocument ? "Documents" : qsTrId("save-page-location-original-folder")
                     }
 
                     MenuItem {
@@ -336,7 +340,8 @@ Page {
 
             SectionHeader {
                 visible: fileExtensionCombo.multiPagePdfCreation
-                text: "\n" + qsTr("Pages Contained")
+                //% "Pages contained"
+                text: qsTrId("save-page-section-pages-contained")
                 horizontalAlignment: Text.AlignLeft
             }
 
@@ -350,14 +355,16 @@ Page {
 
                 Button {
                     icon.source: "image://theme/icon-splus-add"
-                    text: qsTr("Add page")
+                    //% "Add page"
+                    text: qsTrId("save-page-button-add-page")
 
                     onClicked: py.gatherMultiPagePdfFunction()
                 }
 
                 Button {
                     icon.source: "image://theme/icon-splus-clear"
-                    text: qsTr("Clear")
+                    //% "Clear"
+                    text: qsTrId("save-page-button-clear-pages")
                     enabled: page.pageNumberMultiPDF > 0
 
                     onClicked: py.deleteTempMultiPagePDF()
@@ -397,10 +404,12 @@ Page {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.WordWrap
                 
-                text: qsTr("Original Folder") + ": " + origImageFolderPath + "\n"
-                        + qsTr("Width") + ": " + imageWidthSave + "\n"
-                        + qsTr("Height") + ": " + imageHeightSave + "\n"
-                        + qsTr("Size") + ": " + estimatedFileSize + " kb"
+                //% "Original folder: %1\nWidth: %2\nHeight: %3\nSize: %4kb"
+                text: qsTrId("save-page-file-properties")
+                      .arg(origImageFolderPath)
+                      .arg(imageWidthSave)
+                      .arg(imageHeightSave)
+                      .arg(estimatedFileSize)
             }
 
             Label {
@@ -411,7 +420,8 @@ Page {
                 leftPadding: Theme.paddingLarge * 1.2
                 width: parent.width - 2 * Theme.paddingLarge
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: qsTr("Filetype does not support transparency.")
+                //% "Filetype does not support transparency."
+                text: qsTrId("save-page-file-type-does-not-support-transparency")
             }
         } // end Column
     } // end Silica Flickable
@@ -420,7 +430,7 @@ Page {
         page.estimatedFolder = targetFolderCombo.path
 
         page.validatorNameOverwrite = page.estimatedFolder === origImageFolderPath 
-                                 && oldFileName === idFilenameNew.text 
-                                 && "." + oldFileType === fileExtensionCombo.value
+                                      && oldFileName === idFilenameNew.text 
+                                      && "." + oldFileType === fileExtensionCombo.value
     }
 }

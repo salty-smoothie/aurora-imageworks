@@ -59,7 +59,8 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Create image")
+        //% "Create image"
+        headerText: qsTrId("new-page-header")
     }
 
     SilicaFlickable {
@@ -90,7 +91,8 @@ Page {
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.verticalCenterOffset: Theme.paddingLarge
                         text: newImageSizeX
-                        label: qsTr("width")
+                        //% "Width"
+                        label: qsTrId("new-page-textfield-width")
                         color: Theme.highlightColor
                         inputMethodHints: Qt.ImhDigitsOnly
                         font.pixelSize: Theme.fontSizeExtraSmall
@@ -118,7 +120,8 @@ Page {
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.verticalCenterOffset: Theme.paddingLarge
                         text: newImageSizeY
-                        label: qsTr("height")
+                        //% "Height"
+                        label: qsTrId("new-page-textfield-height")
                         horizontalAlignment: Text.AlignRight
                         color: Theme.highlightColor
                         inputMethodHints: Qt.ImhDigitsOnly
@@ -142,7 +145,8 @@ Page {
                         }
                         Label {
                             horizontalAlignment: Text.AlignHCenter
-                            text: qsTr("color")
+                            //% "Color"
+                            text: qsTrId("new-page-button-color")
                             color: Theme.secondaryHighlightColor
                             font.pixelSize: Theme.fontSizeSmall
                             anchors {
@@ -184,7 +188,8 @@ Page {
             }
 
             SectionHeader {
-                text: qsTr("Presets")
+                //% "Presets"
+                text: qsTrId("new-page-section-presets")
             }
 
             Grid {
@@ -211,7 +216,8 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("from") + "\n" + qsTr("clipboard")
+                        //% "From clipboard"
+                        text: qsTrId("new-page-preset-from-clipboard")
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -239,7 +245,8 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("screen") + "\n" + qsTr("resolution")
+                        //% "Screen resolution"
+                        text: qsTrId("new-page-preset-screen-resolution")
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -267,7 +274,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("DIN A4") + "\n" + qsTr("72 dpi")
+                        text: "DIN A4\n72 dpi"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -295,7 +302,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("DIN A4") + "\n" + qsTr("150 dpi")
+                        text: "DIN A4\n150 dpi"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -323,7 +330,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("DIN A4") + "\n" + qsTr("300 dpi")
+                        text: "DIN A4\n300 dpi"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -351,7 +358,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("XGA")
+                        text: "XGA"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -379,7 +386,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("WXGA")
+                        text: "WXGA"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -407,7 +414,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("WXGA+")
+                        text: "WXGA+"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -435,7 +442,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("Full HD")
+                        text: "Full HD"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {
@@ -463,7 +470,7 @@ Page {
 
                     Label {
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("4k")
+                        text: "4k"
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryHighlightColor
                         anchors {

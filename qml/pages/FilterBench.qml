@@ -42,7 +42,8 @@ Page {
        id: lutCubeFilePickerPage
 
        FilePickerPage {
-           title: qsTr("Select LUT (*.cube, *.png)")
+        //% "Select LUT (*.cube, *.png)"
+           title: qsTrId("filter-bench-file-picker-lut")
            nameFilters: [ '*.cube', '*.png' ]
 
            onSelectedContentPropertiesChanged: {
@@ -249,8 +250,10 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Filter bench")
-        subHeaderText: qsTr("Apply color filters")
+        //% "Filter bench"
+        headerText: qsTrId("filter-bench-header")
+        //% "Apply color filters"
+        subHeaderText: qsTrId("filter-bench-subheader")
     }
 
     SilicaFlickable {
@@ -262,8 +265,8 @@ Page {
         }
 
         contentHeight: columnMoods.height
-        VerticalScrollDecorator {}
 
+        VerticalScrollDecorator { }
 
         Column {
             id: columnMoods
@@ -280,13 +283,18 @@ Page {
                 ComboBox {
                     id: idComboBoxMoods
                     width: parent.width / 6 * 5 - Theme.paddingMedium
+                    //% "Mode"
+                    label: qsTrId("filter-bench-mode-combobox-label")
+
                     menu: ContextMenu {
                         MenuItem {
-                            text: qsTr("use preset")
+                            //% "Use preset"
+                            text: qsTrId("filter-bench-mode-combobox-use-preset")
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                         MenuItem {
-                            text: qsTr("use 3D-LUT file (cube, hald-png)")
+                            //% "Use 3D-LUT file (cube, hald-png)"
+                            text: qsTrId("filter-bench-mode-combobox-use-lut")
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
@@ -335,231 +343,288 @@ Page {
                 visible: idComboBoxMoods.currentIndex === 0
                 x: Theme.paddingMedium
                 width: parent.width - 2 * Theme.paddingMedium
+                //% "Preset"
+                label: qsTrId("filter-bench-preset-combobox-label")
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("original")
+                        //% Original
+                        text: qsTrId("filter-bench-preset-combobox-original")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("warmer")
+                        //% Warmer
+                        text: qsTrId("filter-bench-preset-combobox-warmer")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("colder")
+                        //% Colder
+                        text: qsTrId("filter-bench-preset-combobox-colder")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("sepia")
+                        //% Sepia
+                        text: qsTrId("filter-bench-preset-combobox-sepia")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("gotham")
+                        //% Gotham
+                        text: qsTrId("filter-bench-preset-combobox-gotham")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("crema")
+                        //% Crema
+                        text: qsTrId("filter-bench-preset-combobox-crema")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("juno")
+                        //% Juno
+                        text: qsTrId("filter-bench-preset-combobox-juno")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("kelvin")
+                        //% Kelvin
+                        text: qsTrId("filter-bench-preset-combobox-kelvin")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("xpro-ii")
+                        //% Xpro-ii
+                        text: qsTrId("filter-bench-preset-combobox-xpro-ii")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("amaro")
+                        //% Amaro
+                        text: qsTrId("filter-bench-preset-combobox-amaro")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("mayfair")
+                        //% Mayfair
+                        text: qsTrId("filter-bench-preset-combobox-mayfair")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("nineteen77")
+                        //% Nineteen77
+                        text: qsTrId("filter-bench-preset-combobox-nineteen77")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("lofi")
+                        //% Lofi
+                        text: qsTrId("filter-bench-preset-combobox-lofi")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("hudson")
+                        //% Hudson
+                        text: qsTrId("filter-bench-preset-combobox-hudson")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("redteal")
+                        //% Redteal
+                        text: qsTrId("filter-bench-preset-combobox-redteal")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("nashville")
+                        //% Nashville
+                        text: qsTrId("filter-bench-preset-combobox-nashville")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("hefe")
+                        //% Hefe
+                        text: qsTrId("filter-bench-preset-combobox-hefe")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("sierra")
+                        //% Sierra
+                        text: qsTrId("filter-bench-preset-combobox-sierra")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("clarendon")
+                        //% Clarendon
+                        text: qsTrId("filter-bench-preset-combobox-clarendon")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("reyes")
+                        //% Reyes
+                        text: qsTrId("filter-bench-preset-combobox-reyes")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("lark")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-
-                    MenuItem {
-                        text: qsTr("spring")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("summer")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("fall")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("winter")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("backlight")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("goldvibrant")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("polaroid")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("fadeprint")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("bleakfuture")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("desaturated")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("monotint")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-                    MenuItem {
-                        text: qsTr("fujigray")
+                        //% Lark
+                        text: qsTrId("filter-bench-preset-combobox-lark")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
 
-
-
                     MenuItem {
-                        text: qsTr("moon")
+                        //% Spring
+                        text: qsTrId("filter-bench-preset-combobox-spring")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("moonlight")
+                        //% Summer
+                        text: qsTrId("filter-bench-preset-combobox-summer")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("gingham")
+                        //% Fall
+                        text: qsTrId("filter-bench-preset-combobox-fall")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("tensiongreen")
+                        //% Winter
+                        text: qsTrId("filter-bench-preset-combobox-winter")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("anime")
+                        //% Backlight
+                        text: qsTrId("filter-bench-preset-combobox-backlight")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("tealmagentagold")
+                        //% Goldvibrant
+                        text: qsTrId("filter-bench-preset-combobox-goldvibrant")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("juno2")
+                        //% Polaroid
+                        text: qsTrId("filter-bench-preset-combobox-polaroid")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("hudson2")
+                        //% Fadeprint
+                        text: qsTrId("filter-bench-preset-combobox-fadeprint")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("darkblue")
+                        //% Bleakfuture
+                        text: qsTrId("filter-bench-preset-combobox-bleakfuture")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("howlite")
+                        //% Desaturated
+                        text: qsTrId("filter-bench-preset-combobox-desaturated")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Monotint
+                        text: qsTrId("filter-bench-preset-combobox-monotint")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Fujigray
+                        text: qsTrId("filter-bench-preset-combobox-fujigray")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
 
 
+
                     MenuItem {
-                        text: qsTr("cinevibrant")
+                        //% Moon
+                        text: qsTrId("filter-bench-preset-combobox-moon")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("sweetgelatto")
+                        //% Moonlight
+                        text: qsTrId("filter-bench-preset-combobox-moonlight")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("newspaper")
+                        //% Gingham
+                        text: qsTrId("filter-bench-preset-combobox-gingham")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("analog oldstyle")
+                        //% Tensiongreen
+                        text: qsTrId("filter-bench-preset-combobox-tensiongreen")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("hilutite")
+                        //% Anime
+                        text: qsTrId("filter-bench-preset-combobox-anime")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("hackmanite")
+                        //% Tealmagentagold
+                        text: qsTrId("filter-bench-preset-combobox-tealmagentagold")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("herderite")
+                        //% Juno2
+                        text: qsTrId("filter-bench-preset-combobox-juno2")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("heulandite")
+                        //% Hudson2
+                        text: qsTrId("filter-bench-preset-combobox-hudson2")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("hiddenite")
+                        //% Darkblue
+                        text: qsTrId("filter-bench-preset-combobox-darkblue")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("bleach")
+                        //% Howlite
+                        text: qsTrId("filter-bench-preset-combobox-howlite")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+
+
+                    MenuItem {
+                        //% Cinevibrant
+                        text: qsTrId("filter-bench-preset-combobox-cinevibrant")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("dropblues")
+                        //% Sweetgelatto
+                        text: qsTrId("filter-bench-preset-combobox-sweetgelatto")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        text: qsTr("latesunset")
+                        //% Newspaper
+                        text: qsTrId("filter-bench-preset-combobox-newspaper")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Analog oldstyle
+                        text: qsTrId("filter-bench-preset-combobox-analog-oldstyle")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Hilutite
+                        text: qsTrId("filter-bench-preset-combobox-hilutite")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Hackmanite
+                        text: qsTrId("filter-bench-preset-combobox-hackmanite")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Herderite
+                        text: qsTrId("filter-bench-preset-combobox-herderite")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Heulandite
+                        text: qsTrId("filter-bench-preset-combobox-heulandite")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Hiddenite
+                        text: qsTrId("filter-bench-preset-combobox-hiddenite")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Bleach
+                        text: qsTrId("filter-bench-preset-combobox-bleach")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Dropblues
+                        text: qsTrId("filter-bench-preset-combobox-dropblues")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        //% Latesunset
+                        text: qsTrId("filter-bench-preset-combobox-latesunset")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -579,8 +644,8 @@ Page {
                         height: Theme.itemSizeSmall
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
-                        //font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("file:")
+                        //% "File:"
+                        text: qsTrId("filter-bench-label-load-file")
                     }
                     IconButton {
                         id: idFilePicker
@@ -598,9 +663,9 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge * 1.5
                             rightPadding: Theme.paddingLarge * 1.5
-                            //font.pixelSize: Theme.fontSizeExtraSmall
                             truncationMode: TruncationMode.Elide
-                            text: (cubeFileName === "") ? qsTr("load") : cubeFileName
+                            //% "Load"
+                            text: cubeFileName === "" ? qsTrId("filter-bench-button-load-file") : cubeFileName
                         }
                     }
                 }

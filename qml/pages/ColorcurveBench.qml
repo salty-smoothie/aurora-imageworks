@@ -88,20 +88,23 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Color curve bench")
-        subHeaderText: qsTr("View histogram or adjust curves")
+        //% "Color curve bench"
+        headerText: qsTrId("color-curve-bench-header")
+
+        //% "View histogram or adjust curves"
+        subHeaderText: qsTrId("color-curve-bench-subheader")
     }
 
     SilicaFlickable {
         id: listView
-        
+
         anchors {
             fill: parent
             topMargin: appBar.height
         }
 
-        contentHeight: columnSaveAs.height 
-        
+        contentHeight: columnSaveAs.height
+
         VerticalScrollDecorator {}
 
         Column {
@@ -122,7 +125,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Alpha")
+                        //% "Alpha"
+                        text: qsTrId("color-curve-bench-alpha")
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
@@ -147,7 +151,8 @@ Page {
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color : Theme.highlightColor
-                        text: qsTr("RGB")
+                        //% "RGB"
+                        text: qsTrId("color-curve-bench-rgb")
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
@@ -171,7 +176,8 @@ Page {
                         horizontalAlignment: Text.horizontalCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Red")
+                        //% "Red"
+                        text: qsTrId("color-curve-bench-red")
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
@@ -195,7 +201,8 @@ Page {
                         horizontalAlignment: Text.horizontalCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Green")
+                        //% "Green"
+                        text: qsTrId("color-curve-bench-green")
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
@@ -219,7 +226,8 @@ Page {
                         horizontalAlignment: Text.horizontalCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Blue")
+                        //% "Blue"
+                        text: qsTrId("color-curve-bench-blue")
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
@@ -295,7 +303,8 @@ Page {
                 Label {
                     anchors.horizontalCenter: labelGraphLeft.horizontalCenter
                     anchors.verticalCenter: idBackgroundFillerWhite.verticalCenter
-                    text: qsTr("output  curve")
+                    //% "output  curve"
+                    text: qsTrId("color-curve-bench-output-curve")
                     font.pixelSize: Theme.fontSizeExtraSmall
                     rotation: -90
                 }
@@ -312,7 +321,8 @@ Page {
                     anchors.horizontalCenter: idBackgroundFillerWhite.horizontalCenter
                     anchors.bottom: idBackgroundFillerWhite.bottom
                     anchors.bottomMargin: Theme.paddingSmall
-                    text: qsTr("input  values")
+                    //% "input  values"
+                    text: qsTrId("color-curve-bench-input-values")
                     font.pixelSize: Theme.fontSizeExtraSmall
                 }
                 Label {
@@ -338,7 +348,8 @@ Page {
                     anchors.horizontalCenter: idBackgroundFillerWhite.right
                     anchors.horizontalCenterOffset: - Theme.paddingLarge
                     anchors.verticalCenter: idBackgroundFillerWhite.verticalCenter
-                    text: qsTr("occurances")
+                    //% "occurrences"
+                    text: qsTrId("color-curve-bench-occurrences")
                     font.pixelSize: Theme.fontSizeExtraSmall
                     rotation: -90
                 }
@@ -629,7 +640,8 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     leftPadding: Theme.paddingLarge * 1.25
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("min")
+                    //% "min"
+                    text: qsTrId("color-curve-bench-min")
                 }
                 TextField {
                     id: idMinManual
@@ -652,7 +664,8 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    //text: qsTr("only between")
+                    //% "only between"
+                    //text: qsTrId("color-curve-bench-only-between")
                 }
                 TextField {
                     id: idMaxManual
@@ -676,7 +689,8 @@ Page {
                     horizontalAlignment: Text.AlignRight
                     rightPadding: Theme.paddingLarge * 1.25
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("max")
+                    //% "max"
+                    text: qsTrId("color-curve-bench-max")
                 }
             }
             Rectangle {
@@ -730,5 +744,4 @@ Page {
     function getCurrentSliderValue( handleName ) {
         currentSliderValue = Math.round(255 / colorcurveCanvas.height * ( colorcurveCanvas.height - ( handleName.y + handleHeight/2 )))
     }
-
 }

@@ -49,9 +49,11 @@ Page {
                 imgDataHeight = imgHeight
 
                 if (imgExifFull === "This file contains no EXIF tags.") {
-                    imgDataExifFull = qsTr("File contains no EXIF tags.")
+                    //% "File contains no EXIF tags."
+                    imgDataExifFull = qsTrId("metadata-page-no-exif-tags")
                 } else if (imgExifFull === "Filetype does not support EXIF tags.") {
-                    imgDataExifFull = qsTr("Filetype does not support EXIF tags.")
+                    //% "Filetype does not support EXIF tags."
+                    imgDataExifFull = qsTrId("metadata-page-no-exif-support")
                 } else {
                     imgDataExifFull = imgExifFull
                 }
@@ -82,7 +84,8 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Metadata")
+        //% "Metadata"
+        headerText: qsTrId("metadata-page-header")
     }
 
     SilicaFlickable {
@@ -103,7 +106,8 @@ Page {
             width: parent.width
 
             SectionHeader {
-                text: qsTr("File information")
+                //% "File information"
+                text: qsTrId("metadata-page-section-file-information")
                 horizontalAlignment: Text.AlignLeft
             }
 
@@ -112,18 +116,20 @@ Page {
                 width: parent.width - 2*Theme.paddingLarge
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
-                text:   qsTr("File") + ": " + origImageFileName + "\n"
-                      + qsTr("Path") + ": " + origImageFolderPath + "\n"
-                      + qsTr("Size") + ": " + estimatedFileSize + " kb" + "\n"
-                      + qsTr("Width") + ": " + imgDateWidth + " px" + "\n"
-                      + qsTr("Height") + ": " + imgDataHeight + " px" + "\n"
-                      + qsTr("Format") + ": " + imgDataFormat + "\n"
-                      + qsTr("Mode") + ": " + imgDataMode + "\n"
-                      + qsTr("Palette") + ": " + imgDataPalette + "\n"
+                //% "File: %1\nPath: %2\nSize: %3kb\nWidth: %4px\nHeight: %5px\nFormat: %6\nMode: %7\nPalette: %8"
+                text: qsTrId("metadata-page-file-information")
+                      .arg(origImageFileName)
+                      .arg(origImageFolderPath)
+                      .arg(estimatedFileSize)
+                      .arg(imgDateWidth)
+                      .arg(imgDataHeight)
+                      .arg(imgDataMode)
+                      .arg(imgDataPalette)
             }
 
             SectionHeader {
-                text: qsTr("EXIF tags")
+                //% "EXIF tags"
+                text: qsTrId("metadata-page-section-exif-tags")
                 horizontalAlignment: Text.AlignLeft
             }
 

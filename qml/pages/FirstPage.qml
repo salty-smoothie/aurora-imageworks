@@ -230,7 +230,8 @@ Page {
        id: filePickerPage
     
        FilePickerPage {
-           title: qsTr("Select image")
+        //% "Select image"
+           title: qsTrId("main-page-file-picker-image")
            nameFilters: [ '*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.bmp', '*.gif' ]
     
            onSelectedContentPropertiesChanged: {
@@ -269,7 +270,8 @@ Page {
        id: fontPickerPage
     
        FilePickerPage {
-           title: qsTr("Select font")
+            //% "Select font"
+           title: qsTrId("main-page-file-picker-font")
            nameFilters: [ '*.ttf', '*.otf' ]
     
            onSelectedContentPropertiesChanged: {
@@ -300,7 +302,7 @@ Page {
 
             // Handlers = Signals to do something in QML with received Infos from pyotherside
             setHandler('homePathFolder', function( homeDir ) {
-                tempImageFolderPath = homeDir + "/.cache/harbour-simplecrop/"
+                tempImageFolderPath = homeDir + "/.cache/moe.smoothie/imageworks/"
                 saveImageFolderPath = homeDir + "/Pictures" + "/Imageworks/"
                 homeDirectory = homeDir
                 py.createTmpAndSaveFolder(tempImageFolderPath, saveImageFolderPath)
@@ -347,7 +349,6 @@ Page {
             });
 
             setHandler('copyPasteImageDeleted', function(inputPathPy) {
-                //console.log("copyPaste file deleted: " + inputPathPy)
                 copyPastePath = ""
             });
 
@@ -714,12 +715,14 @@ Page {
             });
             
             setHandler('warningPILNotAvailable', function() {
-                appBar.subHeaderText = qsTr("python3-pillow is not installed")
+                //% "python3-pillow is not installed"
+                appBar.subHeaderText = qsTrId("main-page-subheader-no-pillow")
                 warningNoPillow = true
             });
             
             setHandler('warningPIL2old', function( ) {
-                appBar.subHeaderText = qsTr("some functions require python3-pillow 7+")
+                //% "Some functions require python3-pillow 7+"
+                appBar.subHeaderText = qsTrId("main-page-subheader-old-pillow")
                 idIconButtonCollage.enabled = false
                 //warningNoPillow = true
             });
@@ -1498,7 +1501,7 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Imageworks")
+        headerText: "Imageworks"
         subHeaderText: idImageLoadedFreecrop.source.toString()
 
         AppBarSpacer { }
@@ -1510,7 +1513,8 @@ Page {
             visible: undoNr >= 1
 
             onClicked: undoBackwards()
-            onPressAndHold: remorse.execute(qsTr("Restore original?"), py.deleteAllTMPFunction)
+            //% "Restore original?"
+            onPressAndHold: remorse.execute(qsTrId("main-page-remorse-restore-original"), py.deleteAllTMPFunction)
         }
 
         AppBarButton {
@@ -1554,7 +1558,8 @@ Page {
 
                 PopupMenuItem {
                     enabled: warningNoPillow === false
-                    text: qsTr("Open from gallery")
+                    //% "Open from gallery"
+                    text: qsTrId("main-page-appbar-action-open-from-gallery")
                     icon.source: "image://theme/icon-splus-image"
 
                     onClicked: pageStack.push(imagePickerPage)
@@ -1562,14 +1567,16 @@ Page {
 
                 PopupMenuItem {
                     enabled: warningNoPillow === false
-                    text: qsTr("Open from files")
+                    //% "Open from files"
+                    text: qsTrId("main-page-appbar-action-open-from-files")
                     icon.source: "image://theme/icon-splus-file-folder"
 
                     onClicked: pageStack.push(filePickerPage)
                 }
 
                 PopupMenuItem {
-                    text: qsTr("About Imageworks")
+                    //% "About Imageworks"
+                    text: qsTrId("main-page-appbar-action-about-app")
                     icon.source: "image://theme/icon-splus-about"
 
                     onClicked: pageStack.push("AboutPage.qml")
@@ -1612,7 +1619,8 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Welcome to Imageworks!")
+                //% "Welcome to Imageworks!"
+                text: qsTrId("welcome-widget-title")
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeHuge
                 wrapMode: Text.WordWrap
@@ -1621,7 +1629,8 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Open an exisiting image or create a new one to start editing")
+                //% "Open an exisiting image or create a new one to start editing"
+                text: qsTrId("welcome-widget-subtitle")
                 color: Theme.secondaryColor
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
@@ -1633,21 +1642,24 @@ Page {
 
                 Button {
                     icon.source: "image://theme/icon-splus-image"
-                    text: qsTr("Open from gallery")
+                    //% "Open from gallery"
+                    text: qsTrId("welcome-widget-button-gallery")
 
                     onClicked: page.openFromGallery()
                 }
 
                 Button {
                     icon.source: "image://theme/icon-splus-file-folder"
-                    text: qsTr("Open from files")
+                    //% "Open from files"
+                    text: qsTrId("welcome-widget-button-files")
 
                     onClicked: page.openFromFiles()
                 }
 
                 Button {
                     icon.source: "image://theme/icon-splus-new"
-                    text: qsTr("Create new image")
+                    //% "Create new image"
+                    text: qsTrId("welcome-widget-button-new")
 
                     onClicked: page.openNewImagePage()
                 }
@@ -2367,7 +2379,8 @@ Page {
                     height: toolbar.itemHeight
                     icon.source: "image://theme/icon-m-crop"
                     down: toolbar.selectedButton === buttonCrop
-                    label: qsTr("Crop")
+                    //% "Crop"
+                    label: qsTrId("toolbar-item-crop")
 
                     onClicked: {
                         toolbar.selectedButton = buttonCrop
@@ -2386,7 +2399,8 @@ Page {
                     height: toolbar.itemHeight
                     icon.source: "image://theme/icon-m-edit"
                     down: toolbar.selectedButton === buttonPaint
-                    label: qsTr("Draw")
+                    //% "Draw"
+                    label: qsTrId("toolbar-item-draw")
 
                     onClicked: {
                         toolbar.selectedButton = buttonPaint
@@ -2401,9 +2415,10 @@ Page {
                     height: toolbar.itemHeight
                     down: toolbar.selectedButton === buttonShape
                     icon.source: "image://theme/icon-m-rotate"
-                    label: qsTr("Rotate")
+                    //% "Rotate"
+                    label: qsTrId("toolbar-button-rotate")
                     
-                    onClicked: console.log("selecting button shape"), toolbar.selectedButton = buttonShape
+                    onClicked: toolbar.selectedButton = buttonShape
                 }
 
                 ToolbarItem {
@@ -2413,7 +2428,8 @@ Page {
                     height: toolbar.itemHeight
                     icon.source: "image://theme/icon-m-light-contrast"
                     down: toolbar.selectedButton === buttonColors
-                    label: qsTr("Adjust")
+                    //% "Adjust"
+                    label: qsTrId("toolbar-button-adjust")
 
                     onClicked: toolbar.selectedButton = buttonColors
                 }
@@ -2425,7 +2441,8 @@ Page {
                     height: toolbar.itemHeight
                     icon.source: "image://theme/icon-m-scale"
                     down: toolbar.selectedButton === buttonScale
-                    label: qsTr("Resize")
+                    //% "Resize"
+                    label: qsTrId("toolbar-item-resize")
 
                     onClicked: toolbar.selectedButton = buttonScale
                 }
@@ -2436,7 +2453,8 @@ Page {
                     width: toolbar.itemWidth
                     height: toolbar.itemHeight
                     down: toolbar.selectedButton === buttonWorkbenches
-                    label: qsTr("Advanced")
+                    //% "Advanced"
+                    label: qsTrId("toolbar-button-advanced")
                     
                     icon {
                         source: "../symbols/icon-m-effects.svg"
@@ -2454,12 +2472,14 @@ Page {
                     height: toolbar.itemHeight
                     down: toolbar.selectedButton === buttonFile
                     icon.source: "image://theme/icon-m-file-document"
-                    label: qsTr("File")
+                    //% "File"
+                    label: qsTrId("toolbar-button-file")
 
                     onClicked: toolbar.selectedButton = buttonFile
                 }
             } // end Toolbar
 
+            // begin tool crop
             Grid {
                 id: idGridCropPerspectivePicker
 
@@ -2516,11 +2536,13 @@ Page {
                     
                     menu: ContextMenu {
                         MenuItem {
-                            text: qsTr("stretch to edges")
+                            //% "stretch to edges"
+                            text: qsTrId("crop-type-stretch")
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                         MenuItem {
-                            text: qsTr("fold from edges")
+                            //% "fold from edges"
+                            text: qsTrId("crop-type-fold")
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
@@ -2535,7 +2557,8 @@ Page {
                     
                     menu: ContextMenu {
                         MenuItem {
-                            text: qsTr("free crop")
+                            //% "free crop"
+                            text: qsTrId("crop-ratio-free")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 0
@@ -2545,11 +2568,12 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("original")
+                            //% "original"
+                            text: qsTrId("crop-ratio-original")
                             font.pixelSize: Theme.fontSizeExtraSmall
 
                             onClicked: {
-                                // original ration of cropping zone, takes handles into account
+                                // original ratio of cropping zone, takes handles into account
                                 handleWidth = 2 * Theme.paddingLarge
                                 handleHeight = 2 * Theme.paddingLarge
                                 
@@ -2560,7 +2584,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("manual")
+                            //% "manual"
+                            text: qsTrId("crop-ratio-manual")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 1
@@ -2572,7 +2597,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("DIN-landscape")
+                            //% "DIN-landscape"
+                            text: qsTrId("crop-ratio-din-landscape")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 1754/1240
@@ -2582,7 +2608,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("DIN-portrait")
+                            //% "DIN-portrait"
+                            text: qsTrId("crop-ration-din-portrait")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 1240/1754
@@ -2592,7 +2619,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("4:3")
+                            //% "4:3"
+                            text: qsTrId("crop-ratio-4-by-3")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 4/3
@@ -2602,7 +2630,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("16:10")
+                            //% "16:10"
+                            text: qsTrId("crop-ratio-16-by-10")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 16/10
@@ -2612,7 +2641,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("16:9")
+                            //% "16:9"
+                            text: qsTrId("crop-ratio-16-by-9")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 16/9
@@ -2622,7 +2652,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("21:9")
+                            //% "21:9"
+                            text: qsTrId("crop-ratio-21-by-9")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 21/9
@@ -2632,7 +2663,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("1:1")
+                            //% "1:1"
+                            text: qsTrId("crop-ratio-1-by-1")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 1
@@ -2642,7 +2674,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("3:4")
+                            //% "3:4"
+                            text: qsTrId("crop-ratio-3-by-4")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 3/4
@@ -2652,7 +2685,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("1:2")
+                            //% "1:2"
+                            text: qsTrId("crop-ratio-1-by-2")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 1/2
@@ -2662,7 +2696,8 @@ Page {
                             }
                         }
                         MenuItem {
-                            text: qsTr("pixels")
+                            //% "pixels"
+                            text: qsTrId("crop-ratio-pixels")
                             font.pixelSize: Theme.fontSizeExtraSmall
                             onClicked: {
                                 croppingRatio = 0
@@ -2808,7 +2843,8 @@ Page {
                         width: parent.width / 2
                         anchors.verticalCenter: parent.verticalCenter
                         text: "0"
-                        label: qsTr("point 1x")
+                        //% "point 1x"
+                        label: qsTrId("crop-first-point-x")
                         color: Theme.highlightColor
                         inputMethodHints: Qt.ImhDigitsOnly
                         font.pixelSize: Theme.fontSizeExtraSmall
@@ -2830,7 +2866,8 @@ Page {
                         width: parent.width / 2
                         anchors.verticalCenter: parent.verticalCenter
                         text: idImageLoadedFreecrop.sourceSize.width
-                        label: qsTr("point 2x")
+                        //% "point 2x"
+                        label: qsTrId("crop-second-point-x")
                         horizontalAlignment: Text.AlignRight
                         color: Theme.highlightColor
                         inputMethodHints: Qt.ImhDigitsOnly
@@ -2871,7 +2908,8 @@ Page {
                         width: parent.width / 2
                         anchors.verticalCenter: parent.verticalCenter
                         text: "0"
-                        label: qsTr("point 1y")
+                        //% "point 1y"
+                        label: qsTrId("crop-first-point-y")
                         color: Theme.highlightColor
                         inputMethodHints: Qt.ImhDigitsOnly
                         font.pixelSize: Theme.fontSizeExtraSmall
@@ -2886,7 +2924,8 @@ Page {
                         width: parent.width / 2
                         anchors.verticalCenter: parent.verticalCenter
                         text: idImageLoadedFreecrop.sourceSize.height
-                        label: qsTr("point 2y")
+                        //% "point 2y"
+                        label: qsTrId("crop-second-point-y")
                         horizontalAlignment: Text.AlignRight
                         color: Theme.highlightColor
                         inputMethodHints: Qt.ImhDigitsOnly
@@ -2974,7 +3013,8 @@ Page {
                         horizontalAlignment: Text.AlignRight
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Fade
-                        text: qsTr("width, preserve ratio")
+                        //% "width, preserve ratio"
+                        text: qsTrId("resize-type-width-preserve-ratio")
                     }
                 }
                 IconButton {
@@ -3021,7 +3061,8 @@ Page {
                         horizontalAlignment: Text.AlignRight
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Fade
-                        text: qsTr("height, preserve ratio")
+                        //% "height, preserve ratio"
+                        text: qsTrId("resize-type-height-preserve-ratio")
                     }
                 }
                 IconButton {
@@ -3090,7 +3131,8 @@ Page {
                         horizontalAlignment: Text.AlignRight
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Fade
-                        text: qsTr("width  x  height")
+                        //% "width  x  height"
+                        text: qsTrId("resize-type-width-x-height")
                     }
                 }
                 IconButton {
@@ -3142,7 +3184,8 @@ Page {
 
                             leftPadding: Theme.paddingLarge + Theme.paddingSmall/3*2
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("screen ratio")
+                            // Translation specified below
+                            text: qsTrId("resize-type-ratio-combobox-screen-ratio")
                             color: Theme.highlightColor
                             opacity: idImageLoadedFreecrop.status !== Image.Null && finishedLoading
                                      ? 1 
@@ -3151,7 +3194,8 @@ Page {
 
                         menu: ContextMenu {
                             MenuItem {
-                                text: qsTr("screen ratio")
+                                //% "screen ratio"
+                                text: qsTrId("resize-type-ratio-combobox-screen-ratio")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3160,7 +3204,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("manual")
+                                //% "manual"
+                                text: qsTrId("resize-type-ratio-combobox-manual")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3169,7 +3214,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("DIN-landscape")
+                                //% "DIN-landscape"
+                                text: qsTrId("resize-type-ratio-combobox-din-landscape")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3178,7 +3224,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("DIN-portrait")
+                                //% "DIN-portrait"
+                                text: qsTrId("resize-type-ratio-combobox-din-portrait")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                              
                                 onClicked: {
@@ -3187,7 +3234,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("4:3")
+                                //% "4:3"
+                                text: qsTrId("resize-type-ratio-combobox-4-by-3")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                              
                                 onClicked: {
@@ -3196,7 +3244,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("16:10")
+                                //% "16:10"
+                                text: qsTrId("resize-type-ratio-combobox-16-by-10")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                              
                                 onClicked: {
@@ -3205,7 +3254,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("16:9")
+                                //% "16:9"
+                                text: qsTrId("resize-type-ratio-combobox-16-by-9")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                              
                                 onClicked: {
@@ -3214,7 +3264,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("21:9")
+                                //% "21:9"
+                                text: qsTrId("resize-type-ratio-combobox-21-by-9")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3223,7 +3274,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("1:1")
+                                //% "1:1"
+                                text: qsTrId("resize-type-ratio-combobox-1-by-1")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3232,7 +3284,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("3:4")
+                                //% "3:4"
+                                text: qsTrId("resize-type-ratio-combobox-3-by-4")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3241,7 +3294,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("1:2")
+                                //% "1:2"
+                                text: qsTrId("resize-type-ratio-combobox-1-by-2")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3249,7 +3303,6 @@ Page {
                                     idComboBoxPadingRatioText.text = text
                                 }
                             }
-
                         }
                     }
 
@@ -3261,7 +3314,8 @@ Page {
                         horizontalAlignment: Text.AlignHCenter
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Fade
-                        text: qsTr("padding with")
+                        //% "padding with"
+                        text: qsTrId("resize-type-ratio-fill-type")
                     }
 
                     ComboBox {
@@ -3281,14 +3335,16 @@ Page {
                             }
                             
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("color")
+                            // Translation provided below
+                            text: qsTrId("resize-type-ratio-fill-type-combobox-color")
                             color: Theme.highlightColor
                             opacity: idImageLoadedFreecrop.status !== Image.Null && finishedLoading ? 1 : 0.4
                         }
 
                         menu: ContextMenu {
                             MenuItem {
-                                text: qsTr("color")
+                                //% "color"
+                                text: qsTrId("resize-type-ratio-fill-type-combobox-color")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3297,7 +3353,8 @@ Page {
                                 }
                             }
                             MenuItem {
-                                text: qsTr("blur")
+                                //% "blur"
+                                text: qsTrId("resize-type-ratio-fill-type-combobox-blur")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                                 
                                 onClicked: {
@@ -3420,7 +3477,8 @@ Page {
                             horizontalCenter: parent.horizontalCenter
                         }
 
-                        text: qsTr("left")
+                        //% "left"
+                        text: qsTrId("rotate-button-left")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -3443,7 +3501,8 @@ Page {
                             horizontalCenter: parent.horizontalCenter
                         }
 
-                        text: qsTr("right")
+                        //% "right"
+                        text: qsTrId("rotate-button-right")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -3467,7 +3526,8 @@ Page {
                             horizontalCenter: parent.horizontalCenter
                         }
 
-                        text: qsTr("flip")
+                        //% "flip"
+                        text: qsTrId("rotate-button-flip")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -3490,7 +3550,8 @@ Page {
                             horizontalCenter: parent.horizontalCenter
                         }
 
-                        text: qsTr("mirror")
+                        //% "mirror"
+                        text: qsTrId("rotate-button-mirror")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -3560,23 +3621,28 @@ Page {
                         
                         menu: ContextMenu {
                             MenuItem {
-                                text: qsTr("brightness")
+                                //% "brightness"
+                                text: qsTrId("adjust-combobox-brightness")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                             MenuItem {
-                                text: qsTr("contrast")
+                                //% "contrast"
+                                text: qsTrId("adjust-combobox-contrast")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                             MenuItem {
-                                text: qsTr("color")
+                                //% "color"
+                                text: qsTrId("adjust-combobox-color")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                             MenuItem {
-                                text: qsTr("sharpness")
+                                //% "sharpness"
+                                text: qsTrId("adjust-combobox-sharpness")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                             MenuItem {
-                                text: qsTr("hue")
+                                //% "hue"
+                                text: qsTrId("adjust-combobox-hue")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -3695,21 +3761,24 @@ Page {
                             width: parent.width / 7
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTr("red") : ""
+                            //% "red"
+                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTrId("adjust-hue-slider-red") : ""
                         }
                     
                         Label {
                             width: parent.width / 7
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTr("yellow") : ""
+                            //% "yellow"
+                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTrId("adjust-hue-slider-yellow") : ""
                         }
                     
                         Label {
                             width: parent.width / 7
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTr("green") : ""
+                            //% "green"
+                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTrId("adjust-hue-slider-green") : ""
                         }
                     
                         Label {
@@ -3723,21 +3792,24 @@ Page {
                             width: parent.width / 7
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTr("blue") : ""
+                            //% "blue"
+                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTrId("adjust-hue-slider-blue") : ""
                         }
                     
                         Label {
                             width: parent.width / 7
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTr("violet") : ""
+                            //% "violet"
+                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTrId("adjust-hue-slider-violet") : ""
                         }
                     
                         Label {
                             width: parent.width / 7
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTr("red") : ""
+                            // Translation provided above
+                            text: (idComboBoxEnhance.currentIndex === 4) ? qsTrId("adjust-hue-slider-red") : ""
                         }
                     }
                 }
@@ -3793,7 +3865,8 @@ Page {
                     
                         font.pixelSize: Theme.fontSizeExtraSmall
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("pixel")
+                        //% "pixel"
+                        text: qsTrId("advanced-workbench-pixel")
                     }
                 }
 
@@ -3828,7 +3901,8 @@ Page {
                     
                         font.pixelSize: Theme.fontSizeExtraSmall
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("channel")
+                        //% "channel"
+                        text: qsTrId("advanced-workbench-channel")
                     }
                 }
 
@@ -3874,7 +3948,8 @@ Page {
                     
                         font.pixelSize: Theme.fontSizeExtraSmall
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("color")
+                        //% "color"
+                        text: qsTrId("advanced-workbench-color")
                     }
                 }
 
@@ -3923,7 +3998,8 @@ Page {
 
                         font.pixelSize: Theme.fontSizeExtraSmall
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("filter")
+                        //% "filter"
+                        text: qsTrId("advanced-workbench-filter")
                     }
                 }
 
@@ -3977,7 +4053,8 @@ Page {
 
                         font.pixelSize: Theme.fontSizeExtraSmall
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("effect")
+                        //% "effect"
+                        text: qsTrId("advanced-workbench-effect")
                     }
                 }
 
@@ -4028,7 +4105,8 @@ Page {
 
                         font.pixelSize: Theme.fontSizeExtraSmall
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("collage")
+                        //% "collage"
+                        text: qsTrId("advanced-workbench-collage")
                     }
                 }
 
@@ -4050,8 +4128,8 @@ Page {
                     icon.source: "image://theme/icon-m-delete"
 
                     onClicked: {
-                        pageStack.push("ConfirmDeletionPage.qml", { "callback": py.deleteOriginalFunction, 
-                                                                    "filePath": idImageLoadedFreecrop.source })
+                        const args = { "callback": py.deleteOriginalFunction, "filePath": idImageLoadedFreecrop.source }
+                        pageStack.push("ConfirmDeletionPage.qml", args)
                     }
                     
                     Label {
@@ -4062,7 +4140,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("delete")
+                        //% "delete"
+                        text: qsTrId("file-option-delete")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4100,7 +4179,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("rename")
+                        //% "rename"
+                        text: qsTrId("file-option-rename")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4129,7 +4209,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("meta")
+                        //% "meta"
+                        text: qsTrId("file-option-meta")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4155,7 +4236,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("new")
+                        //% "new"
+                        text: qsTrId("file-option-new")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4177,6 +4259,7 @@ Page {
                     down: true
                     width: parent.width / itemsPerRow
                     height: Theme.itemSizeSmall
+
                     icon {
                         source: "../symbols/icon-m-freedraw.svg"
                         width: Theme.iconSizeMedium
@@ -4205,7 +4288,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("free")
+                        //% "free"
+                        text: qsTrId("draw-tool-free-brush")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4245,7 +4329,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("area")
+                        //% "area"
+                        text: qsTrId("draw-tool-area")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4280,7 +4365,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("frame")
+                        //% "frame"
+                        text: qsTrId("draw-tool-frame")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4320,7 +4406,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("spray")
+                        //% "spray"
+                        text: qsTrId("draw-tool-spray")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4355,7 +4442,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("copy")
+                        //% "copy"
+                        text: qsTrId("draw-tool-copy")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4400,7 +4488,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("paste")
+                        //% "paste"
+                        text: qsTrId("draw-tool-paste")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4440,7 +4529,8 @@ Page {
                         }
                     
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("line")
+                        //% "line"
+                        text: qsTrId("draw-tool-line")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4479,7 +4569,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("point")
+                        //% "point"
+                        text: qsTrId("draw-tool-point")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4519,7 +4610,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("symbol")
+                        //% "symbol"
+                        text: qsTrId("draw-tool-symbol")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4554,7 +4646,8 @@ Page {
                         }
                     
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("label")
+                        //% "label"
+                        text: qsTrId("draw-tool-label")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4594,7 +4687,8 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("color")
+                        //% "color"
+                        text: qsTrId("draw-tool-color")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
 
@@ -4606,10 +4700,12 @@ Page {
                     enabled: idImageLoadedFreecrop.status !== Image.Null && finishedLoading
                     width: parent.width / itemsPerRow
                     height: Theme.itemSizeSmall
+
                     icon {
                         source: paintToolColor === "#00000000" 
                                 ? "../symbols/icon-m-color-alpha.svg" 
                                 : "../symbols/icon-m-color.svg"
+
                         width: Theme.iconSizeMedium
                         height: Theme.iconSizeMedium
                         color: paintToolColor === "#00000000" ? "white" : paintToolColor
@@ -4633,9 +4729,7 @@ Page {
                         }
 
                         horizontalAlignment: Text.AlignHCenter
-                        text: idPaintShapesButton.down 
-                              ? qsTr("100%") 
-                              : Math.round( idSliderColorAlpha.value / 255 * 100) + "%"
+                        text: (idPaintShapesButton.down ? 100 : Math.round(idSliderColorAlpha.value / 255 * 100)) + "%"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
@@ -4693,19 +4787,23 @@ Page {
                             
                             menu: ContextMenu {
                                 MenuItem {
-                                    text: qsTr("line")
+                                    //% "line"
+                                    text: qsTrId("draw-type-comobobox-line")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                                 MenuItem {
-                                    text: qsTr("fill")
+                                    //% "fill"
+                                    text: qsTrId("draw-type-comobobox-fill")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                                 MenuItem {
-                                    text: qsTr("keep")
+                                    //% "keep"
+                                    text: qsTrId("draw-type-comobobox-keep")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                                 MenuItem {
-                                    text: qsTr("remove")
+                                    //% "remove"
+                                    text: qsTrId("draw-type-comobobox-remove")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                             }
@@ -4723,6 +4821,7 @@ Page {
                             enabled: idImageLoadedFreecrop.status !== Image.Null 
                                      && finishedLoading 
                                      && !freeDrawSliderSizeLock
+
                             opacity: freeDrawSliderSizeLock ? 0.5 : 1
                             visible: idComboBoxCanvasDraw.currentIndex === 0
                             width: parent.width / (itemsPerRowLess - 1) * (itemsPerRowLess - 2)
@@ -4741,7 +4840,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("size") + " " + idCanvasThicknessSlider.value
+                                //% "size %1"
+                                text: qsTrId("draw-thikness-slider").arg(idCanvasThicknessSlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
 
@@ -4822,7 +4922,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("blur") + " " + idBlurIntensitySlider.value
+                                //% "blur %1"
+                                text: qsTrId("draw-blur-intensity-slider").arg(idBlurIntensitySlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -4836,15 +4937,18 @@ Page {
                             
                             menu: ContextMenu {
                                 MenuItem {
-                                    text: qsTr("fill")
+                                    //% "fill"
+                                    text: qsTrId("draw-cut-shape-combobox-fill")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                                 MenuItem {
-                                    text: qsTr("keep")
+                                    //% "keep"
+                                    text: qsTrId("draw-cut-shape-combobox-keep")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                                 MenuItem {
-                                    text: qsTr("remove")
+                                    //% "remove"
+                                    text: qsTrId("draw-cut-shape-combobox-remove")
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                             }
@@ -4905,7 +5009,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("size") + " " + idFrameThicknessSlider.value
+                                //% "size %1"
+                                text: qsTrId("draw-frame-thickness-slider").arg(idFrameThicknessSlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
 
@@ -4960,7 +5065,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("size") + " " + idSprayThicknessSlider.value
+                                //% "size %1"
+                                text: qsTrId("draw-spray-thickness-slider").arg(idSprayThicknessSlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -4992,7 +5098,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("dots") + " " + idSliderSprayAmount.value
+                                //% "dots %1"
+                                text: qsTrId("draw-spray-amount-slider").arg(idSliderSprayAmount.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -5068,7 +5175,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("size") + " " + idShapeThicknessSlider.value
+                                //% "size %1"
+                                text: qsTrId("draw-shape-thickness-slider").arg(idShapeThicknessSlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
 
@@ -5122,7 +5230,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("size") + " " + idPointThicknessSlider.value
+                                //% "size %1"
+                                text: qsTrId("draw-point-thickness-slider").arg(idPointThicknessSlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
 
@@ -5176,7 +5285,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("size") + " " + idLineThicknessSlider.value
+                                //% "size %1"
+                                text: qsTrId("draw-line-thickness-slider").arg(idLineThicknessSlider.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
 
@@ -5246,7 +5356,8 @@ Page {
                                             verticalCenterOffset: -Theme.paddingSmall * 0.4
                                         }
 
-                                        text: qsTr("°")
+                                        //% "°"
+                                        text: qsTrId("draw-text-rotation-degree-symbol")
                                         color: Theme.highlightColor
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     }
@@ -5259,7 +5370,8 @@ Page {
                                         bottomMargin: Theme.paddingSmall * 0.7
                                     }
 
-                                    text: qsTr("angle")
+                                    //% "angle"
+                                    text: qsTrId("draw-text-rotation-angle")
                                     color: Theme.secondaryColor
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
@@ -5269,11 +5381,12 @@ Page {
                                 id: idComboBoxFontPicker
 
                                 width: parent.width / 3 * 1.15
-                                description: qsTr("font")
+                                //% "font"
+                                description: qsTrId("draw-text-font-combobox-desciption")
 
                                 menu: ContextMenu {
                                     MenuItem {
-                                        text: qsTr("Sailfish")
+                                        text: "Sailfish"
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: {
@@ -5283,9 +5396,15 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: customFontName === ""
-                                              ? qsTr("load custom font") 
-                                              : customFontName + " " + qsTr("(custom)")
+                                        text: {
+                                            if (customFontName === "") {
+                                                //% "load custom font"
+                                                return qsTrId("draw-text-font-comobobx-custom-load") 
+                                            } else {
+                                                //% "%1 (custom)"
+                                                return qsTrId("draw-text-font-combobox-custom-font").arg(customFontName)
+                                            }
+                                        }
                                         
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                         
@@ -5296,7 +5415,7 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: qsTr("Angelface")
+                                        text: "Angelface"
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: {
@@ -5308,7 +5427,7 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: qsTr("Antonio")
+                                        text: "Antonio"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                         
                                         onClicked: {
@@ -5320,7 +5439,7 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: qsTr("Bananasplit")
+                                        text: "Bananasplit"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5332,7 +5451,7 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: qsTr("Baskerville")
+                                        text: "Baskerville"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5344,7 +5463,7 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: qsTr("Fraktur")
+                                        text: "Fraktur"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5356,7 +5475,7 @@ Page {
                                         }
                                     }
                                     MenuItem {
-                                        text: qsTr("League Gothic")
+                                        text: "League Gothic"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5369,7 +5488,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Lobster")
+                                        text: "Lobster"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5382,7 +5501,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Miso")
+                                        text: "Miso"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5395,7 +5514,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Monterey")
+                                        text: "Monterey"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5408,7 +5527,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Nebula bold")
+                                        text: "Nebula bold"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5421,7 +5540,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Oswald heavy")
+                                        text: "Oswald heavy"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5434,7 +5553,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Raleway")
+                                        text: "Raleway"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5447,7 +5566,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Roland")
+                                        text: "Roland"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5460,7 +5579,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Stay Girly")
+                                        text: "Stay Girly"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5473,7 +5592,7 @@ Page {
                                     }
                                     
                                     MenuItem {
-                                        text: qsTr("Yanone")
+                                        text: "Yanone"
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                     
                                         onClicked: {
@@ -5486,7 +5605,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Sans regular")
+                                        text: "Sans regular"
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: {
@@ -5497,8 +5616,8 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Sans bold")
-                                        font.bold : true
+                                        text: "Sans bold"
+                                        font.bold: true
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: {
@@ -5509,7 +5628,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Sans italic")
+                                        text: "Sans italic"
                                         font.italic : true
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
@@ -5521,7 +5640,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Serif regular")
+                                        text: "Serif regular"
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: {
@@ -5532,7 +5651,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Serif bold")
+                                        text: "Serif bold"
                                         font.bold : true
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                         onClicked: {
@@ -5543,7 +5662,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Serif italic")
+                                        text: "Serif italic"
                                         font.italic : true
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
@@ -5555,7 +5674,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Mono regular")
+                                        text: "Mono regular"
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: {
@@ -5566,7 +5685,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Mono bold")
+                                        text: "Mono bold"
                                         font.bold : true
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
@@ -5578,7 +5697,7 @@ Page {
                                     }
 
                                     MenuItem {
-                                        text: qsTr("Mono italic")
+                                        text: "Mono italic"
                                         font.italic : true
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
@@ -5594,31 +5713,36 @@ Page {
                             ComboBox {
                                 id: idComboBoxFontBackColor
 
-                                width: parent.width / 3* 1.15
-                                description: qsTr("layer")
+                                width: parent.width / 3 * 1.15
+                                //% "layer"
+                                description: qsTrId("draw-text-background-combobox-description")
 
                                 menu: ContextMenu {
                                     MenuItem {
-                                        text: qsTr("transparent")
+                                        //% "transparent"
+                                        text: qsTrId("draw-text-background-combobox-transparent")
                                         font.pixelSize: Theme.fontSizeExtraSmall
 
                                         onClicked: idPaintTextPreviewBox.color = "transparent"
                                     }
                                     MenuItem {
-                                        text: qsTr("clipboard color")
+                                        //% "clipboard color"
+                                        text: qsTrId("draw-text-background-combobox-clipboard-color")
                                         enabled: (paintSecondaryColor !== "none")
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                         
                                         onClicked: idPaintTextPreviewBox.color = paintSecondaryColor
                                     }
                                     MenuItem {
-                                        text: qsTr("black")
+                                        //% "black"
+                                        text: qsTrId("draw-text-background-combobox-black")
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                         
                                         onClicked: idPaintTextPreviewBox.color = "black"
                                     }
                                     MenuItem {
-                                        text: qsTr("white")
+                                        //% "white"
+                                        text: qsTrId("draw-text-background-combobox-white")
                                         font.pixelSize: Theme.fontSizeExtraSmall
                                         
                                         onClicked: idPaintTextPreviewBox.color = "white"
@@ -5657,7 +5781,8 @@ Page {
                                         horizontalCenter: parent.horizontalCenter
                                     }
 
-                                    text: qsTr("size") + " " + idTextThicknessSlider.value
+                                    //% "size %1"
+                                    text: qsTrId("draw-text-thickness-slider").arg(idTextThicknessSlider.value)
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                 }
                             }
@@ -5679,9 +5804,10 @@ Page {
                             
                             icon {
                                 source: "../symbols/icon-m-colorpicker2.svg"
-                            width: Theme.iconSizeMedium
-                            height: Theme.iconSizeMedium
+                                width: Theme.iconSizeMedium
+                                height: Theme.iconSizeMedium
                             }
+
                             onClicked: {
                                 finishedLoading = false
                                 py.paintPickColorFunction()
@@ -5695,7 +5821,8 @@ Page {
                                 }
 
                                 horizontalAlignment: Text.AlignHCenter
-                                text: qsTr("cursor")
+                                //% "cursor"
+                                text: qsTrId("draw-color-picker-button-cursor")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -5721,7 +5848,12 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("visibility %1\%").arg(Math.round( idSliderColorAlpha.value / 255 * 100))
+                                text: {
+                                    const visibility = Math.round(idSliderColorAlpha.value / 255 * 100)
+                                    //% "visibility %1%"
+                                    return qsTrId("draw-color-picker-slider-alpha")
+                                }
+
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -5754,7 +5886,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("red") + " " + idSliderColorRed.value
+                                //% "red %1"
+                                text: qsTrId("draw-color-picker-slider-red").arg(idSliderColorRed.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -5764,11 +5897,13 @@ Page {
                         
                             enabled: idImageLoadedFreecrop.status !== Image.Null && finishedLoading
                             width: parent.width / (itemsPerRowLess-1)
+
                             icon {
                                 source: "../symbols/icon-m-colorpicker2.svg"
-                            width: Theme.iconSizeMedium
-                            height: Theme.iconSizeMedium
+                                width: Theme.iconSizeMedium
+                                height: Theme.iconSizeMedium
                             }
+
                             onClicked: {
                                 finishedLoading = false
                                 py.getDominantColorFunction()
@@ -5782,7 +5917,8 @@ Page {
                                 }
 
                                 horizontalAlignment: Text.AlignHCenter
-                                text: qsTr("average")
+                                //% "average"
+                                text: qsTrId("draw-color-picker-button-average")
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -5809,7 +5945,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("green") + " " + idSliderColorGreen.value
+                                //% "green %1"
+                                text: qsTrId("draw-color-picker-slider-green").arg(idSliderColorGreen.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -5842,7 +5979,8 @@ Page {
                                     horizontalCenter: parent.horizontalCenter
                                 }
 
-                                text: qsTr("blue") + " " + idSliderColorBlue.value
+                                //% "blue %1"
+                                text: qsTrId("draw-color-picker-slider-blue").arg(idSliderColorBlue.value)
                                 font.pixelSize: Theme.fontSizeExtraSmall
                             }
                         }
@@ -6033,11 +6171,12 @@ Page {
                             }
 
                             horizontalAlignment: Text.AlignHCenter
-                            text: idPaintColorPickerButton.down ?  qsTr("copy") : ""
+                            //% "copy"
+                            text: idPaintColorPickerButton.down ?  qsTrId("draw-color-picker-button-copy") : ""
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
-            } // end submodul paint
+            } // end submodule paint
 
             TextField {
                 id: idTextPaintInput

@@ -7,6 +7,29 @@ import io.thp.pyotherside 1.5
 Page {
     id: page
 
+    //% "Keep original"
+    readonly property string optionKeepOriginal: qsTrId("channel-bench-option-keep-original")
+    //% "Replace with"
+    readonly property string optionReplaceWith: qsTrId("channel-bench-option-replace-with")
+    //% "Load"
+    readonly property string optionLoadChannelFile: qsTrId("channel-bench-option-load-channel-file")
+    
+    //% "Gray"
+    readonly property string colorNameGray: qsTrId("channel-bench-color-gray")
+    //% "Alpha"
+    readonly property string colorNameAlpha: qsTrId("channel-bench-color-alpha")
+    //% "Red"
+    readonly property string colorNameRed: qsTrId("channel-bench-color-red")
+    //% "Green"
+    readonly property string colorNameGreen: qsTrId("channel-bench-color-green")
+    //% "Blue"
+    readonly property string colorNameBlue: qsTrId("channel-bench-color-blue")
+
+    //% "Normal"
+    readonly property string channelTypeNormal: qsTrId("channel-bench-channel-type-normal")
+    //% "Inverted"
+    readonly property string channelTypeInverted: qsTrId("channel-bench-channel-type-inverted")
+
     // values transmitted from FirstPage.qml
     property var inputPathPy
     property var outputPathPy
@@ -66,8 +89,10 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Channel bench")
-        subHeaderText: qsTr("Replace, invert and saturate")
+        //% "Channel bench"
+        headerText: qsTrId("channel-bench-title")
+        //% "Replace, invert and saturate"
+        subHeaderText: qsTrId("channel-bench-subtitle")
     }
 
     SilicaFlickable {
@@ -104,7 +129,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Alpha")
+                        //% "Alpha"
+                        text: qsTrId("channel-bench-channel-alpha")
                     }
                 
                     Label {
@@ -113,7 +139,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Red")
+                        //% "Red"
+                        text: qsTrId("channel-bench-channel-red")
                     }
                 
                     Label {
@@ -122,7 +149,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Green")
+                        //% "Green"
+                        text: qsTrId("channel-bench-channel-green")
                     }
                 
                     Label {
@@ -131,7 +159,8 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Blue")
+                        //% "Blue"
+                        text: qsTrId("channel-bench-channel-blue")
                     }
                 }
 
@@ -180,16 +209,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("keep") + "\n" + qsTr("original")
+                            text: page.optionKeepOriginal
                         }
                 
                         onClicked: {
                             if (idAlphaPicker.enabled === false) {
-                                idAlphaReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idAlphaReplaceLabel.text = page.optionReplaceWith
                                 idAlphaPicker.enabled = true
                             }
                             else {
-                                idAlphaReplaceLabel.text =qsTr("keep") + "\n" + qsTr("original")
+                                idAlphaReplaceLabel.text =page.optionKeepOriginal
                                 idAlphaPicker.enabled = false
                             }
                         }
@@ -211,16 +240,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("keep") + "\n" + qsTr("original")
+                            text: page.optionKeepOriginal
                         }
                 
                         onClicked: {
                             if (idRedPicker.enabled === false) {
-                                idRedReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idRedReplaceLabel.text = page.optionReplaceWith
                                 idRedPicker.enabled = true
                             }
                             else {
-                                idRedReplaceLabel.text =qsTr("keep") + "\n" + qsTr("original")
+                                idRedReplaceLabel.text =page.optionKeepOriginal
                                 idRedPicker.enabled = false
                             }
                         }
@@ -242,16 +271,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("keep") + "\n" + qsTr("original")
+                            text: page.optionKeepOriginal
                         }
                 
                         onClicked: {
                             if (idGreenPicker.enabled === false) {
-                                idGreenReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idGreenReplaceLabel.text = page.optionReplaceWith
                                 idGreenPicker.enabled = true
                             }
                             else {
-                                idGreenReplaceLabel.text =qsTr("keep") + "\n" + qsTr("original")
+                                idGreenReplaceLabel.text =page.optionKeepOriginal
                                 idGreenPicker.enabled = false
                             }
                         }
@@ -273,16 +302,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("keep") + "\n" + qsTr("original")
+                            text: page.optionKeepOriginal
                         }
                 
                         onClicked: {
                             if (idBluePicker.enabled === false) {
-                                idBlueReplaceLabel.text = qsTr("replace") + "\n" + qsTr("with")
+                                idBlueReplaceLabel.text = page.optionReplaceWith
                                 idBluePicker.enabled = true
                             }
                             else {
-                                idBlueReplaceLabel.text =qsTr("keep") + "\n" + qsTr("original")
+                                idBlueReplaceLabel.text =page.optionKeepOriginal
                                 idBluePicker.enabled = false
                             }
                         }
@@ -314,7 +343,7 @@ Page {
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Elide
-                        text: (fileNameAlpha === "") ? qsTr("load") : fileNameAlpha
+                        text: (fileNameAlpha === "") ? page.optionLoadChannelFile : fileNameAlpha
                     }
                 }
 
@@ -336,7 +365,7 @@ Page {
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Elide
-                        text: (fileNameRed === "") ? qsTr("load") : fileNameRed
+                        text: (fileNameRed === "") ? page.optionLoadChannelFile : fileNameRed
                     }
                 }
              
@@ -358,7 +387,7 @@ Page {
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Elide
-                        text: (fileNameGreen === "") ? qsTr("load") : fileNameGreen
+                        text: (fileNameGreen === "") ? page.optionLoadChannelFile : fileNameGreen
                     }
                 }
                 
@@ -380,7 +409,7 @@ Page {
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
                         truncationMode: TruncationMode.Elide
-                        text: (fileNameBlue === "") ? qsTr("load") : fileNameBlue
+                        text: (fileNameBlue === "") ? page.optionLoadChannelFile : fileNameBlue
                     }
                 }
             }
@@ -407,34 +436,34 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Gray")
+                        text: page.colorNameGray
                     }
       
                     onClicked: {
                         alphaDetailPicker = alphaDetailPicker + 1
       
                         if (alphaDetailPicker === 0) {
-                            idAlphaDetailLabel.text = qsTr("Gray")
+                            idAlphaDetailLabel.text = page.colorNameGray
                             factorA = "gray"
                         }
       
                         if (alphaDetailPicker === 1) {
-                            idAlphaDetailLabel.text = qsTr("Alpha")
+                            idAlphaDetailLabel.text = page.colorNameAlpha
                             factorA = "A"
                         }
       
                         if (alphaDetailPicker === 2) {
-                            idAlphaDetailLabel.text = qsTr("Red")
+                            idAlphaDetailLabel.text = page.colorNameRed
                             factorA = "R"
                         }
       
                         if (alphaDetailPicker === 3) {
-                            idAlphaDetailLabel.text = qsTr("Green")
+                            idAlphaDetailLabel.text = page.colorNameGreen
                             factorA = "G"
                         }
       
                         if (alphaDetailPicker === 4) {
-                            idAlphaDetailLabel.text = qsTr("Blue")
+                            idAlphaDetailLabel.text = page.colorNameBlue
                             factorA = "B"
                             alphaDetailPicker = -1
                         }
@@ -457,33 +486,33 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Gray")
+                        text: page.colorNameGray
                     }
       
                     onClicked: {
                         redDetailPicker = redDetailPicker + 1
       
                         if (redDetailPicker === 0) {
-                            idRedDetailLabel.text = qsTr("Gray")
+                            idRedDetailLabel.text = page.colorNameGray
                             factorR = "gray"
                         }
       
                         if (redDetailPicker === 1) {
-                            idRedDetailLabel.text = qsTr("Alpha")
+                            idRedDetailLabel.text = page.colorNameAlpha
                             factorR = "A"
                         }
                         if (redDetailPicker === 2) {
-                            idRedDetailLabel.text = qsTr("Red")
+                            idRedDetailLabel.text = page.colorNameRed
                             factorR = "R"
                         }
       
                         if (redDetailPicker === 3) {
-                            idRedDetailLabel.text = qsTr("Green")
+                            idRedDetailLabel.text = page.colorNameGreen
                             factorR = "G"
                         }
       
                         if (redDetailPicker === 4) {
-                            idRedDetailLabel.text = qsTr("Blue")
+                            idRedDetailLabel.text = page.colorNameBlue
                             factorR = "B"
                             redDetailPicker = -1
                         }
@@ -506,34 +535,34 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Gray")
+                        text: page.colorNameGray
                     }
       
                     onClicked: {
                         greenDetailPicker = greenDetailPicker + 1
       
                         if (redDetailPicker === 0) {
-                            idGreenDetailLabel.text = qsTr("Gray")
+                            idGreenDetailLabel.text = page.colorNameGray
                             factorG = "gray"
                         }
       
                         if (greenDetailPicker === 1) {
-                            idGreenDetailLabel.text = qsTr("Alpha")
+                            idGreenDetailLabel.text = page.colorNameAlpha
                             factorG = "A"
                         }
       
                         if (greenDetailPicker === 2) {
-                            idGreenDetailLabel.text = qsTr("Red")
+                            idGreenDetailLabel.text = page.colorNameRed
                             factorG = "R"
                         }
       
                         if (greenDetailPicker === 3) {
-                            idGreenDetailLabel.text = qsTr("Green")
+                            idGreenDetailLabel.text = page.colorNameGreen
                             factorG = "G"
                         }
       
                         if (greenDetailPicker === 4) {
-                            idGreenDetailLabel.text = qsTr("Blue")
+                            idGreenDetailLabel.text = page.colorNameBlue
                             factorG = "B"
                             greenDetailPicker = -1
                         }
@@ -556,34 +585,34 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         leftPadding: Theme.paddingLarge
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        text: qsTr("Gray")
+                        text: page.colorNameGray
                     }
       
                     onClicked: {
                         blueDetailPicker = blueDetailPicker + 1
       
                         if (blueDetailPicker === 0) {
-                            idBlueDetailLabel.text = qsTr("Gray")
+                            idBlueDetailLabel.text = page.colorNameGray
                             factorB = "gray"
                         }
       
                         if (blueDetailPicker === 1) {
-                            idBlueDetailLabel.text = qsTr("Alpha")
+                            idBlueDetailLabel.text = page.colorNameAlpha
                             factorB = "A"
                         }
       
                         if (blueDetailPicker === 2) {
-                            idBlueDetailLabel.text = qsTr("Red")
+                            idBlueDetailLabel.text = page.colorNameRed
                             factorB = "R"
                         }
       
                         if (blueDetailPicker === 3) {
-                            idBlueDetailLabel.text = qsTr("Green")
+                            idBlueDetailLabel.text = page.colorNameGreen
                             factorB = "G"
                         }
       
                         if (blueDetailPicker === 4) {
-                            idBlueDetailLabel.text = qsTr("Blue")
+                            idBlueDetailLabel.text = page.colorNameBlue
                             factorB = "B"
                             blueDetailPicker = -1
                         }
@@ -601,7 +630,11 @@ Page {
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: qsTr("use")
+
+                    // Displayed right of the channel mixer, 
+                    // indicates that we will "use" the *color* channel from the selected file
+                    //% "using"
+                    text: qsTrId("channel-bench-selector-subtitle")
                 }
             }
 
@@ -630,16 +663,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("normal")
+                            text: page.channelTypeNormal
                         }
 
                         onClicked: {
                             if (invertA === "keep") {
-                                idAlphaInvertLabel.text = qsTr("invert")
+                                idAlphaInvertLabel.text = page.channelTypeInverted
                                 invertA = "invert"
                             }
                             else {
-                                idAlphaInvertLabel.text =qsTr("normal")
+                                idAlphaInvertLabel.text =page.channelTypeNormal
                                 invertA = "keep"
                             }
                         }
@@ -661,16 +694,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("normal")
+                            text: page.channelTypeNormal
                         }
 
                         onClicked: {
                             if (invertR === "keep") {
-                                idRedInvertLabel.text = qsTr("invert")
+                                idRedInvertLabel.text = page.channelTypeInverted
                                 invertR = "invert"
                             }
                             else {
-                                idRedInvertLabel.text =qsTr("normal")
+                                idRedInvertLabel.text =page.channelTypeNormal
                                 invertR = "keep"
                             }
                         }
@@ -692,16 +725,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("normal")
+                            text: page.channelTypeNormal
                         }
 
                         onClicked: {
                             if (invertG === "keep") {
-                                idGreenInvertLabel.text = qsTr("invert")
+                                idGreenInvertLabel.text = page.channelTypeInverted
                                 invertG = "invert"
                             }
                             else {
-                                idGreenInvertLabel.text =qsTr("normal")
+                                idGreenInvertLabel.text =page.channelTypeNormal
                                 invertG = "keep"
                             }
                         }
@@ -723,16 +756,16 @@ Page {
                             verticalAlignment: Text.AlignVCenter
                             leftPadding: Theme.paddingLarge
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            text: qsTr("normal")
+                            text: page.channelTypeNormal
                         }
 
                         onClicked: {
                             if (invertB === "keep") {
-                                idBlueInvertLabel.text = qsTr("invert")
+                                idBlueInvertLabel.text = page.channelTypeInverted
                                 invertB = "invert"
                             }
                             else {
-                                idBlueInvertLabel.text =qsTr("normal")
+                                idBlueInvertLabel.text =page.channelTypeNormal
                                 invertB = "keep"
                             }
                         }
@@ -775,7 +808,7 @@ Page {
                                 horizontalCenter: parent.horizontalCenter
                             }
 
-                            text: qsTr("alpha") + " " + alphaSliderIntensity.value
+                            text: page.colorNameAlpha + " " + alphaSliderIntensity.value
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
@@ -810,7 +843,7 @@ Page {
                                 horizontalCenter: parent.horizontalCenter
                             }
 
-                            text: qsTr("red") + " " + redSliderIntensity.value
+                            text: page.colorNameRed + " " + redSliderIntensity.value
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
@@ -845,7 +878,7 @@ Page {
                                 horizontalCenter: parent.horizontalCenter
                             }
 
-                            text: qsTr("green") + " " + greenSliderIntensity.value
+                            text: page.colorNameGreen + " " + greenSliderIntensity.value
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
@@ -880,7 +913,7 @@ Page {
                                 horizontalCenter: parent.horizontalCenter
                             }
 
-                            text: qsTr("blue") + " " + blueSliderIntensity.value
+                            text: page.colorNameBlue + " " + blueSliderIntensity.value
                             font.pixelSize: Theme.fontSizeExtraSmall
                         }
                     }
@@ -893,7 +926,8 @@ Page {
        id: alphaPickerPage
 
        FilePickerPage {
-           title: qsTr("Select alpha")
+            //% "Select alpha channel provider"
+           title: qsTrId("channel-bench-file-picker-alpha")
            nameFilters: [ '*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.bmp', '*.gif' ]
 
            onSelectedContentPropertiesChanged: {
@@ -907,7 +941,8 @@ Page {
        id: redPickerPage
 
        FilePickerPage {
-           title: qsTr("Select red")
+            //% "Select red channel provider"
+           title: qsTrId("channel-bench-file-picker-red")
            nameFilters: [ '*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.bmp', '*.gif' ]
 
            onSelectedContentPropertiesChanged: {
@@ -921,7 +956,8 @@ Page {
        id: greenPickerPage
 
        FilePickerPage {
-           title: qsTr("Select green")
+            //% "select green channel provider"
+           title: qsTrId("channel-bench-file-picker-green")
            nameFilters: [ '*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.bmp', '*.gif' ]
 
            onSelectedContentPropertiesChanged: {
@@ -935,7 +971,8 @@ Page {
        id: bluePickerPage
 
        FilePickerPage {
-           title: qsTr("Select blue")
+            //% "Select blue channel provider"
+           title: qsTrId("channel-bench-file-picker-blue")
            nameFilters: [ '*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.bmp', '*.gif' ]
 
            onSelectedContentPropertiesChanged: {

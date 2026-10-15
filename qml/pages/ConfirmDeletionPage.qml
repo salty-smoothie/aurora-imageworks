@@ -11,7 +11,8 @@ Page {
     AppBar {
         id: appBar
 
-        headerText: qsTr("Confirm deletion")
+        //% "Confirm deletion"
+        headerText: qsTrId("confirm-deletion-header")
 
         AppBarSpacer { }
 
@@ -49,13 +50,15 @@ Page {
 
             Label {
                 width: parent.width
-                text: qsTr("Are you sure you want to delete the file and all related temporary files?")
+                //% "Are you sure you want to delete the file and all related temporary files?"
+                text: qsTrId("confirm-deletion-title")
                 wrapMode: Text.WordWrap
             }
 
             Label {
                 width: parent.width
-                text: qsTr("The original file to be deleted is located here:")
+                //% "The original file to be deleted is located here:"
+                text: qsTrId("confirm-deletion-subtitle")
                 color: Theme.secondaryColor
                 wrapMode: Text.WordWrap
             }
