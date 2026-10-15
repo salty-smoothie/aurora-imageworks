@@ -43,10 +43,6 @@
         <source>Imageworks is free software, distributed under the terms of GNU GPL v3.</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="View source">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="about-page-button-donate">
         <source>Donate</source>
         <translation type="unfinished"></translation>
@@ -604,223 +600,39 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-original">
-        <source></source>
+        <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-warmer">
-        <source></source>
+        <source>Warmer</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-colder">
-        <source></source>
+        <source>Colder</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-sepia">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-gotham">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-crema">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-juno">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-kelvin">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-xpro-ii">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-amaro">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-mayfair">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-nineteen77">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-lofi">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-hudson">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-redteal">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-nashville">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-hefe">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-sierra">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-clarendon">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-reyes">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-lark">
-        <source></source>
+        <source>Sepia</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-spring">
-        <source></source>
+        <source>Spring</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-summer">
-        <source></source>
+        <source>Summer</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-fall">
-        <source></source>
+        <source>Fall</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-winter">
-        <source></source>
+        <source>Winter</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-preset-combobox-backlight">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-goldvibrant">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-polaroid">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-fadeprint">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-bleakfuture">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-desaturated">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-monotint">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-fujigray">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-moon">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-moonlight">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-gingham">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-tensiongreen">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-anime">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-tealmagentagold">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-juno2">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-hudson2">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-darkblue">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-howlite">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-cinevibrant">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-sweetgelatto">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-newspaper">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-analog-oldstyle">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-hilutite">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-hackmanite">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-herderite">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-heulandite">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-hiddenite">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-bleach">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-dropblues">
-        <source></source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="filter-bench-preset-combobox-latesunset">
-        <source></source>
+        <source>Backlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="filter-bench-label-load-file">
@@ -1477,6 +1289,10 @@
     </message>
     <message id="save-page-file-type-does-not-support-transparency">
         <source>Filetype does not support transparency.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="about-page-button-view-source">
+        <source>View source</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

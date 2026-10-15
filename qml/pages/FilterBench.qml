@@ -321,14 +321,15 @@ Page {
                     icon.source: "../symbols/icon-m-apply.svg"
                     icon.width: Theme.iconSizeMedium
                     icon.height: Theme.iconSizeMedium
+                    
                     onClicked: {
                         if (idComboBoxMoods.currentIndex === 0) {
                             py.filtersEffectsMiddleStepFunction()
-                        }
-                        if (idComboBoxMoods.currentIndex === 1) {
+                        }else if (idComboBoxMoods.currentIndex === 1) {
                             py.apply3dLUTcubeMiddleStepFunction()
                         }
                     }
+
                     BusyIndicator {
                         id: idNewPreviewButtonRunningIndicator
                         anchors.verticalCenter: parent.verticalCenter
@@ -347,290 +348,238 @@ Page {
                 label: qsTrId("filter-bench-preset-combobox-label")
                 menu: ContextMenu {
                     MenuItem {
-                        //% Original
+                        //% "Original"
                         text: qsTrId("filter-bench-preset-combobox-original")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Warmer
+                        //% "Warmer"
                         text: qsTrId("filter-bench-preset-combobox-warmer")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Colder
+                        //% "Colder"
                         text: qsTrId("filter-bench-preset-combobox-colder")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Sepia
+                        //% "Sepia"
                         text: qsTrId("filter-bench-preset-combobox-sepia")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Gotham
-                        text: qsTrId("filter-bench-preset-combobox-gotham")
+                        text: "Gotham"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Crema
-                        text: qsTrId("filter-bench-preset-combobox-crema")
+                        text: "Crema"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Juno
-                        text: qsTrId("filter-bench-preset-combobox-juno")
+                        text: "Juno"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Kelvin
-                        text: qsTrId("filter-bench-preset-combobox-kelvin")
+                        text: "Kelvin"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Xpro-ii
-                        text: qsTrId("filter-bench-preset-combobox-xpro-ii")
+                        text: "Xpro-ii"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Amaro
-                        text: qsTrId("filter-bench-preset-combobox-amaro")
+                        text: "Amaro"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Mayfair
-                        text: qsTrId("filter-bench-preset-combobox-mayfair")
+                        text: "Mayfair"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Nineteen77
-                        text: qsTrId("filter-bench-preset-combobox-nineteen77")
+                        text: "Nineteen77"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Lofi
-                        text: qsTrId("filter-bench-preset-combobox-lofi")
+                        text: "Lofi"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Hudson
-                        text: qsTrId("filter-bench-preset-combobox-hudson")
+                        text: "Hudson"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Redteal
-                        text: qsTrId("filter-bench-preset-combobox-redteal")
+                        text: "Redteal"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Nashville
-                        text: qsTrId("filter-bench-preset-combobox-nashville")
+                        text: "Nashville"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Hefe
-                        text: qsTrId("filter-bench-preset-combobox-hefe")
+                        text: "Hefe"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Sierra
-                        text: qsTrId("filter-bench-preset-combobox-sierra")
+                        text: "Sierra"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Clarendon
-                        text: qsTrId("filter-bench-preset-combobox-clarendon")
+                        text: "Clarendon"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Reyes
-                        text: qsTrId("filter-bench-preset-combobox-reyes")
+                        text: "Reyes"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Lark
-                        text: qsTrId("filter-bench-preset-combobox-lark")
+                        text: "Lark"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
 
                     MenuItem {
-                        //% Spring
+                        //% "Spring"
                         text: qsTrId("filter-bench-preset-combobox-spring")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Summer
+                        //% "Summer"
                         text: qsTrId("filter-bench-preset-combobox-summer")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Fall
+                        //% "Fall"
                         text: qsTrId("filter-bench-preset-combobox-fall")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Winter
+                        //% "Winter"
                         text: qsTrId("filter-bench-preset-combobox-winter")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Backlight
+                        //% "Backlight"
                         text: qsTrId("filter-bench-preset-combobox-backlight")
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Goldvibrant
-                        text: qsTrId("filter-bench-preset-combobox-goldvibrant")
+                        text: "Goldvibrant"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Polaroid
-                        text: qsTrId("filter-bench-preset-combobox-polaroid")
+                        text: "Polaroid"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Fadeprint
-                        text: qsTrId("filter-bench-preset-combobox-fadeprint")
+                        text: "Fadeprint"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Bleakfuture
-                        text: qsTrId("filter-bench-preset-combobox-bleakfuture")
+                        text: "Bleakfuture"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Desaturated
-                        text: qsTrId("filter-bench-preset-combobox-desaturated")
+                        text: "Desaturated"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Monotint
-                        text: qsTrId("filter-bench-preset-combobox-monotint")
+                        text: "Monotint"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Fujigray
-                        text: qsTrId("filter-bench-preset-combobox-fujigray")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-
-
-
-                    MenuItem {
-                        //% Moon
-                        text: qsTrId("filter-bench-preset-combobox-moon")
+                        text: "Fujigray"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Moonlight
-                        text: qsTrId("filter-bench-preset-combobox-moonlight")
+                        text: "Moon"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Gingham
-                        text: qsTrId("filter-bench-preset-combobox-gingham")
+                        text: "Moonlight"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Tensiongreen
-                        text: qsTrId("filter-bench-preset-combobox-tensiongreen")
+                        text: "Gingham"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Anime
-                        text: qsTrId("filter-bench-preset-combobox-anime")
+                        text: "Tensiongreen"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Tealmagentagold
-                        text: qsTrId("filter-bench-preset-combobox-tealmagentagold")
+                        text: "Anime"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Juno2
-                        text: qsTrId("filter-bench-preset-combobox-juno2")
+                        text: "Tealmagentagold"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Hudson2
-                        text: qsTrId("filter-bench-preset-combobox-hudson2")
+                        text: "Juno2"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Darkblue
-                        text: qsTrId("filter-bench-preset-combobox-darkblue")
+                        text: "Hudson2"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Howlite
-                        text: qsTrId("filter-bench-preset-combobox-howlite")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                    }
-
-
-                    MenuItem {
-                        //% Cinevibrant
-                        text: qsTrId("filter-bench-preset-combobox-cinevibrant")
+                        text: "Darkblue"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Sweetgelatto
-                        text: qsTrId("filter-bench-preset-combobox-sweetgelatto")
+                        text: "Howlite"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Newspaper
-                        text: qsTrId("filter-bench-preset-combobox-newspaper")
+                        text: "Cinevibrant"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Analog oldstyle
-                        text: qsTrId("filter-bench-preset-combobox-analog-oldstyle")
+                        text: "Sweetgelatto"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Hilutite
-                        text: qsTrId("filter-bench-preset-combobox-hilutite")
+                        text: "Newspaper"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Hackmanite
-                        text: qsTrId("filter-bench-preset-combobox-hackmanite")
+                        text: "Analog oldstyle"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Herderite
-                        text: qsTrId("filter-bench-preset-combobox-herderite")
+                        text: "Hilutite"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Heulandite
-                        text: qsTrId("filter-bench-preset-combobox-heulandite")
+                        text: "Hackmanite"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Hiddenite
-                        text: qsTrId("filter-bench-preset-combobox-hiddenite")
+                        text: "Herderite"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Bleach
-                        text: qsTrId("filter-bench-preset-combobox-bleach")
+                        text: "Heulandite"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Dropblues
-                        text: qsTrId("filter-bench-preset-combobox-dropblues")
+                        text: "Hiddenite"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                     MenuItem {
-                        //% Latesunset
-                        text: qsTrId("filter-bench-preset-combobox-latesunset")
+                        text: "Bleach"
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        text: "Dropblues"
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                    }
+                    MenuItem {
+                        text: "Latesunset"
                         font.pixelSize: Theme.fontSizeExtraSmall
                     }
                 }
-                onCurrentIndexChanged: {
-                    previewImageEffectPicker()
-                }
+
+                onCurrentIndexChanged: previewImageEffectPicker()
             }
 
             Row {
