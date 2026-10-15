@@ -203,7 +203,7 @@ Page {
 
                 LabelledButton {
                     enabled: page.copyPasteImageWidth > 0 && page.copyPasteImageHeight > 0
-                    iconSource: "../symbols/icon-m-resize.svg"
+                    icon.source: "../symbols/icon-m-resize.svg"
                     //% "From clipboard"
                     text: qsTrId("new-page-preset-from-clipboard")
 
@@ -211,7 +211,7 @@ Page {
                 }
 
                 LabelledButton {
-                    iconSource: "../symbols/icon-m-resize.svg"
+                    icon.source: "../symbols/icon-m-resize.svg"
                     //% "Screen resolution"
                     text: qsTrId("new-page-preset-screen-resolution")
 
