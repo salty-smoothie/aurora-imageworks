@@ -1193,11 +1193,11 @@
     </message>
     <message id="new-page-preset-from-clipboard">
         <source>From clipboard</source>
-        <translation>Из буфера обмена</translation>
+        <translation>Буфер обмена</translation>
     </message>
     <message id="new-page-preset-screen-resolution">
         <source>Screen resolution</source>
-        <translation>Разрешение экрана</translation>
+        <translation>Размер экрана</translation>
     </message>
     <message id="pixel-bench-option-replace-with">
         <source>replace with</source>

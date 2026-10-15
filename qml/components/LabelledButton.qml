@@ -5,11 +5,15 @@ import QtGraphicalEffects 1.0
 BackgroundItem {
     id: root
 
-    readonly property color elementsColor: highlighted
-                                           ? Theme.highlightColor
-                                           : enabled
-                                             ? Theme.primaryColor
-                                             : Theme.secondaryColor
+    readonly property color elementsColor: {
+        if (highlighted) {
+            return Theme.highlightColor
+        } else if (enabled) {
+            return Theme.primaryColor
+        } else {
+            return Theme.secondaryColor
+        }
+    }
 
     property alias iconSource: icon.source
     property alias text: label.text
