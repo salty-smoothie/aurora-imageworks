@@ -1,1579 +1,1483 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="ru">
 <context>
-    <name>AboutPage</name>
-    <message>
-        <source>About</source>
-        <translation>О приложении</translation>
-    </message>
-    <message>
-        <source>Imageworks</source>
-        <translation>Imageworks</translation>
-    </message>
-    <message>
-        <source>Imageworks is free software, distributed under the terms of GNU GPL v3.</source>
-        <translation>Imageworks - свободное программное обеспечение, распространяемое под лицензией GNU GPL v3.</translation>
-    </message>
-    <message>
-        <source>View source</source>
-        <translation>Исходный код</translation>
-    </message>
-    <message>
-        <source>Donate</source>
-        <translation>Поддержать</translation>
-    </message>
-    <message>
-        <source>Feature-rich image editing application for Aurora OS based on Python Pillow library.</source>
-        <translation>Мощный графический редактор для ОС Аврора на основе библиотеки Pillow для Python.</translation>
-    </message>
-    <message>
-        <source>Imageworks was originally developed for Sailfish OS and then ported to Aurora OS by Smooth-E.</source>
-        <translation>Imageworks основывается на приложении для Sailfish OS и был портирован на ОС Аврора Smooth-E.</translation>
-    </message>
-    <message>
-        <source>Version info copied to clipboard</source>
-        <translation>Имя версии скопировано</translation>
-    </message>
-</context>
-<context>
-    <name>ChannelBench</name>
-    <message>
-        <source>Select alpha</source>
-        <translation>Изображение для альфа-канала</translation>
-    </message>
-    <message>
-        <source>Select red</source>
-        <translation>Изображение для красного канала</translation>
-    </message>
-    <message>
-        <source>Select green</source>
-        <translation>Изображение для зеленого канала</translation>
-    </message>
-    <message>
-        <source>Select blue</source>
-        <translation>Изображение для синего канала</translation>
-    </message>
-    <message>
-        <source>Channel bench</source>
-        <translation>Цветовые каналы</translation>
-    </message>
-    <message>
-        <source>Alpha</source>
-        <translation>Альфа</translation>
-    </message>
-    <message>
-        <source>Red</source>
-        <translation>Красный</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <translation>Зеленый</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <translation>Синий</translation>
-    </message>
-    <message>
-        <source>keep</source>
-        <translation>оставить</translation>
-    </message>
-    <message>
-        <source>original</source>
-        <translation>ориг.</translation>
-    </message>
-    <message>
-        <source>replace</source>
-        <translation>заменить</translation>
-    </message>
-    <message>
-        <source>with</source>
-        <translation>на</translation>
-    </message>
-    <message>
-        <source>load</source>
-        <translation>выбор</translation>
-    </message>
-    <message>
-        <source>Gray</source>
-        <translation>Серый</translation>
-    </message>
-    <message>
-        <source>use</source>
-        <translation>исп.</translation>
-    </message>
-    <message>
-        <source>normal</source>
-        <translation>норм.</translation>
-    </message>
-    <message>
-        <source>invert</source>
-        <translation>инверт.</translation>
-    </message>
-    <message>
-        <source>alpha</source>
-        <translation>альфа</translation>
-    </message>
-    <message>
-        <source>red</source>
-        <translation>красный</translation>
-    </message>
-    <message>
-        <source>green</source>
-        <translation>зеленый</translation>
-    </message>
-    <message>
-        <source>blue</source>
-        <translation>синий</translation>
-    </message>
-    <message>
-        <source>Replace, invert and saturate</source>
-        <translation>Заменяйте, инвертируйте и изменяйте</translation>
-    </message>
-</context>
-<context>
-    <name>CollageBench</name>
-    <message>
-        <source>Output limited to %1px. %2</source>
-        <translation>Ограничено до %1 пикс. %2</translation>
-    </message>
-    <message>
-        <source>layout generator:</source>
-        <translation>расстановка:</translation>
-    </message>
-    <message>
-        <source>auto-rows</source>
-        <translation>авто-ряды</translation>
-    </message>
-    <message>
-        <source>auto-columns</source>
-        <translation>авто-столбцы</translation>
-    </message>
-    <message>
-        <source>mosaic</source>
-        <translation>мозаика</translation>
-    </message>
-    <message>
-        <source>photowall</source>
-        <translation>фото-стена</translation>
-    </message>
-    <message>
-        <source>scattered</source>
-        <translation>в разброс</translation>
-    </message>
-    <message>
-        <source>background:</source>
-        <translation>фон:</translation>
-    </message>
-    <message>
-        <source>blurry image</source>
-        <translation>размытое изображение</translation>
-    </message>
-    <message>
-        <source>current color</source>
-        <translation>текущий цвет</translation>
-    </message>
-    <message>
-        <source>black</source>
-        <translation>черный</translation>
-    </message>
-    <message>
-        <source>white</source>
-        <translation>белый</translation>
-    </message>
-    <message>
-        <source>transparent</source>
-        <translation>прозрачный</translation>
-    </message>
-    <message>
-        <source>frames:</source>
-        <translation>рамки:</translation>
-    </message>
-    <message>
-        <source>none</source>
-        <translation>нет</translation>
-    </message>
-    <message>
-        <source>ratio:</source>
-        <translation>соотношение:</translation>
-    </message>
-    <message>
-        <source>3 : 2</source>
-        <translation>3 : 2</translation>
-    </message>
-    <message>
-        <source>1 : 1</source>
-        <translation>1 : 1</translation>
-    </message>
-    <message>
-        <source>2 : 3</source>
-        <translation>2 : 3</translation>
-    </message>
-    <message>
-        <source>Height: 1/%1 of width</source>
-        <translation>Высота: 1/%1 ширины</translation>
-    </message>
-    <message>
-        <source>Columns: %1</source>
-        <translation>Столбцы: %1</translation>
-    </message>
-    <message>
-        <source>Spacing: %1</source>
-        <translation>Промежутки: %1</translation>
-    </message>
-    <message>
-        <source>Frame width: %1</source>
-        <translation>Ширина рамки: %1</translation>
-    </message>
-    <message>
-        <source>1. Start by adding images</source>
-        <translation>1. Добавьте изображения</translation>
-    </message>
-    <message>
-        <source>Press the button above and select several images to start creating.</source>
-        <translation>Нажмите на кнопку выше и выберите несколько изображение, чтобы начать.</translation>
-    </message>
-    <message>
-        <source>2. Adjust the parameters</source>
-        <translation>2. Настройте параметры</translation>
-    </message>
-    <message>
-        <source>Use menus and sliders below to adjust your collage&apos;s parameters. Don&apos;t forget to tap the &quot;Refresh&quot; button after making changes.</source>
-        <translation>Используйте выпадающие меню и слайдеры, чтобы настроить ваш коллаж. Чтобы увидеть изменения, нажимайте на кнопку обновления.</translation>
-    </message>
-    <message>
-        <source>3. Save your work</source>
-        <translation>3. Сохраните вашу работу</translation>
-    </message>
-    <message>
-        <source>When you are done, tap the check-mark button above to replace your image with the new collage.</source>
-        <translation>Когда закончите, нажмите на галочку вверху, чтобы заменить текущее изображение на ваш новый коллаж.</translation>
-    </message>
-    <message>
-        <source>Creating a collage</source>
-        <translation>Создайте коллаж</translation>
-    </message>
-    <message>
-        <source>Combine %1 images</source>
-        <translation>Совместить %1 изображений</translation>
-    </message>
-    <message>
-        <source>Collage</source>
-        <translation>Коллаж</translation>
-    </message>
-</context>
-<context>
-    <name>ColorcurveBench</name>
-    <message>
-        <source>Alpha</source>
-        <translation>Альфа</translation>
-    </message>
-    <message>
-        <source>RGB</source>
-        <translation>RGB</translation>
-    </message>
-    <message>
-        <source>Red</source>
-        <translation>Красн.</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <translation>Зелен.</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <translation>Синий</translation>
-    </message>
-    <message>
-        <source>output  curve</source>
-        <translation>выходная кривая</translation>
-    </message>
-    <message>
-        <source>input  values</source>
-        <translation>входные значения</translation>
-    </message>
-    <message>
-        <source>occurances</source>
-        <translation>присутствие</translation>
-    </message>
-    <message>
-        <source>min</source>
-        <translation>мин</translation>
-    </message>
-    <message>
-        <source>max</source>
-        <translation>макс</translation>
-    </message>
-    <message>
-        <source>Color curve bench</source>
-        <translation>Настройка цвета</translation>
-    </message>
-    <message>
-        <source>View histogram or adjust curves</source>
-        <translation>Посмотрите гистограмму или настройте кривые</translation>
-    </message>
-</context>
-<context>
-    <name>ConfirmDeletionPage</name>
-    <message>
-        <source>Confirm deletion</source>
-        <translation>Подтвердить удаление</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to delete the file and all related temporary files?</source>
-        <translation>Вы уверены, что хотите удалить файл и все сопутствующие временные файлы?</translation>
-    </message>
-    <message>
-        <source>The original file to be deleted is located here:</source>
-        <translation>Оригинальный файл, который будет удален, находится тут:</translation>
-    </message>
-</context>
-<context>
-    <name>CoverPage</name>
-    <message>
-        <source>Welcome to Imageworks!</source>
-        <translation>Добро пожаловать в Imageworks!</translation>
-    </message>
-    <message>
-        <source>Edit images and create new ones</source>
-        <translation>Редактируйте изображения или создавайте новые</translation>
-    </message>
-    <message>
-        <source>Currently editing</source>
-        <translation>Редактирование</translation>
-    </message>
-</context>
-<context>
-    <name>EffectsBench</name>
-    <message>
-        <source>Effects bench</source>
-        <translation>Эффекты</translation>
-    </message>
-    <message>
-        <source>original</source>
-        <translation>оригинал</translation>
-    </message>
-    <message>
-        <source>auto contrast</source>
-        <translation>авто-контраст</translation>
-    </message>
-    <message>
-        <source>stretch contrast</source>
-        <translation>растянуть контраст</translation>
-    </message>
-    <message>
-        <source>dithering</source>
-        <translation>дизеринг</translation>
-    </message>
-    <message>
-        <source>coal drawing</source>
-        <translation>рисунок углем</translation>
-    </message>
-    <message>
-        <source>grayscale</source>
-        <translation>оттенки серого</translation>
-    </message>
-    <message>
-        <source>invert colors</source>
-        <translation>инвертировать цвета</translation>
-    </message>
-    <message>
-        <source>equalize colors</source>
-        <translation>уравнять цвета</translation>
-    </message>
-    <message>
-        <source>solarize</source>
-        <translation>высвеченный</translation>
-    </message>
-    <message>
-        <source>brush art</source>
-        <translation>рисунок кистью</translation>
-    </message>
-    <message>
-        <source>posterize</source>
-        <translation>постер</translation>
-    </message>
-    <message>
-        <source>blur image</source>
-        <translation>размытие</translation>
-    </message>
-    <message>
-        <source>smooth surface</source>
-        <translation>гладкая поверхность</translation>
-    </message>
-    <message>
-        <source>central focus</source>
-        <translation>центральный фокус</translation>
-    </message>
-    <message>
-        <source>miniature world</source>
-        <translation>маленькая мир</translation>
-    </message>
-    <message>
-        <source>enhance edges</source>
-        <translation>улучшить очертания</translation>
-    </message>
-    <message>
-        <source>digital unsharp masking</source>
-        <translation>цифровая сглаживающая маска</translation>
-    </message>
-    <message>
-        <source>find edges</source>
-        <translation>найти очертания</translation>
-    </message>
-    <message>
-        <source>find contour</source>
-        <translation>найти контур</translation>
-    </message>
-    <message>
-        <source>emboss</source>
-        <translation>тиснение</translation>
-    </message>
-    <message>
-        <source>add current colored frame</source>
-        <translation>добавить рамку текущего цвета</translation>
-    </message>
-    <message>
-        <source>tint with current color</source>
-        <translation>затемнить текущим цветом</translation>
-    </message>
-    <message>
-        <source>reduce colors</source>
-        <translation>уменьшить цвета</translation>
-    </message>
-    <message>
-        <source>change opacity</source>
-        <translation>изменить прозрачность</translation>
-    </message>
-    <message>
-        <source>create alpha from</source>
-        <translation>создать прозрачность из</translation>
-    </message>
-    <message>
-        <source>extract color</source>
-        <translation>извлечь цвета</translation>
-    </message>
-    <message>
-        <source>extract channel</source>
-        <translation>извлечь канал</translation>
-    </message>
-    <message>
-        <source>minFilter (bright spots darker)</source>
-        <translation>мин-фильтр (яркие участки темнее)</translation>
-    </message>
-    <message>
-        <source>maxFilter (dark spots brighter)</source>
-        <translation>макс-фильтр (темные участки светлее)</translation>
-    </message>
-    <message>
-        <source>mediumFilter</source>
-        <translation>усредненный фильтр</translation>
-    </message>
-    <message>
-        <source>fishEye</source>
-        <translation>рыбий глаз</translation>
-    </message>
-    <message>
-        <source>coal</source>
-        <translation>уголь</translation>
-    </message>
-    <message>
-        <source>brush size</source>
-        <translation>размер кисти</translation>
-    </message>
-    <message>
-        <source>blur</source>
-        <translation>размытие</translation>
-    </message>
-    <message>
-        <source>color</source>
-        <translation>цвет</translation>
-    </message>
-    <message>
-        <source>frame</source>
-        <translation>рамка</translation>
-    </message>
-    <message>
-        <source>amount colors</source>
-        <translation>сумма цветов</translation>
-    </message>
-    <message>
-        <source>opacity</source>
-        <translation>прозрачность</translation>
-    </message>
-    <message>
-        <source>white</source>
-        <translation>белый</translation>
-    </message>
-    <message>
-        <source>black</source>
-        <translation>черный</translation>
-    </message>
-    <message>
-        <source>tolerance</source>
-        <translation>допуск</translation>
-    </message>
-    <message>
-        <source>red</source>
-        <translation>красный</translation>
-    </message>
-    <message>
-        <source>green</source>
-        <translation>зеленый</translation>
-    </message>
-    <message>
-        <source>blue</source>
-        <translation>синий</translation>
-    </message>
-    <message>
-        <source>alpha</source>
-        <translation>альфа</translation>
-    </message>
-    <message>
-        <source>radius</source>
-        <translation>радиус</translation>
-    </message>
-    <message>
-        <source>percent</source>
-        <translation>процент</translation>
-    </message>
-    <message>
-        <source>threshold</source>
-        <translation>граница</translation>
-    </message>
-    <message>
-        <source>size</source>
-        <translation>размер</translation>
-    </message>
-    <message>
-        <source>Apply effects</source>
-        <translation>Применяйте эффекты</translation>
-    </message>
-    <message>
-        <source>Effect</source>
-        <translation>Эффект</translation>
-    </message>
-</context>
-<context>
-    <name>ExtendedBusyLabel</name>
-    <message>
+    <name></name>
+    <message id="extended-busy-label-title">
         <source>Applying changes</source>
-        <translation>Применение изменений</translation>
+        <translation type="unfinished">Применение изменений</translation>
     </message>
-    <message>
-        <source>Some changes take longer to process.
-Do not close Imageworks while this operation is in progress.</source>
-        <translation>Для применения некоторых изменений нужно больше времени.
-Не закрывайте Imageworks до окончания загрузки.</translation>
-    </message>
-</context>
-<context>
-    <name>FilterBench</name>
-    <message>
-        <source>Select LUT (*.cube, *.png)</source>
-        <translation>Выберите LUT (*.cube, *.png)</translation>
-    </message>
-    <message>
-        <source>Filter bench</source>
-        <translation>Фильтры</translation>
-    </message>
-    <message>
-        <source>use preset</source>
-        <translation>использовать пресет</translation>
-    </message>
-    <message>
-        <source>use 3D-LUT file (cube, hald-png)</source>
-        <translation>использовать 3D-LUT (cube, hald-png)</translation>
-    </message>
-    <message>
-        <source>original</source>
-        <translation>оригинал</translation>
-    </message>
-    <message>
-        <source>warmer</source>
-        <translation>теплее</translation>
-    </message>
-    <message>
-        <source>colder</source>
-        <translation>холоднее</translation>
-    </message>
-    <message>
-        <source>sepia</source>
-        <translation>сепия</translation>
-    </message>
-    <message>
-        <source>gotham</source>
-        <translation>gotham</translation>
-    </message>
-    <message>
-        <source>crema</source>
-        <translation>crema</translation>
-    </message>
-    <message>
-        <source>juno</source>
-        <translation>juno</translation>
-    </message>
-    <message>
-        <source>kelvin</source>
-        <translation>kelvin</translation>
-    </message>
-    <message>
-        <source>xpro-ii</source>
-        <translation>xpro-ii</translation>
-    </message>
-    <message>
-        <source>amaro</source>
-        <translation>amaro</translation>
-    </message>
-    <message>
-        <source>mayfair</source>
-        <translation>mayfair</translation>
-    </message>
-    <message>
-        <source>nineteen77</source>
-        <translation>nineteen77</translation>
-    </message>
-    <message>
-        <source>lofi</source>
-        <translation>lofi</translation>
-    </message>
-    <message>
-        <source>hudson</source>
-        <translation>hudson</translation>
-    </message>
-    <message>
-        <source>redteal</source>
-        <translation>redteal</translation>
-    </message>
-    <message>
-        <source>nashville</source>
-        <translation>nashville</translation>
-    </message>
-    <message>
-        <source>hefe</source>
-        <translation>hefe</translation>
-    </message>
-    <message>
-        <source>sierra</source>
-        <translation>sierra</translation>
-    </message>
-    <message>
-        <source>clarendon</source>
-        <translation>clarendon</translation>
-    </message>
-    <message>
-        <source>reyes</source>
-        <translation>reyes</translation>
-    </message>
-    <message>
-        <source>lark</source>
-        <translation>lark</translation>
-    </message>
-    <message>
-        <source>spring</source>
-        <translation>весна</translation>
-    </message>
-    <message>
-        <source>summer</source>
-        <translation>лето</translation>
-    </message>
-    <message>
-        <source>fall</source>
-        <translation>осень</translation>
-    </message>
-    <message>
-        <source>winter</source>
-        <translation>зима</translation>
-    </message>
-    <message>
-        <source>backlight</source>
-        <translation>подсветка</translation>
-    </message>
-    <message>
-        <source>goldvibrant</source>
-        <translation>goldvibrant</translation>
-    </message>
-    <message>
-        <source>polaroid</source>
-        <translation>polaroid</translation>
-    </message>
-    <message>
-        <source>fadeprint</source>
-        <translation>fadeprint</translation>
-    </message>
-    <message>
-        <source>bleakfuture</source>
-        <translation>bleakfuture</translation>
-    </message>
-    <message>
-        <source>desaturated</source>
-        <translation>осветленный</translation>
-    </message>
-    <message>
-        <source>monotint</source>
-        <translation>моно</translation>
-    </message>
-    <message>
-        <source>fujigray</source>
-        <translation>fujigray</translation>
-    </message>
-    <message>
-        <source>moon</source>
-        <translation>луна</translation>
-    </message>
-    <message>
-        <source>moonlight</source>
-        <translation>лунный свет</translation>
-    </message>
-    <message>
-        <source>gingham</source>
-        <translation>gingham</translation>
-    </message>
-    <message>
-        <source>tensiongreen</source>
-        <translation>напряженный зеленый</translation>
-    </message>
-    <message>
-        <source>anime</source>
-        <translation>аниме</translation>
-    </message>
-    <message>
-        <source>tealmagentagold</source>
-        <translation>бирюзово-пурпурно-золотой</translation>
-    </message>
-    <message>
-        <source>juno2</source>
-        <translation>juno2</translation>
-    </message>
-    <message>
-        <source>hudson2</source>
-        <translation>hudson2</translation>
-    </message>
-    <message>
-        <source>darkblue</source>
-        <translation>темно-синий</translation>
-    </message>
-    <message>
-        <source>howlite</source>
-        <translation>howlite</translation>
-    </message>
-    <message>
-        <source>cinevibrant</source>
-        <translation>яркое кино</translation>
-    </message>
-    <message>
-        <source>sweetgelatto</source>
-        <translation>сладкое мороженое</translation>
-    </message>
-    <message>
-        <source>newspaper</source>
-        <translation>газета</translation>
-    </message>
-    <message>
-        <source>analog oldstyle</source>
-        <translation>аналоговый</translation>
-    </message>
-    <message>
-        <source>hilutite</source>
-        <translation>hilutite</translation>
-    </message>
-    <message>
-        <source>hackmanite</source>
-        <translation>hackmanite</translation>
-    </message>
-    <message>
-        <source>herderite</source>
-        <translation>herderite</translation>
-    </message>
-    <message>
-        <source>heulandite</source>
-        <translation>heulandite</translation>
-    </message>
-    <message>
-        <source>hiddenite</source>
-        <translation>hiddenite</translation>
-    </message>
-    <message>
-        <source>bleach</source>
-        <translation>побелка</translation>
-    </message>
-    <message>
-        <source>dropblues</source>
-        <translation>капли блюза</translation>
-    </message>
-    <message>
-        <source>latesunset</source>
-        <translation>поздний закат</translation>
-    </message>
-    <message>
-        <source>file:</source>
-        <translation>файл:</translation>
-    </message>
-    <message>
-        <source>load</source>
-        <translation>загрузить</translation>
-    </message>
-    <message>
-        <source>Apply color filters</source>
-        <translation>Применяйте цветовые фильтры</translation>
-    </message>
-</context>
-<context>
-    <name>FirstPage</name>
-    <message>
-        <source>Select image</source>
-        <translation>Выбрать изображение</translation>
-    </message>
-    <message>
-        <source>Select font</source>
-        <translation>Выбрать шрифт</translation>
-    </message>
-    <message>
-        <source>python3-pillow is not installed</source>
-        <translation>python3-pillow не установлен</translation>
-    </message>
-    <message>
-        <source>some functions require python3-pillow 7+</source>
-        <translation>некоторые функции требуют python3-pillow 7+</translation>
-    </message>
-    <message>
-        <source>Restore original?</source>
-        <translation>Восстановить оригинал?</translation>
-    </message>
-    <message>
-        <source>stretch to edges</source>
-        <translation>Растянуть к углам</translation>
-    </message>
-    <message>
-        <source>fold from edges</source>
-        <translation>Сложить от углов</translation>
-    </message>
-    <message>
-        <source>free crop</source>
-        <translation>Свободная обрезка</translation>
-    </message>
-    <message>
-        <source>original</source>
-        <translation>Как оригинал</translation>
-    </message>
-    <message>
-        <source>manual</source>
-        <translation>Ручное</translation>
-    </message>
-    <message>
-        <source>DIN-landscape</source>
-        <translation>DIN альбомная</translation>
-    </message>
-    <message>
-        <source>DIN-portrait</source>
-        <translation>DIN портретная</translation>
-    </message>
-    <message>
-        <source>4:3</source>
-        <translation>4:3</translation>
-    </message>
-    <message>
-        <source>16:10</source>
-        <translation>16:10?</translation>
-    </message>
-    <message>
-        <source>16:9</source>
-        <translation>16:9</translation>
-    </message>
-    <message>
-        <source>21:9</source>
-        <translation>21:9</translation>
-    </message>
-    <message>
-        <source>1:1</source>
-        <translation>1:1</translation>
-    </message>
-    <message>
-        <source>3:4</source>
-        <translation>3:4</translation>
-    </message>
-    <message>
-        <source>1:2</source>
-        <translation>1:2</translation>
-    </message>
-    <message>
-        <source>pixels</source>
-        <translation>пиксели</translation>
-    </message>
-    <message>
-        <source>point 1x</source>
-        <translation>X1</translation>
-    </message>
-    <message>
-        <source>point 2x</source>
-        <translation>X2</translation>
-    </message>
-    <message>
-        <source>point 1y</source>
-        <translation>Y1</translation>
-    </message>
-    <message>
-        <source>point 2y</source>
-        <translation>Y2</translation>
-    </message>
-    <message>
-        <source>width, preserve ratio</source>
-        <translation>ширина, сохранить соотн.</translation>
-    </message>
-    <message>
-        <source>height, preserve ratio</source>
-        <translation>высота, сохранить соотн.</translation>
-    </message>
-    <message>
-        <source>width  x  height</source>
-        <translation>ширина x высота</translation>
-    </message>
-    <message>
-        <source>screen ratio</source>
-        <translation>соотн. экрана</translation>
-    </message>
-    <message>
-        <source>padding with</source>
-        <translation>заполнить</translation>
-    </message>
-    <message>
-        <source>color</source>
-        <translation>цвет</translation>
-    </message>
-    <message>
-        <source>blur</source>
-        <translation>размытием</translation>
-    </message>
-    <message>
-        <source>left</source>
-        <translation>влево</translation>
-    </message>
-    <message>
-        <source>right</source>
-        <translation>вправо</translation>
-    </message>
-    <message>
-        <source>flip</source>
-        <translation>перевер.</translation>
-    </message>
-    <message>
-        <source>mirror</source>
-        <translation>отразить</translation>
-    </message>
-    <message>
-        <source>brightness</source>
-        <translation>яркость</translation>
-    </message>
-    <message>
-        <source>contrast</source>
-        <translation>контраст</translation>
-    </message>
-    <message>
-        <source>sharpness</source>
-        <translation>резкость</translation>
-    </message>
-    <message>
-        <source>hue</source>
-        <translation>HUE</translation>
-    </message>
-    <message>
-        <source>red</source>
-        <translation>красный</translation>
-    </message>
-    <message>
-        <source>yellow</source>
-        <translation>желт.</translation>
-    </message>
-    <message>
-        <source>green</source>
-        <translation>зелен.</translation>
-    </message>
-    <message>
-        <source>blue</source>
-        <translation>син.</translation>
-    </message>
-    <message>
-        <source>violet</source>
-        <translation>фиол.</translation>
-    </message>
-    <message>
-        <source>pixel</source>
-        <translation>пиксели</translation>
-    </message>
-    <message>
-        <source>channel</source>
-        <translation>каналы</translation>
-    </message>
-    <message>
-        <source>filter</source>
-        <translation>фильтр</translation>
-    </message>
-    <message>
-        <source>effect</source>
-        <translation>эффект</translation>
-    </message>
-    <message>
-        <source>collage</source>
-        <translation>коллаж</translation>
-    </message>
-    <message>
-        <source>delete</source>
-        <translation>удалить</translation>
-    </message>
-    <message>
-        <source>rename</source>
-        <translation>имя</translation>
-    </message>
-    <message>
-        <source>meta</source>
-        <translation>мета</translation>
-    </message>
-    <message>
-        <source>new</source>
-        <translation>новый</translation>
-    </message>
-    <message>
-        <source>free</source>
-        <translation>кисть</translation>
-    </message>
-    <message>
-        <source>area</source>
-        <translation>область</translation>
-    </message>
-    <message>
-        <source>frame</source>
-        <translation>рамка</translation>
-    </message>
-    <message>
-        <source>spray</source>
-        <translation>спрей</translation>
-    </message>
-    <message>
-        <source>copy</source>
-        <translation>копир.</translation>
-    </message>
-    <message>
-        <source>paste</source>
-        <translation>вставить</translation>
-    </message>
-    <message>
-        <source>line</source>
-        <translation>линия</translation>
-    </message>
-    <message>
-        <source>point</source>
-        <translation>точка</translation>
-    </message>
-    <message>
-        <source>symbol</source>
-        <translation>символ</translation>
-    </message>
-    <message>
-        <source>label</source>
-        <translation>текст</translation>
-    </message>
-    <message>
-        <source>100%</source>
-        <translation>100%</translation>
-    </message>
-    <message>
-        <source>fill</source>
-        <translation>залить</translation>
-    </message>
-    <message>
-        <source>keep</source>
-        <translation>оставить</translation>
-    </message>
-    <message>
-        <source>remove</source>
-        <translation>удалить</translation>
-    </message>
-    <message>
-        <source>size</source>
-        <translation>размер</translation>
-    </message>
-    <message>
-        <source>dots</source>
-        <translation>точки</translation>
-    </message>
-    <message>
-        <source>°</source>
-        <translation>°</translation>
-    </message>
-    <message>
-        <source>angle</source>
-        <translation>угол</translation>
-    </message>
-    <message>
-        <source>font</source>
-        <translation>шрифт</translation>
-    </message>
-    <message>
-        <source>Sailfish</source>
-        <translation>Sailfish</translation>
-    </message>
-    <message>
-        <source>load custom font</source>
-        <translation>кастомный шрифт</translation>
-    </message>
-    <message>
-        <source>(custom)</source>
-        <translation>(свой)</translation>
-    </message>
-    <message>
-        <source>Angelface</source>
+    <message id="extended-busy-label-subtitle">
+        <source>Some changes take longer to process.\nDo not close Imageworks while this operation is in progress.</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Antonio</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bananasplit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Baskerville</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fraktur</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>League Gothic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lobster</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Miso</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Monterey</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nebula bold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Oswald heavy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Raleway</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Roland</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stay Girly</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yanone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sans regular</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sans bold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sans italic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Serif regular</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Serif bold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Serif italic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mono regular</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mono bold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mono italic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>layer</source>
-        <translation>слой</translation>
-    </message>
-    <message>
-        <source>transparent</source>
-        <translation>прозрачный</translation>
-    </message>
-    <message>
-        <source>clipboard color</source>
-        <translation>цвет из б. обмена</translation>
-    </message>
-    <message>
-        <source>black</source>
-        <translation>черный</translation>
-    </message>
-    <message>
-        <source>white</source>
-        <translation>белый</translation>
-    </message>
-    <message>
-        <source>cursor</source>
-        <translation>курсор</translation>
-    </message>
-    <message>
-        <source>average</source>
-        <translation>среднее</translation>
-    </message>
-    <message>
-        <source>Imageworks</source>
-        <translation>Imageworks</translation>
-    </message>
-    <message>
-        <source>Open from files</source>
-        <translation>Открыть из файлов</translation>
-    </message>
-    <message>
-        <source>Open from gallery</source>
-        <translation>Открыть из галереи</translation>
-    </message>
-    <message>
-        <source>About Imageworks</source>
-        <translation>О приложении</translation>
-    </message>
-    <message>
-        <source>Crop</source>
-        <translation>Кадр.</translation>
-    </message>
-    <message>
-        <source>Draw</source>
-        <translation>Рисование</translation>
-    </message>
-    <message>
-        <source>Rotate</source>
-        <translation>Вращение</translation>
-    </message>
-    <message>
-        <source>Adjust</source>
-        <translation>Уровни</translation>
-    </message>
-    <message>
-        <source>Resize</source>
-        <translation>Размер</translation>
-    </message>
-    <message>
-        <source>Advanced</source>
-        <translation>Тулбокс</translation>
-    </message>
-    <message>
-        <source>File</source>
-        <translation>Файл</translation>
-    </message>
-    <message>
+    <message id="cover-page-welcome-title">
         <source>Welcome to Imageworks!</source>
-        <translation>Добро пожаловать в Imageworks!</translation>
+        <translation type="unfinished">Добро пожаловать в Imageworks!</translation>
     </message>
-    <message>
-        <source>Create new image</source>
-        <translation>Новое изображение</translation>
+    <message id="cover-page-welcome-subtitle">
+        <source>Edit images and create new ones</source>
+        <translation type="unfinished">Редактируйте изображения или создавайте новые</translation>
     </message>
-    <message>
-        <source>Open an exisiting image or create a new one to start editing</source>
-        <translation>Откройте существующее изображение или создайте новое, чтобы начать</translation>
+    <message id="cover-page-editing-subtitle">
+        <source>Currently editing</source>
+        <translation type="unfinished">Редактирование</translation>
     </message>
-    <message>
-        <source>visibility %1%</source>
-        <translation>видимость %1%</translation>
+    <message id="about-page-app-bar-title">
+        <source>About</source>
+        <translation type="unfinished">О приложении</translation>
     </message>
-</context>
-<context>
-    <name>MetadataPage</name>
-    <message>
-        <source>File contains no EXIF tags.</source>
-        <translation>Файл не содержит EXIF-тегов.</translation>
+    <message id="about-page-version-copy-notice">
+        <source>Version info copied to clipboard</source>
+        <translation type="unfinished">Имя версии скопировано</translation>
     </message>
-    <message>
-        <source>Filetype does not support EXIF tags.</source>
-        <translation>Тип файла не поддерживает теги EXIF</translation>
+    <message id="about-page-app-description">
+        <source>Feature-rich image editing application for Aurora OS based on Python Pillow library.</source>
+        <translation type="unfinished">Мощный графический редактор для ОС Аврора на основе библиотеки Pillow для Python.</translation>
     </message>
-    <message>
-        <source>Metadata</source>
-        <translation>Мета-данные</translation>
+    <message id="about-page-port-notice">
+        <source>Imageworks was originally developed for Sailfish OS and then ported to Aurora OS by Smooth-E.</source>
+        <translation type="unfinished">Imageworks основывается на приложении для Sailfish OS и был портирован на ОС Аврора Smooth-E.</translation>
     </message>
-    <message>
-        <source>File</source>
-        <translation>Файл</translation>
+    <message id="about-page-license-notice">
+        <source>Imageworks is free software, distributed under the terms of GNU GPL v3.</source>
+        <translation type="unfinished">Imageworks - свободное программное обеспечение, распространяемое под лицензией GNU GPL v3.</translation>
     </message>
-    <message>
-        <source>Path</source>
-        <translation>Путь</translation>
-    </message>
-    <message>
-        <source>Size</source>
-        <translation>Размер</translation>
-    </message>
-    <message>
-        <source>Width</source>
-        <translation>Ширина</translation>
-    </message>
-    <message>
-        <source>Height</source>
-        <translation>Высота</translation>
-    </message>
-    <message>
-        <source>Format</source>
-        <translation>Формат</translation>
-    </message>
-    <message>
-        <source>Mode</source>
-        <translation>Режим</translation>
-    </message>
-    <message>
-        <source>Palette</source>
-        <translation>Палитра</translation>
-    </message>
-    <message>
-        <source>File information</source>
-        <translation>Информация о файле</translation>
-    </message>
-    <message>
-        <source>EXIF tags</source>
-        <translation>Теги EXIF</translation>
-    </message>
-</context>
-<context>
-    <name>NewPage</name>
-    <message>
-        <source>width</source>
-        <translation>ширина</translation>
-    </message>
-    <message>
-        <source>height</source>
-        <translation>высота</translation>
-    </message>
-    <message>
-        <source>color</source>
-        <translation>цвет</translation>
-    </message>
-    <message>
-        <source>Presets</source>
-        <translation>Пресеты</translation>
-    </message>
-    <message>
-        <source>Create image</source>
-        <translation>Создать изображение</translation>
-    </message>
-    <message>
-        <source>from</source>
-        <translation>буфер</translation>
-    </message>
-    <message>
-        <source>clipboard</source>
-        <translation>обмена</translation>
-    </message>
-    <message>
-        <source>screen</source>
-        <translation>разрешение</translation>
-    </message>
-    <message>
-        <source>resolution</source>
-        <translation>экрана</translation>
-    </message>
-    <message>
-        <source>DIN A4</source>
+    <message id="View source">
+        <source></source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>72 dpi</source>
+    <message id="about-page-button-donate">
+        <source>Donate</source>
+        <translation type="unfinished">Поддержать</translation>
+    </message>
+    <message id="channel-bench-option-keep-original">
+        <source>Keep original</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>150 dpi</source>
+    <message id="channel-bench-option-replace-with">
+        <source>Replace with</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>300 dpi</source>
+    <message id="channel-bench-option-load-channel-file">
+        <source>Load</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>XGA</source>
-        <translation type="unfinished"></translation>
+    <message id="channel-bench-color-gray">
+        <source>Gray</source>
+        <translation type="unfinished">Серый</translation>
     </message>
-    <message>
-        <source>WXGA</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>WXGA+</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Full HD</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>4k</source>
-        <translation type="unfinished">100% {4k?}</translation>
-    </message>
-</context>
-<context>
-    <name>PixelBench</name>
-    <message>
-        <source>Pixel bench</source>
-        <translation>Пиксели</translation>
-    </message>
-    <message>
+    <message id="channel-bench-color-alpha">
         <source>Alpha</source>
-        <translation>Альфа</translation>
+        <translation type="unfinished">Альфа</translation>
     </message>
-    <message>
+    <message id="channel-bench-color-red">
         <source>Red</source>
-        <translation>Красный</translation>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message id="channel-bench-color-green">
         <source>Green</source>
-        <translation>Зеленый</translation>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message id="channel-bench-color-blue">
         <source>Blue</source>
-        <translation>Синий</translation>
+        <translation type="unfinished">Синий</translation>
     </message>
-    <message>
-        <source>old</source>
-        <translation>старый</translation>
+    <message id="channel-bench-channel-type-normal">
+        <source>Normal</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>+/-</source>
-        <translation>+/-</translation>
+    <message id="channel-bench-channel-type-inverted">
+        <source>Inverted</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>replace</source>
-        <translation>заменить</translation>
+    <message id="channel-bench-title">
+        <source>Channel bench</source>
+        <translation type="unfinished">Цветовые каналы</translation>
     </message>
-    <message>
-        <source>with</source>
-        <translation>на</translation>
+    <message id="channel-bench-subtitle">
+        <source>Replace, invert and saturate</source>
+        <translation type="unfinished">Заменяйте, инвертируйте и изменяйте</translation>
     </message>
-    <message>
-        <source>keep</source>
-        <translation>оставить</translation>
+    <message id="channel-bench-channel-alpha">
+        <source>Alpha</source>
+        <translation type="unfinished">Альфа</translation>
     </message>
-    <message>
-        <source>values</source>
-        <translation>значения</translation>
+    <message id="channel-bench-channel-red">
+        <source>Red</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message id="channel-bench-channel-green">
+        <source>Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="channel-bench-channel-blue">
+        <source>Blue</source>
+        <translation type="unfinished">Синий</translation>
+    </message>
+    <message id="channel-bench-selector-subtitle">
+        <source>using</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="channel-bench-file-picker-alpha">
+        <source>Select alpha channel provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="channel-bench-file-picker-red">
+        <source>Select red channel provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="channel-bench-file-picker-green">
+        <source>select green channel provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="channel-bench-file-picker-blue">
+        <source>Select blue channel provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="collage-bench-subheader">
+        <source>Combine %1 images</source>
+        <translation type="unfinished">Совместить %1 изображений</translation>
+    </message>
+    <message id="collage-bench-header">
+        <source>Collage</source>
+        <translation type="unfinished">Коллаж</translation>
+    </message>
+    <message id="collage-bench-subheader-warning">
+        <source>Output limited to %1px. %2</source>
+        <translation type="unfinished">Ограничено до %1 пикс. %2</translation>
+    </message>
+    <message id="collage-bench-tutorial-title">
+        <source>Creating a collage</source>
+        <translation type="unfinished">Создайте коллаж</translation>
+    </message>
+    <message id="collage-bench-tutorial-1-title">
+        <source>1. Start by adding images</source>
+        <translation type="unfinished">1. Добавьте изображения</translation>
+    </message>
+    <message id="collage-bench-tutorial-1-summary">
+        <source>Press the button above and select several images to start creating.</source>
+        <translation type="unfinished">Нажмите на кнопку выше и выберите несколько изображение, чтобы начать.</translation>
+    </message>
+    <message id="collage-bench-tutorial-2-title">
+        <source>2. Adjust the parameters</source>
+        <translation type="unfinished">2. Настройте параметры</translation>
+    </message>
+    <message id="collage-bench-tutorial-2-summary">
+        <source>Use menus and sliders below to adjust your collage&apos;s parameters. Don&apos;t forget to tap the \&quot;Refresh\&quot; button after making changes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="collage-bench-tutorial-3-title">
+        <source>3. Save your work</source>
+        <translation type="unfinished">3. Сохраните вашу работу</translation>
+    </message>
+    <message id="collage-bench-tutorial-3-summary">
+        <source>When you are done, tap the check-mark button above to replace your image with the new collage.</source>
+        <translation type="unfinished">Когда закончите, нажмите на галочку вверху, чтобы заменить текущее изображение на ваш новый коллаж.</translation>
+    </message>
+    <message id="collage-bench-combobox-preset-label">
+        <source>layout generator:</source>
+        <translation type="unfinished">расстановка:</translation>
+    </message>
+    <message id="collage-bench-preset-auto-rows">
+        <source>auto-rows</source>
+        <translation type="unfinished">авто-ряды</translation>
+    </message>
+    <message id="collage-bench-preset-auto-columns">
+        <source>auto-columns</source>
+        <translation type="unfinished">авто-столбцы</translation>
+    </message>
+    <message id="collage-bench-preset-mosaic">
+        <source>mosaic</source>
+        <translation type="unfinished">мозаика</translation>
+    </message>
+    <message id="collage-bench-preset-photowall">
+        <source>photowall</source>
+        <translation type="unfinished">фото-стена</translation>
+    </message>
+    <message id="collage-bench-preset-scattered">
+        <source>scattered</source>
+        <translation type="unfinished">в разброс</translation>
+    </message>
+    <message id="collage-bench-combobox-background-label">
+        <source>background:</source>
+        <translation type="unfinished">фон:</translation>
+    </message>
+    <message id="collage-bench-background-blurry-image">
+        <source>blurry image</source>
+        <translation type="unfinished">размытое изображение</translation>
+    </message>
+    <message id="collage-bench-background-current-color">
+        <source>current color</source>
+        <translation type="unfinished">текущий цвет</translation>
+    </message>
+    <message id="collage-bench-background-black">
+        <source>black</source>
+        <translation type="unfinished">черный</translation>
+    </message>
+    <message id="collage-bench-background-white">
+        <source>white</source>
+        <translation type="unfinished">белый</translation>
+    </message>
+    <message id="collage-bench-background-transparent">
+        <source>transparent</source>
+        <translation type="unfinished">прозрачный</translation>
+    </message>
+    <message id="collage-bench-combobox-frames-label">
+        <source>frames:</source>
+        <translation type="unfinished">рамки:</translation>
+    </message>
+    <message id="collage-bench-frame-none">
+        <source>none</source>
+        <translation type="unfinished">нет</translation>
+    </message>
+    <message id="collage-bench-frame-current-color">
+        <source>current color</source>
+        <translation type="unfinished">текущий цвет</translation>
+    </message>
+    <message id="collage-bench-frame-black">
+        <source>black</source>
+        <translation type="unfinished">черный</translation>
+    </message>
+    <message id="collage-bench-frame-white">
+        <source>white</source>
+        <translation type="unfinished">белый</translation>
+    </message>
+    <message id="collage-bench-combobox-ratio-label">
+        <source>ratio:</source>
+        <translation type="unfinished">соотношение:</translation>
+    </message>
+    <message id="collage-bench-aspect-3-2">
+        <source>3 : 2</source>
+        <translation type="unfinished">3 : 2</translation>
+    </message>
+    <message id="collage-bench-aspect-1-1">
+        <source>1 : 1</source>
+        <translation type="unfinished">1 : 1</translation>
+    </message>
+    <message id="collage-bench-aspect-2-3">
+        <source>2 : 3</source>
+        <translation type="unfinished">2 : 3</translation>
+    </message>
+    <message id="collage-bench-slider-height">
+        <source>Height: 1/%1 of width</source>
+        <translation type="unfinished">Высота: 1/%1 ширины</translation>
+    </message>
+    <message id="collage-bench-slider-columns">
+        <source>Columns: %1</source>
+        <translation type="unfinished">Столбцы: %1</translation>
+    </message>
+    <message id="collage-bench-slider-spacing">
+        <source>Spacing: %1</source>
+        <translation type="unfinished">Промежутки: %1</translation>
+    </message>
+    <message id="collage-bench-slider-frame-width">
+        <source>Frame width: %1</source>
+        <translation type="unfinished">Ширина рамки: %1</translation>
+    </message>
+    <message id="color-curve-bench-header">
+        <source>Color curve bench</source>
+        <translation type="unfinished">Настройка цвета</translation>
+    </message>
+    <message id="color-curve-bench-subheader">
+        <source>View histogram or adjust curves</source>
+        <translation type="unfinished">Посмотрите гистограмму или настройте кривые</translation>
+    </message>
+    <message id="color-curve-bench-alpha">
+        <source>Alpha</source>
+        <translation type="unfinished">Альфа</translation>
+    </message>
+    <message id="color-curve-bench-rgb">
+        <source>RGB</source>
+        <translation type="unfinished">RGB</translation>
+    </message>
+    <message id="color-curve-bench-red">
+        <source>Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="color-curve-bench-green">
+        <source>Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="color-curve-bench-blue">
+        <source>Blue</source>
+        <translation type="unfinished">Синий</translation>
+    </message>
+    <message id="color-curve-bench-output-curve">
+        <source>output  curve</source>
+        <translation type="unfinished">выходная кривая</translation>
+    </message>
+    <message id="color-curve-bench-input-values">
+        <source>input  values</source>
+        <translation type="unfinished">входные значения</translation>
+    </message>
+    <message id="color-curve-bench-occurrences">
+        <source>occurrences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="color-curve-bench-min">
+        <source>min</source>
+        <translation type="unfinished">мин</translation>
+    </message>
+    <message id="color-curve-bench-max">
+        <source>max</source>
+        <translation type="unfinished">макс</translation>
+    </message>
+    <message id="confirm-deletion-header">
+        <source>Confirm deletion</source>
+        <translation type="unfinished">Подтвердить удаление</translation>
+    </message>
+    <message id="confirm-deletion-title">
+        <source>Are you sure you want to delete the file and all related temporary files?</source>
+        <translation type="unfinished">Вы уверены, что хотите удалить файл и все сопутствующие временные файлы?</translation>
+    </message>
+    <message id="confirm-deletion-subtitle">
+        <source>The original file to be deleted is located here:</source>
+        <translation type="unfinished">Оригинальный файл, который будет удален, находится тут:</translation>
+    </message>
+    <message id="effects-bench-header">
+        <source>Effects bench</source>
+        <translation type="unfinished">Эффекты</translation>
+    </message>
+    <message id="effects-bench-subheader">
+        <source>Apply effects</source>
+        <translation type="unfinished">Применяйте эффекты</translation>
+    </message>
+    <message id="effects-bench-cb-preset-label">
+        <source>Effect</source>
+        <translation type="unfinished">Эффект</translation>
+    </message>
+    <message id="effects-bench-preset-original">
+        <source>Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-auto-contrast">
+        <source>Auto contrast</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-stretch-contrast">
+        <source>Stretch contrast</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-dithering">
+        <source>Dithering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-coal-drawing">
+        <source>Coal drawing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-grayscale">
+        <source>Gray scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-invert-colors">
+        <source>Invert colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-equalize-colors">
+        <source>Equalize colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-solarize">
+        <source>Solarize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-brush-art">
+        <source>Brush art</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-posterize">
+        <source>Posterize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-blur-image">
+        <source>Blur image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-smooth-surface">
+        <source>Smooth surface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-central-focus">
+        <source>Central focus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-miniature-world">
+        <source>Miniature world</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-enhance-edges">
+        <source>Enhance edges</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-digital-unsharp-masking">
+        <source>Digital unsharp masking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-find-edges">
+        <source>Find edges</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-find-contour">
+        <source>Find contour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-emboss">
+        <source>Emboss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-add-current-colored-frame">
+        <source>Add current colored frame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-tint-with-current-color">
+        <source>Tint with current color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-reduce-colors">
+        <source>Reduce colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-change-opacity">
+        <source>Change opacity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-create-alpha-from">
+        <source>Create alpha from</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-extract-color">
+        <source>Extract color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-extract-channel">
+        <source>Extract channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-min-filter">
+        <source>Minimum filter (bright spots darker)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-max-filter">
+        <source>Maximum filter (dark spots brighter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-medium-filter">
+        <source>Medium filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-preset-fish-eye">
+        <source>Fish eye</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-coal-size">
+        <source>Coal %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-brush-size">
+        <source>Brush size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-blur">
+        <source>Blur %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-central-focus">
+        <source>Blur %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-miniature-blur">
+        <source>Blur %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-miniature-color">
+        <source>Color %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-add-frame">
+        <source>Frame %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-quantize">
+        <source>Amount colors %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-opacity">
+        <source>Opacity %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-alpha-color-label">
+        <source>Alpha color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-alpha-color-white">
+        <source>White</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-alpha-color-black">
+        <source>Black</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-tolerance">
+        <source>Tolerance %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-color-label">
+        <source>Extract color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-color-red">
+        <source>Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-color-green">
+        <source>Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-color-blue">
+        <source>Blue</source>
+        <translation type="unfinished">Синий</translation>
+    </message>
+    <message id="effects-bench-combobox-extract-channel-label">
+        <source>Extract channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-channel-red">
+        <source>Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-channel-green">
+        <source>Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-combobox-extract-channel-blue">
+        <source>Blue</source>
+        <translation type="unfinished">Синий</translation>
+    </message>
+    <message id="effects-bench-combobox-extract-channel-alpha">
+        <source>Alpha</source>
+        <translation type="unfinished">Альфа</translation>
+    </message>
+    <message id="effects-bench-slider-unsharp-radius-mask">
+        <source>Radius %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effects-bench-slider-unsharp-percent-mask">
+        <source>Percent %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effect-bench-slider-unsharp-threshold-mask">
+        <source>Threshold %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="effect-bench-slider-brightness-size">
+        <source>Size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-file-picker-lut">
+        <source>Select LUT (*.cube, *.png)</source>
+        <translation type="unfinished">Выберите LUT (*.cube, *.png)</translation>
+    </message>
+    <message id="filter-bench-header">
+        <source>Filter bench</source>
+        <translation type="unfinished">Фильтры</translation>
+    </message>
+    <message id="filter-bench-subheader">
+        <source>Apply color filters</source>
+        <translation type="unfinished">Применяйте цветовые фильтры</translation>
+    </message>
+    <message id="filter-bench-mode-combobox-label">
+        <source>Mode</source>
+        <translation type="unfinished">Режим</translation>
+    </message>
+    <message id="filter-bench-mode-combobox-use-preset">
+        <source>Use preset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-mode-combobox-use-lut">
+        <source>Use 3D-LUT file (cube, hald-png)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-label">
+        <source>Preset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-original">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-warmer">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-colder">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-sepia">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-gotham">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-crema">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-juno">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-kelvin">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-xpro-ii">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-amaro">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-mayfair">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-nineteen77">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-lofi">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-hudson">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-redteal">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-nashville">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-hefe">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-sierra">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-clarendon">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-reyes">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-lark">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-spring">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-summer">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-fall">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-winter">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-backlight">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-goldvibrant">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-polaroid">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-fadeprint">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-bleakfuture">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-desaturated">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-monotint">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-fujigray">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-moon">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-moonlight">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-gingham">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-tensiongreen">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-anime">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-tealmagentagold">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-juno2">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-hudson2">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-darkblue">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-howlite">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-cinevibrant">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-sweetgelatto">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-newspaper">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-analog-oldstyle">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-hilutite">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-hackmanite">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-herderite">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-heulandite">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-hiddenite">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-bleach">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-dropblues">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-preset-combobox-latesunset">
+        <source></source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-label-load-file">
+        <source>File:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filter-bench-button-load-file">
+        <source>Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="main-page-file-picker-image">
+        <source>Select image</source>
+        <translation type="unfinished">Выбрать изображение</translation>
+    </message>
+    <message id="main-page-file-picker-font">
+        <source>Select font</source>
+        <translation type="unfinished">Выбрать шрифт</translation>
+    </message>
+    <message id="main-page-subheader-no-pillow">
+        <source>python3-pillow is not installed</source>
+        <translation type="unfinished">python3-pillow не установлен</translation>
+    </message>
+    <message id="main-page-subheader-old-pillow">
+        <source>Some functions require python3-pillow 7+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="main-page-remorse-restore-original">
+        <source>Restore original?</source>
+        <translation type="unfinished">Восстановить оригинал?</translation>
+    </message>
+    <message id="main-page-appbar-action-open-from-gallery">
+        <source>Open from gallery</source>
+        <translation type="unfinished">Открыть из галереи</translation>
+    </message>
+    <message id="main-page-appbar-action-open-from-files">
+        <source>Open from files</source>
+        <translation type="unfinished">Открыть из файлов</translation>
+    </message>
+    <message id="main-page-appbar-action-about-app">
+        <source>About Imageworks</source>
+        <translation type="unfinished">О приложении</translation>
+    </message>
+    <message id="welcome-widget-title">
+        <source>Welcome to Imageworks!</source>
+        <translation type="unfinished">Добро пожаловать в Imageworks!</translation>
+    </message>
+    <message id="welcome-widget-subtitle">
+        <source>Open an exisiting image or create a new one to start editing</source>
+        <translation type="unfinished">Откройте существующее изображение или создайте новое, чтобы начать</translation>
+    </message>
+    <message id="welcome-widget-button-gallery">
+        <source>Open from gallery</source>
+        <translation type="unfinished">Открыть из галереи</translation>
+    </message>
+    <message id="welcome-widget-button-files">
+        <source>Open from files</source>
+        <translation type="unfinished">Открыть из файлов</translation>
+    </message>
+    <message id="welcome-widget-button-new">
+        <source>Create new image</source>
+        <translation type="unfinished">Новое изображение</translation>
+    </message>
+    <message id="toolbar-item-crop">
+        <source>Crop</source>
+        <translation type="unfinished">Кадр.</translation>
+    </message>
+    <message id="toolbar-item-draw">
+        <source>Draw</source>
+        <translation type="unfinished">Рисование</translation>
+    </message>
+    <message id="toolbar-button-rotate">
+        <source>Rotate</source>
+        <translation type="unfinished">Вращение</translation>
+    </message>
+    <message id="toolbar-button-adjust">
+        <source>Adjust</source>
+        <translation type="unfinished">Уровни</translation>
+    </message>
+    <message id="toolbar-item-resize">
+        <source>Resize</source>
+        <translation type="unfinished">Размер</translation>
+    </message>
+    <message id="toolbar-button-advanced">
+        <source>Advanced</source>
+        <translation type="unfinished">Тулбокс</translation>
+    </message>
+    <message id="toolbar-button-file">
+        <source>File</source>
+        <translation type="unfinished">Файл</translation>
+    </message>
+    <message id="crop-type-stretch">
+        <source>stretch to edges</source>
+        <translation type="unfinished">Растянуть к углам</translation>
+    </message>
+    <message id="crop-type-fold">
+        <source>fold from edges</source>
+        <translation type="unfinished">Сложить от углов</translation>
+    </message>
+    <message id="crop-ratio-free">
+        <source>free crop</source>
+        <translation type="unfinished">Свободная обрезка</translation>
+    </message>
+    <message id="crop-ratio-original">
+        <source>original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="crop-ratio-manual">
+        <source>manual</source>
+        <translation type="unfinished">Ручное</translation>
+    </message>
+    <message id="crop-ratio-din-landscape">
+        <source>DIN-landscape</source>
+        <translation type="unfinished">DIN альбомная</translation>
+    </message>
+    <message id="crop-ration-din-portrait">
+        <source>DIN-portrait</source>
+        <translation type="unfinished">DIN портретная</translation>
+    </message>
+    <message id="crop-ratio-4-by-3">
+        <source>4:3</source>
+        <translation type="unfinished">4:3</translation>
+    </message>
+    <message id="crop-ratio-16-by-10">
+        <source>16:10</source>
+        <translation type="unfinished">16:10?</translation>
+    </message>
+    <message id="crop-ratio-16-by-9">
+        <source>16:9</source>
+        <translation type="unfinished">16:9</translation>
+    </message>
+    <message id="crop-ratio-21-by-9">
+        <source>21:9</source>
+        <translation type="unfinished">21:9</translation>
+    </message>
+    <message id="crop-ratio-1-by-1">
+        <source>1:1</source>
+        <translation type="unfinished">1:1</translation>
+    </message>
+    <message id="crop-ratio-3-by-4">
+        <source>3:4</source>
+        <translation type="unfinished">3:4</translation>
+    </message>
+    <message id="crop-ratio-1-by-2">
+        <source>1:2</source>
+        <translation type="unfinished">1:2</translation>
+    </message>
+    <message id="crop-ratio-pixels">
+        <source>pixels</source>
+        <translation type="unfinished">пиксели</translation>
+    </message>
+    <message id="crop-first-point-x">
+        <source>point 1x</source>
+        <translation type="unfinished">X1</translation>
+    </message>
+    <message id="crop-second-point-x">
+        <source>point 2x</source>
+        <translation type="unfinished">X2</translation>
+    </message>
+    <message id="crop-first-point-y">
+        <source>point 1y</source>
+        <translation type="unfinished">Y1</translation>
+    </message>
+    <message id="crop-second-point-y">
+        <source>point 2y</source>
+        <translation type="unfinished">Y2</translation>
+    </message>
+    <message id="resize-type-width-preserve-ratio">
+        <source>width, preserve ratio</source>
+        <translation type="unfinished">ширина, сохранить соотн.</translation>
+    </message>
+    <message id="resize-type-height-preserve-ratio">
+        <source>height, preserve ratio</source>
+        <translation type="unfinished">высота, сохранить соотн.</translation>
+    </message>
+    <message id="resize-type-width-x-height">
+        <source>width  x  height</source>
+        <translation type="unfinished">ширина x высота</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-screen-ratio">
+        <source>screen ratio</source>
+        <translation type="unfinished">соотн. экрана</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-manual">
+        <source>manual</source>
+        <translation type="unfinished">Ручное</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-din-landscape">
+        <source>DIN-landscape</source>
+        <translation type="unfinished">DIN альбомная</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-din-portrait">
+        <source>DIN-portrait</source>
+        <translation type="unfinished">DIN портретная</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-4-by-3">
+        <source>4:3</source>
+        <translation type="unfinished">4:3</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-16-by-10">
+        <source>16:10</source>
+        <translation type="unfinished">16:10?</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-16-by-9">
+        <source>16:9</source>
+        <translation type="unfinished">16:9</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-21-by-9">
+        <source>21:9</source>
+        <translation type="unfinished">21:9</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-1-by-1">
+        <source>1:1</source>
+        <translation type="unfinished">1:1</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-3-by-4">
+        <source>3:4</source>
+        <translation type="unfinished">3:4</translation>
+    </message>
+    <message id="resize-type-ratio-combobox-1-by-2">
+        <source>1:2</source>
+        <translation type="unfinished">1:2</translation>
+    </message>
+    <message id="resize-type-ratio-fill-type">
+        <source>padding with</source>
+        <translation type="unfinished">заполнить</translation>
+    </message>
+    <message id="resize-type-ratio-fill-type-combobox-color">
+        <source>color</source>
+        <translation type="unfinished">цвет</translation>
+    </message>
+    <message id="resize-type-ratio-fill-type-combobox-blur">
+        <source>blur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="rotate-button-left">
+        <source>left</source>
+        <translation type="unfinished">влево</translation>
+    </message>
+    <message id="rotate-button-right">
+        <source>right</source>
+        <translation type="unfinished">вправо</translation>
+    </message>
+    <message id="rotate-button-flip">
+        <source>flip</source>
+        <translation type="unfinished">перевер.</translation>
+    </message>
+    <message id="rotate-button-mirror">
+        <source>mirror</source>
+        <translation type="unfinished">отразить</translation>
+    </message>
+    <message id="adjust-combobox-brightness">
+        <source>brightness</source>
+        <translation type="unfinished">яркость</translation>
+    </message>
+    <message id="adjust-combobox-contrast">
+        <source>contrast</source>
+        <translation type="unfinished">контраст</translation>
+    </message>
+    <message id="adjust-combobox-color">
+        <source>color</source>
+        <translation type="unfinished">цвет</translation>
+    </message>
+    <message id="adjust-combobox-sharpness">
+        <source>sharpness</source>
+        <translation type="unfinished">резкость</translation>
+    </message>
+    <message id="adjust-combobox-hue">
+        <source>hue</source>
+        <translation type="unfinished">HUE</translation>
+    </message>
+    <message id="adjust-hue-slider-red">
+        <source>red</source>
+        <translation type="unfinished">красный</translation>
+    </message>
+    <message id="adjust-hue-slider-yellow">
+        <source>yellow</source>
+        <translation type="unfinished">желт.</translation>
+    </message>
+    <message id="adjust-hue-slider-green">
+        <source>green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="adjust-hue-slider-blue">
+        <source>blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="adjust-hue-slider-violet">
+        <source>violet</source>
+        <translation type="unfinished">фиол.</translation>
+    </message>
+    <message id="advanced-workbench-pixel">
+        <source>pixel</source>
+        <translation type="unfinished">пиксели</translation>
+    </message>
+    <message id="advanced-workbench-channel">
+        <source>channel</source>
+        <translation type="unfinished">каналы</translation>
+    </message>
+    <message id="advanced-workbench-color">
+        <source>color</source>
+        <translation type="unfinished">цвет</translation>
+    </message>
+    <message id="advanced-workbench-filter">
+        <source>filter</source>
+        <translation type="unfinished">фильтр</translation>
+    </message>
+    <message id="advanced-workbench-effect">
+        <source>effect</source>
+        <translation type="unfinished">эффект</translation>
+    </message>
+    <message id="advanced-workbench-collage">
+        <source>collage</source>
+        <translation type="unfinished">коллаж</translation>
+    </message>
+    <message id="file-option-delete">
+        <source>delete</source>
+        <translation type="unfinished">удалить</translation>
+    </message>
+    <message id="file-option-rename">
+        <source>rename</source>
+        <translation type="unfinished">имя</translation>
+    </message>
+    <message id="file-option-meta">
+        <source>meta</source>
+        <translation type="unfinished">мета</translation>
+    </message>
+    <message id="file-option-new">
         <source>new</source>
-        <translation>новый</translation>
+        <translation type="unfinished">новый</translation>
     </message>
-    <message>
-        <source>Results</source>
-        <translation>Результат</translation>
+    <message id="draw-tool-free-brush">
+        <source>free</source>
+        <translation type="unfinished">кисть</translation>
     </message>
-    <message>
-        <source>normal</source>
-        <translation>нормальный</translation>
+    <message id="draw-tool-area">
+        <source>area</source>
+        <translation type="unfinished">область</translation>
     </message>
-    <message>
-        <source>invert</source>
-        <translation>инвертировать</translation>
+    <message id="draw-tool-frame">
+        <source>frame</source>
+        <translation type="unfinished">рамка</translation>
     </message>
-    <message>
+    <message id="draw-tool-spray">
+        <source>spray</source>
+        <translation type="unfinished">спрей</translation>
+    </message>
+    <message id="draw-tool-copy">
+        <source>copy</source>
+        <translation type="unfinished">копир.</translation>
+    </message>
+    <message id="draw-tool-paste">
+        <source>paste</source>
+        <translation type="unfinished">вставить</translation>
+    </message>
+    <message id="draw-tool-line">
+        <source>line</source>
+        <translation type="unfinished">линия</translation>
+    </message>
+    <message id="draw-tool-point">
+        <source>point</source>
+        <translation type="unfinished">точка</translation>
+    </message>
+    <message id="draw-tool-symbol">
+        <source>symbol</source>
+        <translation type="unfinished">символ</translation>
+    </message>
+    <message id="draw-tool-label">
+        <source>label</source>
+        <translation type="unfinished">текст</translation>
+    </message>
+    <message id="draw-tool-color">
+        <source>color</source>
+        <translation type="unfinished">цвет</translation>
+    </message>
+    <message id="draw-type-comobobox-line">
+        <source>line</source>
+        <translation type="unfinished">линия</translation>
+    </message>
+    <message id="draw-type-comobobox-fill">
+        <source>fill</source>
+        <translation type="unfinished">залить</translation>
+    </message>
+    <message id="draw-type-comobobox-keep">
+        <source>keep</source>
+        <translation type="unfinished">оставить</translation>
+    </message>
+    <message id="draw-type-comobobox-remove">
+        <source>remove</source>
+        <translation type="unfinished">удалить</translation>
+    </message>
+    <message id="draw-thikness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-blur-intensity-slider">
+        <source>blur %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-cut-shape-combobox-fill">
+        <source>fill</source>
+        <translation type="unfinished">залить</translation>
+    </message>
+    <message id="draw-cut-shape-combobox-keep">
+        <source>keep</source>
+        <translation type="unfinished">оставить</translation>
+    </message>
+    <message id="draw-cut-shape-combobox-remove">
+        <source>remove</source>
+        <translation type="unfinished">удалить</translation>
+    </message>
+    <message id="draw-frame-thickness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-spray-thickness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-spray-amount-slider">
+        <source>dots %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-shape-thickness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-point-thickness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-line-thickness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-text-rotation-degree-symbol">
+        <source>°</source>
+        <translation type="unfinished">°</translation>
+    </message>
+    <message id="draw-text-rotation-angle">
+        <source>angle</source>
+        <translation type="unfinished">угол</translation>
+    </message>
+    <message id="draw-text-font-combobox-desciption">
+        <source>font</source>
+        <translation type="unfinished">шрифт</translation>
+    </message>
+    <message id="draw-text-font-comobobx-custom-load">
+        <source>load custom font</source>
+        <translation type="unfinished">кастомный шрифт</translation>
+    </message>
+    <message id="draw-text-font-combobox-custom-font">
+        <source>%1 (custom)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-text-background-combobox-description">
+        <source>layer</source>
+        <translation type="unfinished">слой</translation>
+    </message>
+    <message id="draw-text-background-combobox-transparent">
+        <source>transparent</source>
+        <translation type="unfinished">прозрачный</translation>
+    </message>
+    <message id="draw-text-background-combobox-clipboard-color">
+        <source>clipboard color</source>
+        <translation type="unfinished">цвет из б. обмена</translation>
+    </message>
+    <message id="draw-text-background-combobox-black">
+        <source>black</source>
+        <translation type="unfinished">черный</translation>
+    </message>
+    <message id="draw-text-background-combobox-white">
+        <source>white</source>
+        <translation type="unfinished">белый</translation>
+    </message>
+    <message id="draw-text-thickness-slider">
+        <source>size %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-color-picker-button-cursor">
+        <source>cursor</source>
+        <translation type="unfinished">курсор</translation>
+    </message>
+    <message id="draw-color-picker-slider-alpha">
+        <source>visibility %1%</source>
+        <translation type="unfinished">видимость %1%</translation>
+    </message>
+    <message id="draw-color-picker-slider-red">
+        <source>red %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-color-picker-button-average">
+        <source>average</source>
+        <translation type="unfinished">среднее</translation>
+    </message>
+    <message id="draw-color-picker-slider-green">
+        <source>green %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-color-picker-slider-blue">
+        <source>blue %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="draw-color-picker-button-copy">
+        <source>copy</source>
+        <translation type="unfinished">копир.</translation>
+    </message>
+    <message id="metadata-page-no-exif-tags">
+        <source>File contains no EXIF tags.</source>
+        <translation type="unfinished">Файл не содержит EXIF-тегов.</translation>
+    </message>
+    <message id="metadata-page-no-exif-support">
+        <source>Filetype does not support EXIF tags.</source>
+        <translation type="unfinished">Тип файла не поддерживает теги EXIF</translation>
+    </message>
+    <message id="metadata-page-header">
+        <source>Metadata</source>
+        <translation type="unfinished">Мета-данные</translation>
+    </message>
+    <message id="metadata-page-section-file-information">
+        <source>File information</source>
+        <translation type="unfinished">Информация о файле</translation>
+    </message>
+    <message id="metadata-page-file-information">
+        <source>File: %1\nPath: %2\nSize: %3kb\nWidth: %4px\nHeight: %5px\nFormat: %6\nMode: %7\nPalette: %8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="metadata-page-section-exif-tags">
+        <source>EXIF tags</source>
+        <translation type="unfinished">Теги EXIF</translation>
+    </message>
+    <message id="new-page-header">
+        <source>Create image</source>
+        <translation type="unfinished">Создать изображение</translation>
+    </message>
+    <message id="new-page-textfield-width">
+        <source>Width</source>
+        <translation type="unfinished">Ширина</translation>
+    </message>
+    <message id="new-page-textfield-height">
+        <source>Height</source>
+        <translation type="unfinished">Высота</translation>
+    </message>
+    <message id="new-page-button-color">
+        <source>Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="new-page-section-presets">
+        <source>Presets</source>
+        <translation type="unfinished">Пресеты</translation>
+    </message>
+    <message id="new-page-preset-from-clipboard">
+        <source>From clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="new-page-preset-screen-resolution">
+        <source>Screen resolution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="pixel-bench-option-replace-with">
+        <source>replace with</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="pixel-bench-option-keep-values">
+        <source>keep values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="pixel-bench-header">
+        <source>Pixel bench</source>
+        <translation type="unfinished">Пиксели</translation>
+    </message>
+    <message id="pixel-bench-subheader">
         <source>Find and replace</source>
-        <translation>Находите и заменяйте</translation>
+        <translation type="unfinished">Находите и заменяйте</translation>
     </message>
-</context>
-<context>
-    <name>RenamePage</name>
-    <message>
-        <source>Path</source>
-        <translation>Путь</translation>
+    <message id="pixel-bench-column-alpha">
+        <source>Alpha</source>
+        <translation type="unfinished">Альфа</translation>
     </message>
-    <message>
-        <source>Width</source>
-        <translation>Ширина</translation>
+    <message id="pixel-bench-column-red">
+        <source>Red</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Height</source>
-        <translation>Высота</translation>
+    <message id="pixel-bench-column-green">
+        <source>Green</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Size</source>
-        <translation>Размер</translation>
+    <message id="pixel-bench-column-blue">
+        <source>Blue</source>
+        <translation type="unfinished">Синий</translation>
     </message>
-    <message>
+    <message id="pixel-bench-type-old">
+        <source>old</source>
+        <translation type="unfinished">старый</translation>
+    </message>
+    <message id="pixel-bench-type-diff">
+        <source>+/-</source>
+        <translation type="unfinished">+/-</translation>
+    </message>
+    <message id="pixel-bench-type-new">
+        <source>new</source>
+        <translation type="unfinished">новый</translation>
+    </message>
+    <message id="pixel-bench-label-result">
+        <source>Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="pixel-bench-result-normal">
+        <source>normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="pixel-bench-result-inverted">
+        <source>inverted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="rename-page-header">
         <source>Rename as...</source>
-        <translation>Переименовать как...</translation>
+        <translation type="unfinished">Переименовать как...</translation>
     </message>
-</context>
-<context>
-    <name>SavePage</name>
-    <message>
+    <message id="rename-page-file-properties">
+        <source>Path: %1\nWidth: %2\nHeight: %3\nSize: %4kb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="save-page-header">
         <source>Save as...</source>
-        <translation>Сохранить как...</translation>
+        <translation type="unfinished">Сохранить как...</translation>
     </message>
-    <message>
-        <source>overwrite...</source>
-        <translation>перезаписать...</translation>
+    <message id="save-page-filename-override">
+        <source>Override...</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message id="save-page-combobox-save-location">
         <source>Save location</source>
-        <translation>Каталог для сохранения</translation>
+        <translation type="unfinished">Каталог для сохранения</translation>
     </message>
-    <message>
-        <source>Documents</source>
-        <translation>Документы</translation>
-    </message>
-    <message>
+    <message id="save-page-location-original-folder">
         <source>Original Folder</source>
-        <translation>Папка оригинала</translation>
+        <translation type="unfinished">Папка оригинала</translation>
     </message>
-    <message>
-        <source>Pages Contained</source>
-        <translation>Страницы в документе</translation>
+    <message id="save-page-section-pages-contained">
+        <source>Pages contained</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message id="save-page-button-add-page">
         <source>Add page</source>
-        <translation>Добавить</translation>
+        <translation type="unfinished">Добавить</translation>
     </message>
-    <message>
+    <message id="save-page-button-clear-pages">
         <source>Clear</source>
-        <translation>Сбросить</translation>
+        <translation type="unfinished">Сбросить</translation>
     </message>
-    <message>
-        <source>Width</source>
-        <translation>Ширина</translation>
+    <message id="save-page-file-properties">
+        <source>Original folder: %1\nWidth: %2\nHeight: %3\nSize: %4kb</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Height</source>
-        <translation>Высота</translation>
-    </message>
-    <message>
-        <source>Size</source>
-        <translation>Размер</translation>
-    </message>
-    <message>
+    <message id="save-page-file-type-does-not-support-transparency">
         <source>Filetype does not support transparency.</source>
-        <translation>Тип файла не поддерживает прозрачность.</translation>
+        <translation type="unfinished">Тип файла не поддерживает прозрачность.</translation>
     </message>
 </context>
 </TS>
