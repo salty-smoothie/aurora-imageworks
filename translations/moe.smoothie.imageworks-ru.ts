@@ -1183,14 +1183,6 @@
         <source>Height</source>
         <translation>Высота</translation>
     </message>
-    <message id="new-page-button-color">
-        <source>Color</source>
-        <translation>Цвет</translation>
-    </message>
-    <message id="new-page-section-presets">
-        <source>Presets</source>
-        <translation>Пресеты</translation>
-    </message>
     <message id="new-page-preset-from-clipboard">
         <source>From clipboard</source>
         <translation>Буфер обмена</translation>
@@ -1308,6 +1300,22 @@
     <message id="about-page-button-view-source">
         <source>View source</source>
         <translation>Исходный код</translation>
+    </message>
+    <message id="new-page-fill-color-title">
+        <source>Fill color</source>
+        <translation>Цвет заливки</translation>
+    </message>
+    <message id="new-page-fill-color-summary">
+        <source>Select base color for the new image</source>
+        <translation>Выберите цвет заливки для нового изображения</translation>
+    </message>
+    <message id="new-page-section-image-settings">
+        <source>New image settings</source>
+        <translation>Настройки изображения</translation>
+    </message>
+    <message id="new-page-section-resolution-presets">
+        <source>Resolution presets</source>
+        <translation>Пресеты размеров</translation>
     </message>
 </context>
 </TS>

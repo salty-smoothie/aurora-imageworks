@@ -94,7 +94,7 @@ Page {
 
             SectionHeader {
                 //% "New image settings"
-                text: qsTrId("new-page-settings-image-settings")
+                text: qsTrId("new-page-section-image-settings")
                 horizontalAlignment: Text.AlignLeft
             }
 
@@ -232,8 +232,8 @@ Page {
             }
 
             SectionHeader {
-                //% "Presets"
-                text: qsTrId("new-page-section-presets")
+                //% "Resolution presets"
+                text: qsTrId("new-page-section-resolution-presets")
                 horizontalAlignment: Text.AlignLeft
             }
 

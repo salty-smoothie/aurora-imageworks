@@ -1175,14 +1175,6 @@
         <source>Height</source>
         <translation>Height</translation>
     </message>
-    <message id="new-page-button-color">
-        <source>Color</source>
-        <translation>Color</translation>
-    </message>
-    <message id="new-page-section-presets">
-        <source>Presets</source>
-        <translation>Presets</translation>
-    </message>
     <message id="new-page-preset-from-clipboard">
         <source>From clipboard</source>
         <translation>From clipboard</translation>
@@ -1294,6 +1286,22 @@
     <message id="about-page-button-view-source">
         <source>View source</source>
         <translation>View source</translation>
+    </message>
+    <message id="new-page-fill-color-title">
+        <source>Fill color</source>
+        <translation>Fill color</translation>
+    </message>
+    <message id="new-page-fill-color-summary">
+        <source>Select base color for the new image</source>
+        <translation>Select base color for the new image</translation>
+    </message>
+    <message id="new-page-section-image-settings">
+        <source>New image settings</source>
+        <translation>New image settings</translation>
+    </message>
+    <message id="new-page-section-resolution-presets">
+        <source>Resolution presets</source>
+        <translation>Resolution presets</translation>
     </message>
 </context>
 </TS>
