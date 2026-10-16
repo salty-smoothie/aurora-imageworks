@@ -170,6 +170,8 @@ Page {
             }
 
             BackgroundItem {
+                id: colorPickerButton
+
                 width: parent.width
                 height: fillColorLabel.height + fillColorDescription.height + Theme.paddingLarge * 2
 
@@ -195,7 +197,7 @@ Page {
 
                     //% "Fill color"
                     text: qsTrId("new-page-fill-color-title")
-                    color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+                    color: colorPickerButton.highlighted ? Theme.highlightColor : Theme.primaryColor
                     wrapMode: Text.WordWrap
                 }
 
@@ -210,7 +212,7 @@ Page {
 
                     //% "Select base color for the new image"
                     text: qsTrId("new-page-fill-color-summary")
-                    color: parent.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    color: colorPickerButton.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     wrapMode: Text.WordWrap
                     font.pixelSize: Theme.fontSizeSmall
                 }
